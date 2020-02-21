@@ -11,6 +11,7 @@ barplot(s, col="#cdc0b0", xlab="No. of segregating sites",
 
 
 #Histgram distribution of the theta values
+#theta <- read.table("cache/theta.txt", header=TRUE)
 theta <- fread("cache/theta.txt", data.table =FALSE)
 hist(theta$Pairwise) 
 hist(theta$Pairwise, col="green", xlab="Theta pairwise values (log10)") 

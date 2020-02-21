@@ -1,0 +1,62 @@
+wgsim lambda.fa -e 0 -d 500 -N 5000 -1 100 -2 100 -r 0.01  -R 0 -X 0 -S 1234567 -h l1.read1.fq l1.read2.fq
+wget ftp://ftp.ensemblgenomes.org/pub/plants/release-46/fasta/zea_mays/dna/Zea_mays.B73_RefGen_v4.dna.chromosome.Mt.fa.gz
+gunzip Zea_mays.B73_RefGen_v4.dna.chromosome.Mt.fa.gz
+wgsim Zea_mays.B73_RefGen_v4.dna.chromosome.Mt.fa -e 0 -d 500 -N 5000 -1 100 -2 100 -r 0.01  -R 0 -X 0 -S 1234567 l1.read1.fq l1.read2.fq
+
+Simulate pop 1
+for i in {1..10}; do    wgsim Zea_mays.B73_RefGen_v4.dna.chromosome.Mt.fa -e 0 -d 500 -N 50000 -1 100 -2 100 -r 0.1  -R 0 -X 0 l$i.read1.fq l$i.read2.fq; done
+change name pop 1
+mv l1.read1.fq p1l1.read1.fq (all 10 idividuals)
+
+Simulate pop 2
+for i in {1..10}; do    wgsim Zea_mays.B73_RefGen_v4.dna.chromosome.Mt.fa -e 0 -d 500 -N 50000 -1 100 -2 100 -r 0.1  -R 0 -X 0 l$i.read1.fq l$i.read2.fq; done
+change name pop 1
+mv l1.read1.fq p2l1.read1.fq (all 10 idividuals)
+
+module load bwa samtools
+bwa index Zea_mays.B73_RefGen_v4.dna.chromosome.Mt.fa
+bwa mem Zea_mays.B73_RefGen_v4.dna.chromosome.Mt.fa p1l1.read1.fq p1l1.read2.fq | samtools view -bSh - > p1l1.bam
+for i in {1..10}; do bwa mem Zea_mays.B73_RefGen_v4.dna.chromosome.Mt.fa p1l$i.read1.fq p1l$i.read2.fq | samtools view -bSh - > l$i.bam; done
+
+bwa mem Zea_mays.B73_RefGen_v4.dna.chromosome.Mt.fa p2l1.read1.fq p2l1.read2.fq | samtools view -bSh - > p2l1.bam
+for i in {1..10}; do bwa mem Zea_mays.B73_RefGen_v4.dna.chromosome.Mt.fa p2l$i.read1.fq p2l$i.read2.fq | samtools view -bSh - > p2l$i.bam; done
+
+for i in *.bam; do samtools sort $i -o sorted_$i; done
+for i in sorted*.bam; do samtools index $i; done
+mkdir bam_files
+mv sorted*.bam bam_files
+cd bam_files/
+ls sorted*.bam > bam.txt
+
+../../../../angsd/angsd -bam bam.txt -doSaf 1 -anc ../Zea_mays.B73_RefGen_v4.dna.chromosome.Mt.fa -GL 1  -out out
+../../../../angsd/misc/realSFS out.saf.idx > out.sfs
+cp out.sfs ../../../cache/
+../../../../angsd/angsd -bam bam.txt -out out -doThetas 1 -doSaf 1 -pest out.sfs -anc ../Zea_mays.B73_RefGen_v4.dna.chromosome.Mt.fa -GL 1
+../../../../angsd/misc/thetaStat print out.thetas.idx > theta.txt
+cp theta.txt ../../../cache/ (copy the file)
+
+../../../../angsd/angsd -b pop1.txt -anc ../Zea_mays.B73_RefGen_v4.dna.chromosome.Mt.fa -out pop1 -dosaf 1 -gl 1
+mv sorted_p1*.bam bam1_files
+ls sorted_p1*.bam > bam_p1.txt
+cat bam_p1.txt (see file 1)
+ls sorted_p2*.bam > bam_p2.txt
+cat bam_p2.txt (see file 2)
+
+../../../../angsd/angsd -bam bam_p1.txt -out out -doThetas 1 -doSaf 1 -pest out.sfs -anc ../Zea_mays.B73_RefGen_v4.dna.chromosome.Mt.fa -GL 1
+cat out.sfs
+../../../../angsd/misc/realSFS out.saf.idx > out.sfs
+cat bam.txt
+../../../../angsd/angsd -bam bam_p1.txt -out out -doThetas 1 -doSaf 1 -pest out.sfs -anc ../Zea_mays.B73_RefGen_v4.dna.chromosome.Mt.fa -GL 1
+cat out.saf.idx 
+cat out.thetas.idx
+cat theta.txt
+../../../../angsd/angsd -b pop1.txt -anc ../Zea_mays.B73_RefGen_v4.dna.chromosome.Mt.fa -out pop1 -dosaf 1 -gl 1
+cp bam_p1.txt pop1.txt
+cp bam_p2.txt pop2.txt
+../../../../angsd/angsd -b pop1.txt -anc ../Zea_mays.B73_RefGen_v4.dna.chromosome.Mt.fa -out pop1 -dosaf 1 -gl 1
+../../../../angsd/angsd -b pop2.txt -anc ../Zea_mays.B73_RefGen_v4.dna.chromosome.Mt.fa -out pop2 -dosaf 1 -gl 1
+../../../../angsd/misc/realSFS pop1.saf.idx pop2.saf.idx > pop1.pop2.ml
+../../../../angsd/misc/realSFS fst index pop1.saf.idx pop2.saf.idx -sfs pop1.pop2.ml -fstout out
+../../../../angsd/misc/realSFS fst stats out.fst.idx
+../../../../angsd/misc/realSFS fst stats2 out.fst.idx -win 500 -step 100 > fst_win.txt
+cp fst_win.txt ../../../cache/
