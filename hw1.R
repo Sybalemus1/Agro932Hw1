@@ -1,15 +1,19 @@
 #Visualize the results
+
+#In local computer, using `R`:
+  
+  #### Barplot for SFS
 #Barplot for SFS
-s <- scan('cache/out.sfs')
-s <- s[-c(1,length(s))]
-s <- s/sum(s)
-barplot(s,names=1:length(s), main='SFS')
+sfs <- scan('cache/out.sfs')
+sfs <- sfs[-c(1,length(sfs))]
+sfs <- sfs/sum(sfs)
 
-barplot(s, col="#cdc0b0", xlab="No. of segregating sites", 
+barplot(sfs,names=1:length(sfs), main='SFS')
+barplot(sfs, col="#cdc0b0", xlab="No. of segregating sites", 
         ylab="Minor allele frequency", 
-        names=1:length(s))
+        names=1:length(sfs))
 
-
+library("data.table")
 #Histgram distribution of the theta values
 #theta <- read.table("cache/theta.txt", header=TRUE)
 theta <- fread("cache/theta.txt", data.table =FALSE)
@@ -21,9 +25,6 @@ fst <- read.table("cache/fst_win.txt", skip=1, header=FALSE)
 names(fst)[c(3,5)] <- c("midp", "fst")
 plot(fst$midp, fst$fst, xlab="Physical position", ylab="Fst", col="#5f9ea0", pch=16)
 
-#General feature format (GFF) from EnsemblPlants
-# to process the GFF3 file
-
 # install.package("data.table")
 library("data.table")
 ## simply read in wouldn't work
@@ -31,11 +32,9 @@ gff <- fread("largedata/Zea_mays.B73_RefGen_v4.46.chromosome.Mt.gff3", skip="#",
 ## grep -v means select lines that not matching any of the specified patterns
 gff <- fread(cmd='grep -v "#" largedata/Zea_mays.B73_RefGen_v4.46.chromosome.Mt.gff3', header=FALSE, data.table=FALSE)
 
-#Work with GFF
 names(gff) <- c("seq", "source", "feature", "start", "end", "score", "strand", "phase", "att")
 table(gff$feature)
 
-#Get genes and upstream and downstream 5kb regions
 g <- subset(gff, feature %in% "gene")
 g$geneid <- gsub(".*gene:|;biotype.*", "", g$att)
 
@@ -51,17 +50,38 @@ gp_up$start <- gp_up$end - 5000
 ### get the 5k downstream of the + strand gene model
 gp_down <- gp
 gp_down$start <- gp_down$end + 1
-gp_down$end <- gp_down$start + 5000
+gp_down$end <- gp_down$start + 5000 
 
-##Get genes and upstream and downstream 5kb regions
+g <- subset(gff, feature %in% "gene")
+g$geneid <- gsub(".*gene:|;biotype.*", "", g$att)
+
+### - strand
+gm <- subset(g, strand %in% "-") 
+# nrow(gm) 82
+
+### get the 5k upstream of the + strand gene model
+gm_up <- gm
+gm_up$start <- gm_up$end + 1
+gm_up$end <- gm_up$start + 5000 
+
+### get the 5k downstream of the + strand gene model
+gm_down <- gm
+gm_down$end <- gm_down$start - 1
+gm_down$start <- gm_down$end - 5000 
+
+gup <- rbind(gp_up, gm_up)
+fwrite(gup, "cache/mt_gene_up5k.txt", sep="\t", row.names = FALSE, quote=FALSE)
+
+gdown <- rbind(gp_down, gm_down)
+fwrite(gdown, "cache/mt_gene_down5k.txt", sep="\t", row.names = FALSE, quote=FALSE)
 
 ### - strand
 gm <- subset(g, strand %in% "-") 
 dim(gm) # 82
+
 fwrite(g, "cache/mt_gene.txt", sep="\t", row.names = FALSE, quote=FALSE)
 
-
-##Intepret the theta results
+## Intepret the theta results
 library("data.table")
 library("GenomicRanges")
 library("plyr")
@@ -84,10 +104,10 @@ tb <- as.matrix(tb)
 
 out1 <- as.data.frame(grf[tb[,1]])
 out2 <- as.data.frame(grc[tb[,2]])
-
 ### for each genomic feature, find the sites with non-missing data
 out <- cbind(out1, out2[, "start"]) 
 names(out)[ncol(out)] <- "pos"
+
 
 #define unique identifier and merge with the thetas
 out$uid <- paste(out$seqnames, out$pos, sep="_")
@@ -139,25 +159,23 @@ get_mean_theta <- function(gf_file="cache/mt_gene_up5k.txt"){
   return(mx)
 }
 
-#Run the customized R function
-#apply the function
-up5k <- get_mean_theta(gf_file="cache/mt_gene_up5k.txt")
-down5k <- get_mean_theta(gf_file="cache/mt_gene_down5k.txt")
-gene_f <- get_mean_theta(gf_file="cache/mt_gene.txt")
 
 ## Plot the results
+### apply the function
+up5k <- get_mean_theta(gf_file="cache/mt_gene_up5k.txt")
+down5k <- get_mean_theta(gf_file="cache/mt_gene_down5k.txt")
+gene <- get_mean_theta(gf_file="cache/mt_gene.txt")
+
 library("ggplot2")
 
 up5k$feature <- "up 5k"
 down5k$feature <- "down 5k"
-gene_f$feature <- "genic"
+gene$feature <- "genic"
 res <- rbind(up5k, down5k)
 res_nongenic <- res
-#res_nongenic_f <- res_f
-res_nongenic_f$feature <- "intergenic"
-res_t_f <- rbind(res_f, gene_f, res_nongenic_f)
-
-ggplot(res, aes(x=feature, y=Pairwise, fill=feature)) + 
+res_nongenic$feature <- "intergenic"
+res_t <- rbind(res, gene, res_nongenic)
+ggplot(res_t, aes(x=feature, y=Pairwise, fill=feature)) + 
   geom_violin(trim=FALSE)+
   labs(title="Theta value", x="", y = "Log10 (theta)")+
   geom_boxplot(width=0.1, fill="white")+

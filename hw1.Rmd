@@ -1,0 +1,635 @@
+---
+title: "hw1"
+author: "Santos Barrera"
+date: "2/26/2020"
+output: html_document
+---
+
+# NGS data simulation using `wgsim`
+#### Type in the following command:
+
+```{bash, eval=FALSE}
+wgsim lambda.fa -e 0 -d 500 -N 5000 -1 100 -2 100 -r 0.01  -R 0 -X 0 -S 1234567 -h l1.read1.fq l1.read2.fq
+```
+
+---
+
+# Download Reference from EnsemblPlants
+
+Maize [reference genome](https://plants.ensembl.org/Zea_mays/Info/Index)
+
+#### Change to `largedata\lab4` folder:
+```{bash, eval=FALSE}
+cd largedata
+mkdir Thetas_Fst
+cd Thetas_Fst
+```
+
+
+#### Then use `wget` to download the reference genome:
+
+```{bash, eval=FALSE}
+wget ftp://ftp.ensemblgenomes.org/pub/plants/release-46/fasta/zea_mays/dna/Zea_mays.B73_RefGen_v4.dna.chromosome.Mt.fa.gz
+
+### then unzip it
+gunzip Zea_mays.B73_RefGen_v4.dna.chromosome.Mt.fa.gz
+```
+
+---
+
+# NGS data simulation using `wgsim`
+
+#### Type in the following command:
+
+```{bash, eval=FALSE}
+wgsim Zea_mays.B73_RefGen_v4.dna.chromosome.Mt.fa \
+-e 0 -d 500 -N 5000 -1 100 -2 100 -r 0.01  \
+-R 0 -X 0 -S 1234567 l1.read1.fq l1.read2.fq
+```
+
+- Reference (about 500k)
+  - `Zea_mays.B73_RefGen_v4.dna.chromosome.Mt.fa`
+- 20x coverage
+  - `N 5000`
+- PE 100bp
+  - `-1 100 -2 100`
+- Only SNP no Indel
+  - `-R 0 -X 0`
+- Mutation rate is low 
+  - `-r 0.01`
+
+---
+
+# NGS data simulation using `wgsim`
+
+## simulate 10 individals population 1
+
+```{bash, eval=FALSE}
+for i in {1..10}; do    wgsim Zea_mays.B73_RefGen_v4.dna.chromosome.Mt.fa -e 0 -d 500 -N 50000 -1 100 -2 100 -r 0.1  -R 0 -X 0 p1l$i.read1.fq l$i.read2.fq; done
+mv l1.read1.fq p1l1.read1.fq #(Change name pop 1. all 10 idividuals)
+
+```
+## simulate 10 individals population 2
+
+--
+```{bash, eval=FALSE}
+for i in {1..10}; do    wgsim Zea_mays.B73_RefGen_v4.dna.chromosome.Mt.fa -e 0 -d 500 -N 50000 -1 100 -2 100 -r 0.1  -R 0 -X 0 l$i.read1.fq l$i.read2.fq; done
+mv l1.read1.fq p2l1.read1.fq #(Change name pop 2. all 10 idividuals)
+
+```
+--
+#### check how many reads
+
+```{bash, eval=FALSE}
+wc -l p1l1.read1.fq 
+wc -l p2l1.read1.fq 
+# suppose to be 200,000 lines = 50,000 reads
+```
+
+---
+
+# A procedure to calculate $\theta$ and $F_{ST}$ values
+
+### 1. Align the NGS reads to the reference genome
+  - [bwa](https://github.com/lh3/bwa)
+  - [samtools](https://github.com/samtools/samtools)
+
+
+### 2. Calculate SFS 
+  - [ANGSD](http://www.popgen.dk/angsd/index.php/ANGSD)
+
+### 3. Calculate the thetas and Fst for each site
+  - ANGSD
+
+---
+# A procedure to calculate $\theta$ and $F_{ST}$ values
+
+### 1. Align the NGS reads to the reference genome
+
+```{bash, eval=FALSE}
+module load bwa samtools
+# index the reference genome
+bwa index Zea_mays.B73_RefGen_v4.dna.chromosome.Mt.fa
+# using bwa mem to align the reads to the reference genome 
+# => samtools to convert into bam file
+#Pop. 1
+bwa mem Zea_mays.B73_RefGen_v4.dna.chromosome.Mt.fa p1l1.read1.fq p1l1.read2.fq | samtools view -bSh - > p1l1.bam
+#pop. 2
+bwa mem Zea_mays.B73_RefGen_v4.dna.chromosome.Mt.fa p2l1.read1.fq p2l1.read2.fq | samtools view -bSh - > p2l1.bam
+```
+
+#### Do alignment for 2 individuals using bash loop:
+
+```{bash, eval=FALSE}
+# alignment pop.1
+for i in {1..10}; do bwa mem Zea_mays.B73_RefGen_v4.dna.chromosome.Mt.fa p1l$i.read1.fq p1l$i.read2.fq | samtools view -bSh - > p1l$i.bam; done
+# alignment pop.2
+for i in {1..10}; do bwa mem Zea_mays.B73_RefGen_v4.dna.chromosome.Mt.fa p2l$i.read1.fq p2l$i.read2.fq | samtools view -bSh - > p2l$i.bam; done
+
+# sort
+for i in *.bam; do samtools sort $i -o sorted_$i; done
+# index them
+for i in sorted*.bam; do samtools index $i; done
+```
+
+
+#### Check mapping statistics
+
+```{bash, eval=FALSE}
+samtools flagstat sorted_l1.bam
+```
+
+---
+
+# Submit a Slurm job (I couldn't do it)
+
+- We wrap our jobs in little batch scripts, which is nice because these also help make steps reproducible. 
+
+- To keep your directory organized, I usually keep a scripts directory (i.e., `slurm-script/` ) and log dir (i.e., `slurm-log` )  for Slurm’s logs.
+  - Tip: use these logs, as these are very helpful in debugging. I separate them from my project because they fill up directories rather quickly.
+
+- `D` sets your project directory.
+- `o` sets where standard output (of your batch script) goes.
+- `e` sets where standard error (of your batch script) goes.
+- `J` sets the job name.
+- `t` sets the time limit for the job, 24:00:00 indicates 24 hours.
+- `--mail`: will email you if the job is "END" or "FAIL"
+
+--
+
+
+```{bash, eval=FALSE}
+vi my_theta.sh
+
+  #!/bin/bash -l
+	#SBATCH -D /home/agro932/sybarreral/Agro932hw
+	#SBATCH -o /home/agro932/sybarreral/Agro932hw/slurm-log/stdout-%j.txt
+	#SBATCH -e /home/agro932/sybarreral/Agro932hw/slurm-log/stderr-%j.txt
+	#SBATCH -J theta
+	#SBATCH -t 1:00:00
+	#SBATCH --mail-user=sybarreral@huskers.unl.edu
+	#SBATCH --mail-type=END #email if ends
+	#SBATCH --mail-type=FAIL #email if fails
+	set -e
+	set -u
+
+# insert your script here
+module load bwa samtools
+# alignment pop.1
+cd largedata/Thetas_Fst/bam_files
+for i in {1..10}; do bwa mem Zea_mays.B73_RefGen_v4.dna.chromosome.Mt.fa p1l$i.read1.fq p1l$i.read2.fq | samtools view -bSh - > p1l$i.bam; done
+# alignment pop.2
+for i in {1..10}; do bwa mem Zea_mays.B73_RefGen_v4.dna.chromosome.Mt.fa p2l$i.read1.fq p2l$i.read2.fq | samtools view -bSh - > p2l$i.bam; done
+# sort
+for i in *.bam; do samtools sort $i -o sorted_$i; done
+# index them
+for i in sorted*.bam; do samtools index $i; done
+
+
+```
+
+---
+- submit the job via `sbatch`:
+
+```{bash, eval=FALSE}
+sbatch --licenses=common --ntasks=1 --mem=5G slurm-script/my_theta.sh
+
+## check your job status
+squeue | grep "YOUR USER ID"
+```
+
+
+---
+
+# A procedure to calculate $\theta$ values
+
+### 2. Calculate SFS using `ANGSD`
+
+#### Install ANGSD first
+
+```{bash, eval=FALSE}
+cd ~/bin/ # if you don't have one, do `mkdir bin`
+git clone https://github.com/samtools/htslib.git
+git clone https://github.com/ANGSD/angsd.git 
+cd htslib; make; 
+cd ../angsd;
+make HTSSRC=../htslib
+```
+
+#### run angsd
+
+```{bash, eval=FALSE}
+#write the bam files to a txt file
+mkdir bam_files
+mv sorted*.bam bam_files
+cd bam_files/
+ls sorted_p1*.bam > bam.txt
+#see file 1
+cat bam_p1.txt 
+ls sorted_p2*.bam > bam.txt
+#see file 2
+cat bam_p2.txt 
+```
+
+---
+
+# A procedure to calculate $\theta$ values
+
+
+```{bash, eval=FALSE}
+#calculate Sfs 
+../../../../angsd/angsd -bam  bam.txt -doSaf 1 -anc ../Zea_mays.B73_RefGen_v4.dna.chromosome.Mt.fa -GL 1  -out out
+# use realSFS to calculate sfs
+../../../../angsd/misc/realSFS out.saf.idx > out.sfs
+```
+
+#### Copy the result to `cache/` folder
+
+```{bash, eval=FALSE}
+## cp sfs to the cache/ folder
+cp out.sfs ../../../cache/
+```
+
+
+### 3. Calculate the thetas for each site
+
+The output from the above command are two files out.thetas.gz and out.thetas.idx. A formal description of these files can be found in the doc/formats.pdf in the angsd package. It is possible to extract the logscale persite thetas using the ./thetaStat print program.
+
+```{bash, eval=FALSE}
+../../../../angsd/angsd -bam bam.txt -out out -doThetas 1 -doSaf 1 -pest out.sfs -anc ../Zea_mays.B73_RefGen_v4.dna.chromosome.Mt.fa -GL 1
+../../../../angsd/misc/thetaStat print out.thetas.idx > theta.txt
+## cp theta to the cache/ folder
+cp theta.txt ../../../cache/
+```
+
+---
+
+# A procedure to calculate $F_{ST}$
+
+#### Create two list bam files
+```{bash, eval=FALSE}
+cp bam_p1.txt pop1.txt
+cp bam_p2.txt pop2.txt
+```
+
+#### Two population Fst
+```{bash, eval=FALSE}
+# first calculate per pop saf for each populatoin
+../../../../angsd/angsd -b pop1.txt -anc ../Zea_mays.B73_RefGen_v4.dna.chromosome.Mt.fa -out pop1 -dosaf 1 -gl 1
+../../../../angsd/angsd -b pop2.txt -anc ../Zea_mays.B73_RefGen_v4.dna.chromosome.Mt.fa -out pop2 -dosaf 1 -gl 1
+# calculate the 2dsfs prior
+../../../../angsd/misc/realSFS pop1.saf.idx pop2.saf.idx > pop1.pop2.ml
+# prepare the fst for easy window analysis etc
+../../../../angsd/misc/realSFS fst index pop1.saf.idx pop2.saf.idx -sfs pop1.pop2.ml -fstout out
+
+# get the global estimate
+../../../../angsd/misc/realSFS fst stats out.fst.idx
+# below is not tested that much, but seems to work
+../../../../angsd/misc/realSFS fst stats2 out.fst.idx -win 500 -step 100 > fst_win.txt
+
+```
+
+#### Copy the result to `cache/` folder
+
+```{bash, eval=FALSE}
+## cp sfs to the cache/ folder
+cp fst_win.txt ../../../cache/
+```
+
+---
+
+# Visualize the results
+
+In local computer, using `R`:
+
+#### Barplot for SFS
+
+```{r, eval=FALSE}
+#Barplot for SFS
+sfs <- scan('cache/out.sfs')
+sfs <- sfs[-c(1,length(sfs))]
+sfs <- sfs/sum(sfs)
+
+barplot(sfs,names=1:length(sfs), main='SFS')
+barplot(sfs, col="#cdc0b0", xlab="No. of segregating sites", 
+        ylab="Minor allele frequency", 
+        names=1:length(sfs))
+```
+
+#### Histgram distribution of the theta values
+
+```{r, eval=FALSE}
+library("data.table")
+#Histgram distribution of the theta values
+#theta <- read.table("cache/theta.txt", header=TRUE)
+theta <- fread("cache/theta.txt", data.table =FALSE)
+hist(theta$Pairwise) 
+hist(theta$Pairwise, col="green", xlab="Theta pairwise values (log10)") 
+```
+
+#### Scatter plot of the Fst values
+
+
+```{r, eval=FALSE}
+#Scatter plot of the Fst values
+fst <- read.table("cache/fst_win.txt", skip=1, header=FALSE)
+names(fst)[c(3,5)] <- c("midp", "fst")
+plot(fst$midp, fst$fst, xlab="Physical position", ylab="Fst", col="#5f9ea0", pch=16)
+```
+
+---
+
+# General feature format (GFF) from EnsemblPlants
+
+Maize [reference genome](https://plants.ensembl.org/Zea_mays/Info/Index)
+
+change to `largedata\lab4` folder:
+
+```{bash, eval=FALSE}
+wget ftp://ftp.ensemblgenomes.org/pub/plants/release-46/fasta/zea_mays/dna/Zea_mays.B73_RefGen_v4.dna.chromosome.Mt.fa.gz
+
+### then unzip it
+gunzip Zea_mays.B73_RefGen_v4.dna.chromosome.Mt.fa.gz
+```
+
+Similarly, we will download and unzip the [Mt GFF3](ftp://ftp.ensemblgenomes.org/pub/plants/release-46/gff3/zea_mays/Zea_mays.B73_RefGen_v4.46.chromosome.Mt.gff3.gz) file
+
+--
+
+#### Use R to process the GFF3 file
+
+```{r, eval=FALSE}
+# install.package("data.table")
+library("data.table")
+## simply read in wouldn't work
+gff <- fread("largedata/Zea_mays.B73_RefGen_v4.46.chromosome.Mt.gff3", skip="#", header=FALSE, data.table=FALSE)
+## grep -v means select lines that not matching any of the specified patterns
+gff <- fread(cmd='grep -v "#" largedata/Zea_mays.B73_RefGen_v4.46.chromosome.Mt.gff3', header=FALSE, data.table=FALSE)
+
+```
+
+---
+
+# General feature format (GFF) version 3
+
+```
+  V1      V2         V3   V4     V5 V6 V7 V8
+1 Mt Gramene chromosome    1 569630  .  .  .
+2 Mt ensembl       gene 6391   6738  .  +  .
+3 Mt    NCBI       mRNA 6391   6738  .  +  .
+4 Mt    NCBI       exon 6391   6738  .  +  .
+5 Mt    NCBI        CDS 6391   6738  .  +  0
+6 Mt ensembl       gene 6951   8285  .  +  .
+                  V9
+1   ID=chromosome:Mt;Alias=AY506529.1,NC_007982.1;Is_circular=true
+2   ID=gene:ZeamMp002;biotype=protein_coding;description=orf115-a1;
+3   ID=transcript:ZeamMp002;Parent=gene:ZeamMp002;
+4   Parent=transcript:ZeamMp002;Name=ZeamMp002.exon1;constitutive=1;ensembl_end_phase=0;
+5   ID=CDS:ZeamMp002;Parent=transcript:ZeamMp002;
+6   ID=gene:ZeamMp003;biotype=protein_coding;description=orf444
+```
+
+---
+
+# General feature format (GFF) version 3
+
+```
+  V1      V2         V3   V4     V5 V6 V7 V8
+1 Mt Gramene chromosome    1 569630  .  .  .
+2 Mt ensembl       gene 6391   6738  .  +  .
+                  V9
+1   ID=chromosome:Mt;Alias=AY506529.1,NC_007982.1;Is_circular=true
+2   ID=gene:ZeamMp002;biotype=protein_coding;description=orf115-a1;
+```
+--------------
+
+- 1	__sequence__:	The name of the sequence where the feature is located.
+
+- 2	__source__:	Keyword identifying the source of the feature, like a program (e.g. RepeatMasker) or an organization (like ensembl).
+
+- 3	__feature__:	The feature type name, like "gene" or "exon". 
+  - In a well structured GFF file, all the children features always follow their parents in a single block (so all exons of a transcript are put after their parent "transcript" feature line and before any other parent transcript line).
+  
+- 4	__start__:	Genomic start of the feature, with a 1-base offset. 
+  - This is in contrast with other 0-offset half-open sequence formats, like [BED]().
+ 
+- 5	__end__:	Genomic end of the feature, with a 1-base offset. 
+  - This is the same end coordinate as it is in 0-offset half-open sequence formats, like BED.
+
+- 6	__score__:	Numeric value that generally indicates the confidence of the source in the annotated feature. 
+  - A value of "." (a dot) is used to define a null value.
+  
+- 7	__strand__:	Single character that indicates the strand of the feature. 
+  - it can assume the values of "+" (positive, or 5' -> 3'), 
+  - "-", (negative, or 3' -> 5'), "." (undetermined).
+  
+- 8	__phase__:	phase of CDS (__means CoDing Sequence__) features. 
+  - The phase indicates where the feature begins with reference to the reading frame. 
+  - The phase is one of the integers 0, 1, or 2, indicating the number of bases that should be removed from the beginning of this feature to reach the first base of the next codon.
+  
+- 9	__attributes__:	All the other information pertaining to this feature. 
+  - The format, structure and content of this field is the one which varies the most between the three competing file formats.
+
+---
+
+# Work with GFF
+
+```{r, eval=FALSE}
+names(gff) <- c("seq", "source", "feature", "start", "end", "score", "strand", "phase", "att")
+table(gff$feature)
+```
+
+### Get genes and upstream and downstream 5kb regions
+
+```{r, eval=FALSE}
+g <- subset(gff, feature %in% "gene")
+g$geneid <- gsub(".*gene:|;biotype.*", "", g$att)
+
+### + strand
+gp <- subset(g, strand %in% "+") 
+# nrow(gp) 75
+
+### get the 5k upstream of the + strand gene model
+gp_up <- gp
+gp_up$end <- gp_up$start - 1
+gp_up$start <- gp_up$end - 5000 
+
+### get the 5k downstream of the + strand gene model
+gp_down <- gp
+gp_down$start <- gp_down$end + 1
+gp_down$end <- gp_down$start + 5000 
+```
+
+---
+
+
+### Get genes and upstream and downstream 5kb regions
+
+```{r echo=FALSE, eval=FALSE}
+g <- subset(gff, feature %in% "gene")
+g$geneid <- gsub(".*gene:|;biotype.*", "", g$att)
+
+### - strand
+gm <- subset(g, strand %in% "-") 
+# nrow(gm) 82
+
+### get the 5k upstream of the + strand gene model
+gm_up <- gm
+gm_up$start <- gm_up$end + 1
+gm_up$end <- gm_up$start + 5000 
+
+### get the 5k downstream of the + strand gene model
+gm_down <- gm
+gm_down$end <- gm_down$start - 1
+gm_down$start <- gm_down$end - 5000 
+
+gup <- rbind(gp_up, gm_up)
+fwrite(gup, "cache/mt_gene_up5k.txt", sep="\t", row.names = FALSE, quote=FALSE)
+
+gdown <- rbind(gp_down, gm_down)
+fwrite(gdown, "cache/mt_gene_down5k.txt", sep="\t", row.names = FALSE, quote=FALSE)
+```
+
+
+```{r, eval=FALSE}
+### - strand
+gm <- subset(g, strand %in% "-") 
+dim(gm) # 82
+
+fwrite(g, "cache/mt_gene.txt", sep="\t", row.names = FALSE, quote=FALSE)
+```
+
+---
+
+## Intepret the theta results
+
+
+```{r, eval=FALSE}
+library("data.table")
+library("GenomicRanges")
+library("plyr")
+
+
+theta <- fread("cache/theta.txt", data.table=FALSE)
+names(theta)[1] <- "seq"
+
+up5k <- read.table("cache/mt_gene_up5k.txt", header=TRUE)
+
+### define the subject file for theta values
+grc <- with(theta, GRanges(seqnames=seq, IRanges(start=Pos, end=Pos)))
+
+### define the query file for genomic feature
+grf <- with(up5k, GRanges(seqnames=seq, IRanges(start=start, end=end), geneid=geneid))
+    
+### find overlaps between the two
+tb <- findOverlaps(query=grf, subject=grc)
+tb <- as.matrix(tb)
+    
+out1 <- as.data.frame(grf[tb[,1]])
+out2 <- as.data.frame(grc[tb[,2]])
+### for each genomic feature, find the sites with non-missing data
+out <- cbind(out1, out2[, "start"]) 
+names(out)[ncol(out)] <- "pos"
+
+
+```
+
+---
+
+## Intepret the theta results
+
+
+```{r, eval=FALSE}
+#define unique identifier and merge with the thetas
+out$uid <- paste(out$seqnames, out$pos, sep="_")
+theta$uid <- paste(theta$seq, theta$Pos, sep="_")
+
+df <- merge(out, theta[, c(-1, -2)], by="uid")
+# for each upstream 5k region, how many theta values
+
+mx <- ddply(df, .(geneid), summarise,
+            Pairwise = mean(Pairwise, na.rm=TRUE),
+            thetaH = mean(thetaH, na.rm=TRUE),
+            nsites = length(uid))
+
+```
+
+---
+
+## Intepret the theta results
+
+Copy and paste everything above, and pack it into an `R` function:
+
+```{r, eval=FALSE}
+get_mean_theta <- function(gf_file="cache/mt_gene_up5k.txt"){
+  # gf_file: gene feature file [chr, ="cache/mt_gene_up5k.txt"]
+  
+  theta <- fread("cache/theta.txt", data.table=FALSE)
+  names(theta)[1] <- "seq"
+
+  up5k <- read.table(gf_file, header=TRUE)
+
+  ### define the subject file for theta values
+  grc <- with(theta, GRanges(seqnames=seq, IRanges(start=Pos, end=Pos)))
+
+  ### define the query file for genomic feature
+  grf <- with(up5k, GRanges(seqnames=seq, IRanges(start=start, end=end), geneid=geneid))
+    
+  ### find overlaps between the two
+  tb <- findOverlaps(query=grf, subject=grc)
+  tb <- as.matrix(tb)
+    
+  out1 <- as.data.frame(grf[tb[,1]])
+  out2 <- as.data.frame(grc[tb[,2]])
+  ### for each genomic feature, find the sites with non-missing data
+  out <- cbind(out1, out2[, "start"]) 
+  names(out)[ncol(out)] <- "pos"
+
+  #define unique identifier and merge with the thetas
+  out$uid <- paste(out$seqnames, out$pos, sep="_")
+  theta$uid <- paste(theta$seq, theta$Pos, sep="_")
+
+  df <- merge(out, theta[, c(-1, -2)], by="uid")
+  # for each upstream 5k region, how many theta values
+
+  mx <- ddply(df, .(geneid), summarise,
+            Pairwise = mean(Pairwise, na.rm=TRUE),
+            thetaH = mean(thetaH, na.rm=TRUE),
+            nsites = length(uid))
+  return(mx)
+}
+```
+
+---
+
+## Plot the results
+
+Run the customized R function
+
+```{r, eval=FALSE}
+### apply the function
+up5k <- get_mean_theta(gf_file="cache/mt_gene_up5k.txt")
+down5k <- get_mean_theta(gf_file="cache/mt_gene_down5k.txt")
+gene <- get_mean_theta(gf_file="cache/mt_gene.txt")
+```
+
+And then plot the results:
+
+```{r, eval=FALSE}
+library("ggplot2")
+
+up5k$feature <- "up 5k"
+down5k$feature <- "down 5k"
+gene$feature <- "genic"
+res <- rbind(up5k, down5k)
+res_nongenic <- res
+res_nongenic$feature <- "intergenic"
+res_t <- rbind(res, gene, res_nongenic)
+ggplot(res_t, aes(x=feature, y=Pairwise, fill=feature)) + 
+  geom_violin(trim=FALSE)+
+  labs(title="Theta value", x="", y = "Log10 (theta)")+
+  geom_boxplot(width=0.1, fill="white")+
+  scale_fill_brewer(palette="Blues") + 
+  theme_classic()
+
+```

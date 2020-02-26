@@ -1,0 +1,147 @@
+
+###NGS data simulation using wgsim
+wgsim lambda.fa -e 0 -d 500 -N 5000 -1 100 -2 100 -r 0.01  -R 0 -X 0 -S 1234567 -h l1.read1.fq l1.read2.fq
+
+#wget to download the reference genome
+wget ftp://ftp.ensemblgenomes.org/pub/plants/release-46/fasta/zea_mays/dna/Zea_mays.B73_RefGen_v4.dna.chromosome.Mt.fa.gz
+#unzip the reference genome
+gunzip Zea_mays.B73_RefGen_v4.dna.chromosome.Mt.fa.gz
+
+wgsim Zea_mays.B73_RefGen_v4.dna.chromosome.Mt.fa -e 0 -d 500 -N 5000 -1 100 -2 100 -r 0.01  -R 0 -X 0 -S 1234567 l1.read1.fq l1.read2.fq
+
+
+###Simulate pop 1
+for i in {1..10}; do    wgsim Zea_mays.B73_RefGen_v4.dna.chromosome.Mt.fa -e 0 -d 500 -N 50000 -1 100 -2 100 -r 0.1  -R 0 -X 0 l$i.read1.fq l$i.read2.fq; done
+#change name pop 1
+mv l1.read1.fq p1l1.read1.fq (all 10 idividuals)
+
+###Simulate pop 2
+for i in {1..10}; do    wgsim Zea_mays.B73_RefGen_v4.dna.chromosome.Mt.fa -e 0 -d 500 -N 50000 -1 100 -2 100 -r 0.1  -R 0 -X 0 l$i.read1.fq l$i.read2.fq; done
+#change name pop 1
+mv l1.read1.fq p2l1.read1.fq (all 10 idividuals)
+
+#check reads
+wc -l p1l1.read1.fq 
+wc -l p2l1.read1.fq 
+
+
+###To calculate θ and Fst 
+
+###1.Align the NGS reads to the reference genome
+module load bwa samtools
+# index the reference genome
+bwa index Zea_mays.B73_RefGen_v4.dna.chromosome.Mt.fa
+
+# using bwa mem to align the reads to the reference genome 
+# => samtools to convert into bam file
+
+#pop 1
+bwa mem Zea_mays.B73_RefGen_v4.dna.chromosome.Mt.fa p1l1.read1.fq p1l1.read2.fq | samtools view -bSh - > p1l1.bam
+#Do alignment for 10 individuals using bash loop
+for i in {1..10}; do bwa mem Zea_mays.B73_RefGen_v4.dna.chromosome.Mt.fa p1l$i.read1.fq p1l$i.read2.fq | samtools view -bSh - > p1l$i.bam; done
+
+#pop 2
+bwa mem Zea_mays.B73_RefGen_v4.dna.chromosome.Mt.fa p2l1.read1.fq p2l1.read2.fq | samtools view -bSh - > p2l1.bam
+#Do alignment for 10 individuals using bash loop
+for i in {1..10}; do bwa mem Zea_mays.B73_RefGen_v4.dna.chromosome.Mt.fa p2l$i.read1.fq p2l$i.read2.fq | samtools view -bSh - > p2l$i.bam; done
+
+#sort
+for i in *.bam; do samtools sort $i -o sorted_$i; done
+#index them
+for i in sorted*.bam; do samtools index $i; done
+
+#Check mapping statistics
+samtools flagstat sorted_l1.bam
+
+#Submit a Slurm job I couldn't do it 
+	vi my_theta.sh
+
+	#!/bin/bash -l
+	#SBATCH -D /home/agro932/sybarreral/Agro932hw
+	#SBATCH -o /home/agro932/sybarreral/Agro932hw/slurm-log/stdout-%j.txt
+	#SBATCH -e /home/agro932/sybarreral/Agro932hw/slurm-log/stderr-%j.txt
+	#SBATCH -J theta
+	#SBATCH -t 1:00:00
+	#SBATCH --mail-user=sybarreral@huskers.unl.edu
+	#SBATCH --mail-type=END #email if ends
+	#SBATCH --mail-type=FAIL #email if fails
+	set -e
+	set -u
+
+	module load bwa samtools
+
+	cd largedata/Thetas_Fst/bam_files
+	for i in {1..10}; do bwa mem Zea_mays.B73_RefGen_v4.dna.chromosome.Mt.fa p1l$i.read1.fq p1l$i.read2.fq | samtools view -bSh - > p1l$i.bam; done
+	for i in {1..10}; do bwa mem Zea_mays.B73_RefGen_v4.dna.chromosome.Mt.fa p2l$i.read1.fq p2l$i.read2.fq | samtools view -bSh - > p2l$i.bam; done
+	# sort
+	for i in *.bam; do samtools sort $i -o sorted_$i; done
+	# index them
+	for i in sorted*.bam; do samtools index $i; done
+
+#submit the job via sbatch:
+sbatch --licenses=common --ntasks=1 --mem=5G slurm-script/my_theta.sh
+#sbatch: error: Unable to open file slurm-script/my_theta.sh
+#check your job status
+squeue | grep "YOUR USER ID"
+
+
+
+###2.Calculate SFS using ANGSD
+#Install ANGSD first (already done lab3)
+#cd ~/bin/ # if you don't have one, do `mkdir bin`
+#git clone https://github.com/samtools/htslib.git
+#git clone https://github.com/ANGSD/angsd.git 
+#cd htslib; make; 
+#cd ../angsd;
+#make HTSSRC=../htslib
+
+#write the bam files to a txt file
+mkdir bam_files
+mv sorted*.bam bam_files
+cd bam_files/
+ls sorted_p1*.bam > bam.txt
+#see file 1
+cat bam_p1.txt 
+ls sorted_p2*.bam > bam.txt
+#see file 2
+cat bam_p2.txt 
+
+
+###A procedure to calculate θθ values
+#calculate Sfs 
+../../../../angsd/angsd -bam  bam.txt -doSaf 1 -anc ../Zea_mays.B73_RefGen_v4.dna.chromosome.Mt.fa -GL 1  -out out
+#use realSFS to calculate sfs
+../../../../angsd/misc/realSFS out.saf.idx > out.sfs
+##cp sfs to the cache/ folder
+cp out.sfs ../../../cache/
+
+
+
+###3. Calculate the thetas for each site
+../../../../angsd/angsd -bam bam.txt -out out -doThetas 1 -doSaf 1 -pest out.sfs -anc ../Zea_mays.B73_RefGen_v4.dna.chromosome.Mt.fa -GL 1
+../../../../angsd/misc/thetaStat print out.thetas.idx > theta.txt
+# cp theta to the cache/ folder
+cp theta.txt ../../../cache/ 
+
+
+
+###A procedure to calculate Fst
+#Create two list bam files
+cp bam_p1.txt pop1.txt
+cp bam_p2.txt pop2.txt
+
+#Two population Fst
+# first calculate per pop saf for each populatoin
+../../../../angsd/angsd -b pop1.txt -anc ../Zea_mays.B73_RefGen_v4.dna.chromosome.Mt.fa -out pop1 -dosaf 1 -gl 1
+../../../../angsd/angsd -b pop2.txt -anc ../Zea_mays.B73_RefGen_v4.dna.chromosome.Mt.fa -out pop2 -dosaf 1 -gl 1
+# calculate the 2dsfs prior
+../../../../angsd/misc/realSFS pop1.saf.idx pop2.saf.idx > pop1.pop2.ml
+# prepare the fst for easy window analysis etc
+../../../../angsd/misc/realSFS fst index pop1.saf.idx pop2.saf.idx -sfs pop1.pop2.ml -fstout out
+# get the global estimate
+../../../../angsd/misc/realSFS fst stats out.fst.idx
+# below is not tested that much, but seems to work
+../../../../angsd/misc/realSFS fst stats2 out.fst.idx -win 500 -step 100 > fst_win.txt
+## cp sfs to the cache/ folder
+cp fst_win.txt ../../../cache/
+

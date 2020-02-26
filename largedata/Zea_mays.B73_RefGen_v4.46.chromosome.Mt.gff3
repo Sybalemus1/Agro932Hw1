@@ -1,0 +1,1106 @@
+##gff-version 3
+##sequence-region   Mt 1 569630
+#!genome-build Gramene B73 RefGen_v4
+#!genome-version B73_RefGen_v4
+#!genome-date 2017-02
+#!genome-build-accession GCA_000005005.6
+#!genebuild-last-updated 2016-12
+Mt	Gramene	chromosome	1	569630	.	.	.	ID=chromosome:Mt;Alias=AY506529.1,NC_007982.1;Is_circular=true
+###
+Mt	ensembl	gene	6391	6738	.	+	.	ID=gene:ZeamMp002;biotype=protein_coding;description=orf115-a1;gene_id=ZeamMp002;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	6391	6738	.	+	.	ID=transcript:ZeamMp002;Parent=gene:ZeamMp002;biotype=protein_coding;transcript_id=ZeamMp002
+Mt	NCBI	exon	6391	6738	.	+	.	Parent=transcript:ZeamMp002;Name=ZeamMp002.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp002.exon1;rank=1
+Mt	NCBI	CDS	6391	6738	.	+	0	ID=CDS:ZeamMp002;Parent=transcript:ZeamMp002;protein_id=ZeamMp002
+###
+Mt	ensembl	gene	6951	8285	.	+	.	ID=gene:ZeamMp003;biotype=protein_coding;description=orf444;gene_id=ZeamMp003;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	6951	8285	.	+	.	ID=transcript:ZeamMp003;Parent=gene:ZeamMp003;biotype=protein_coding;transcript_id=ZeamMp003
+Mt	NCBI	exon	6951	8285	.	+	.	Parent=transcript:ZeamMp003;Name=ZeamMp003.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp003.exon1;rank=1
+Mt	NCBI	CDS	6951	8285	.	+	0	ID=CDS:ZeamMp003;Parent=transcript:ZeamMp003;protein_id=ZeamMp003
+###
+Mt	ensembl	gene	8752	9915	.	+	.	ID=gene:ZeamMp004;biotype=protein_coding;description=orf387;gene_id=ZeamMp004;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	8752	9915	.	+	.	ID=transcript:ZeamMp004;Parent=gene:ZeamMp004;biotype=protein_coding;transcript_id=ZeamMp004
+Mt	NCBI	exon	8752	9915	.	+	.	Parent=transcript:ZeamMp004;Name=ZeamMp004.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp004.exon1;rank=1
+Mt	NCBI	CDS	8752	9915	.	+	0	ID=CDS:ZeamMp004;Parent=transcript:ZeamMp004;protein_id=ZeamMp004
+###
+Mt	ensembl	gene	11111	13315	.	-	.	ID=gene:ZeamMp005;biotype=protein_coding;description=orf734;gene_id=ZeamMp005;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	11111	13315	.	-	.	ID=transcript:ZeamMp005;Parent=gene:ZeamMp005;biotype=protein_coding;transcript_id=ZeamMp005
+Mt	NCBI	exon	11111	13315	.	-	.	Parent=transcript:ZeamMp005;Name=ZeamMp005.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp005.exon1;rank=1
+Mt	NCBI	CDS	11111	13315	.	-	0	ID=CDS:ZeamMp005;Parent=transcript:ZeamMp005;protein_id=ZeamMp005
+###
+Mt	ensembl	gene	17513	17863	.	-	.	ID=gene:ZeamMp006;biotype=protein_coding;description=orf116-a;gene_id=ZeamMp006;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	17513	17863	.	-	.	ID=transcript:ZeamMp006;Parent=gene:ZeamMp006;biotype=protein_coding;transcript_id=ZeamMp006
+Mt	NCBI	exon	17513	17863	.	-	.	Parent=transcript:ZeamMp006;Name=ZeamMp006.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp006.exon1;rank=1
+Mt	NCBI	CDS	17513	17863	.	-	0	ID=CDS:ZeamMp006;Parent=transcript:ZeamMp006;protein_id=ZeamMp006
+###
+Mt	ensembl	gene	18047	18793	.	+	.	ID=gene:ZeamMp007;biotype=protein_coding;description=orf248;gene_id=ZeamMp007;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	18047	18793	.	+	.	ID=transcript:ZeamMp007;Parent=gene:ZeamMp007;biotype=protein_coding;transcript_id=ZeamMp007
+Mt	NCBI	exon	18047	18793	.	+	.	Parent=transcript:ZeamMp007;Name=ZeamMp007.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp007.exon1;rank=1
+Mt	NCBI	CDS	18047	18793	.	+	0	ID=CDS:ZeamMp007;Parent=transcript:ZeamMp007;protein_id=ZeamMp007
+###
+Mt	ensembl	gene	19813	20889	.	+	.	ID=gene:ZeamMp008;biotype=protein_coding;description=rps4;gene_id=ZeamMp008;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	19813	20889	.	+	.	ID=transcript:ZeamMp008;Parent=gene:ZeamMp008;biotype=protein_coding;transcript_id=ZeamMp008
+Mt	NCBI	exon	19813	20889	.	+	.	Parent=transcript:ZeamMp008;Name=ZeamMp008.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp008.exon1;rank=1
+Mt	NCBI	CDS	19813	20889	.	+	0	ID=CDS:ZeamMp008;Parent=transcript:ZeamMp008;protein_id=ZeamMp008
+###
+Mt	ensembl	gene	21087	21434	.	-	.	ID=gene:ZeamMp009;biotype=protein_coding;description=orf115-b;gene_id=ZeamMp009;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	21087	21434	.	-	.	ID=transcript:ZeamMp009;Parent=gene:ZeamMp009;biotype=protein_coding;transcript_id=ZeamMp009
+Mt	NCBI	exon	21087	21434	.	-	.	Parent=transcript:ZeamMp009;Name=ZeamMp009.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp009.exon1;rank=1
+Mt	NCBI	CDS	21087	21434	.	-	0	ID=CDS:ZeamMp009;Parent=transcript:ZeamMp009;protein_id=ZeamMp009
+###
+Mt	ensembl	gene	21403	22593	.	+	.	ID=gene:ZeamMp010;biotype=protein_coding;description=orf396;gene_id=ZeamMp010;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	21403	22593	.	+	.	ID=transcript:ZeamMp010;Parent=gene:ZeamMp010;biotype=protein_coding;transcript_id=ZeamMp010
+Mt	NCBI	exon	21403	22593	.	+	.	Parent=transcript:ZeamMp010;Name=ZeamMp010.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp010.exon1;rank=1
+Mt	NCBI	CDS	21403	22593	.	+	0	ID=CDS:ZeamMp010;Parent=transcript:ZeamMp010;protein_id=ZeamMp010
+###
+Mt	ensembl	gene	21565	22593	.	+	.	ID=gene:ZeamMp011;biotype=protein_coding;description=orf342;gene_id=ZeamMp011;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	21565	22593	.	+	.	ID=transcript:ZeamMp011;Parent=gene:ZeamMp011;biotype=protein_coding;transcript_id=ZeamMp011
+Mt	NCBI	exon	21565	22593	.	+	.	Parent=transcript:ZeamMp011;Name=ZeamMp011.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp011.exon1;rank=1
+Mt	NCBI	CDS	21565	22593	.	+	0	ID=CDS:ZeamMp011;Parent=transcript:ZeamMp011;protein_id=ZeamMp011
+###
+Mt	ensembl	gene	26910	27212	.	+	.	ID=gene:ZeamMp012;biotype=protein_coding;description=nad4L;gene_id=ZeamMp012;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	26910	27212	.	+	.	ID=transcript:ZeamMp012;Parent=gene:ZeamMp012;biotype=protein_coding;transcript_id=ZeamMp012
+Mt	NCBI	exon	26910	27212	.	+	.	Parent=transcript:ZeamMp012;Name=ZeamMp012.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp012.exon1;rank=1
+Mt	NCBI	CDS	26910	27212	.	+	0	ID=CDS:ZeamMp012;Parent=transcript:ZeamMp012;protein_id=ZeamMp012
+###
+Mt	ensembl	gene	27219	27551	.	-	.	ID=gene:ZeamMp013;biotype=protein_coding;description=orf110-a;gene_id=ZeamMp013;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	27219	27551	.	-	.	ID=transcript:ZeamMp013;Parent=gene:ZeamMp013;biotype=protein_coding;transcript_id=ZeamMp013
+Mt	NCBI	exon	27219	27551	.	-	.	Parent=transcript:ZeamMp013;Name=ZeamMp013.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp013.exon1;rank=1
+Mt	NCBI	CDS	27219	27551	.	-	0	ID=CDS:ZeamMp013;Parent=transcript:ZeamMp013;protein_id=ZeamMp013
+###
+Mt	ensembl	gene	27503	27883	.	+	.	ID=gene:ZeamMp014;biotype=protein_coding;description=orf126-a;gene_id=ZeamMp014;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	27503	27883	.	+	.	ID=transcript:ZeamMp014;Parent=gene:ZeamMp014;biotype=protein_coding;transcript_id=ZeamMp014
+Mt	NCBI	exon	27503	27883	.	+	.	Parent=transcript:ZeamMp014;Name=ZeamMp014.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp014.exon1;rank=1
+Mt	NCBI	CDS	27503	27883	.	+	0	ID=CDS:ZeamMp014;Parent=transcript:ZeamMp014;protein_id=ZeamMp014
+###
+Mt	ensembl	gene	37491	37868	.	-	.	ID=gene:ZeamMp015;biotype=protein_coding;description=orf125;gene_id=ZeamMp015;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	37491	37868	.	-	.	ID=transcript:ZeamMp015;Parent=gene:ZeamMp015;biotype=protein_coding;transcript_id=ZeamMp015
+Mt	NCBI	exon	37491	37868	.	-	.	Parent=transcript:ZeamMp015;Name=ZeamMp015.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp015.exon1;rank=1
+Mt	NCBI	CDS	37491	37868	.	-	0	ID=CDS:ZeamMp015;Parent=transcript:ZeamMp015;protein_id=ZeamMp015
+###
+Mt	Ensembl_Plants	ncRNA_gene	42663	42734	.	+	.	ID=gene:ENSRNA049451776;Name=tRNA-Asn;biotype=tRNA;description=tRNA-Asn for anticodon GUU;gene_id=ENSRNA049451776;logic_name=trnascan_gene
+Mt	Ensembl_Plants	tRNA	42663	42734	.	+	.	ID=transcript:ENSRNA049451776-T1;Parent=gene:ENSRNA049451776;biotype=tRNA;transcript_id=ENSRNA049451776-T1
+Mt	Ensembl_Plants	exon	42663	42734	.	+	.	Parent=transcript:ENSRNA049451776-T1;Name=ENSRNA049451776-E1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ENSRNA049451776-E1;rank=1
+###
+Mt	ensembl	ncRNA_gene	42663	42734	.	+	.	ID=gene:ZeamMt001;biotype=tRNA;description=trnN-a1-cttRNA-Asn;gene_id=ZeamMt001;logic_name=organellar_genes_ncbi
+Mt	NCBI	tRNA	42663	42734	.	+	.	ID=transcript:ZeamMt001;Parent=gene:ZeamMt001;biotype=tRNA;transcript_id=ZeamMt001
+Mt	NCBI	exon	42663	42734	.	+	.	Parent=transcript:ZeamMt001;Name=ZeamMt001.exon1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ZeamMt001.exon1;rank=1
+###
+Mt	ensembl	ncRNA_gene	43362	43435	.	-	.	ID=gene:ZeamMt002;biotype=tRNA;description=trnD-a1tRNA-Asp;gene_id=ZeamMt002;logic_name=organellar_genes_ncbi
+Mt	NCBI	tRNA	43362	43435	.	-	.	ID=transcript:ZeamMt002;Parent=gene:ZeamMt002;biotype=tRNA;transcript_id=ZeamMt002
+Mt	NCBI	exon	43362	43435	.	-	.	Parent=transcript:ZeamMt002;Name=ZeamMt002.exon1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ZeamMt002.exon1;rank=1
+###
+Mt	ensembl	ncRNA_gene	44163	44236	.	+	.	ID=gene:ZeamMt003;biotype=tRNA;description=trnI-a1tRNA-Met;gene_id=ZeamMt003;logic_name=organellar_genes_ncbi
+Mt	NCBI	tRNA	44163	44236	.	+	.	ID=transcript:ZeamMt003;Parent=gene:ZeamMt003;biotype=tRNA;transcript_id=ZeamMt003
+Mt	NCBI	exon	44163	44236	.	+	.	Parent=transcript:ZeamMt003;Name=ZeamMt003.exon1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ZeamMt003.exon1;rank=1
+###
+Mt	Ensembl_Plants	ncRNA_gene	47077	47148	.	-	.	ID=gene:ENSRNA049451616;Name=tRNA-Glu;biotype=tRNA;description=tRNA-Glu for anticodon UUC;gene_id=ENSRNA049451616;logic_name=trnascan_gene
+Mt	Ensembl_Plants	tRNA	47077	47148	.	-	.	ID=transcript:ENSRNA049451616-T1;Parent=gene:ENSRNA049451616;biotype=tRNA;transcript_id=ENSRNA049451616-T1
+Mt	Ensembl_Plants	exon	47077	47148	.	-	.	Parent=transcript:ENSRNA049451616-T1;Name=ENSRNA049451616-E1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ENSRNA049451616-E1;rank=1
+###
+Mt	ensembl	ncRNA_gene	47077	47148	.	-	.	ID=gene:ZeamMt004;biotype=tRNA;description=trnE-a1tRNA-Glu;gene_id=ZeamMt004;logic_name=organellar_genes_ncbi
+Mt	NCBI	tRNA	47077	47148	.	-	.	ID=transcript:ZeamMt004;Parent=gene:ZeamMt004;biotype=tRNA;transcript_id=ZeamMt004
+Mt	NCBI	exon	47077	47148	.	-	.	Parent=transcript:ZeamMt004;Name=ZeamMt004.exon1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ZeamMt004.exon1;rank=1
+###
+Mt	ensembl	ncRNA_gene	49198	49272	.	+	.	ID=gene:ZeamMt005;biotype=tRNA;description=trnP-a1tRNA-Pro;gene_id=ZeamMt005;logic_name=organellar_genes_ncbi
+Mt	NCBI	tRNA	49198	49272	.	+	.	ID=transcript:ZeamMt005;Parent=gene:ZeamMt005;biotype=tRNA;transcript_id=ZeamMt005
+Mt	NCBI	exon	49198	49272	.	+	.	Parent=transcript:ZeamMt005;Name=ZeamMt005.exon1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ZeamMt005.exon1;rank=1
+###
+Mt	ensembl	gene	51738	52037	.	+	.	ID=gene:ZeamMp018;biotype=protein_coding;description=orf99-a1;gene_id=ZeamMp018;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	51738	52037	.	+	.	ID=transcript:ZeamMp018;Parent=gene:ZeamMp018;biotype=protein_coding;transcript_id=ZeamMp018
+Mt	NCBI	exon	51738	52037	.	+	.	Parent=transcript:ZeamMp018;Name=ZeamMp018.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp018.exon1;rank=1
+Mt	NCBI	CDS	51738	52037	.	+	0	ID=CDS:ZeamMp018;Parent=transcript:ZeamMp018;protein_id=ZeamMp018
+###
+Mt	Ensembl_Plants	ncRNA_gene	57382	57478	.	-	.	ID=gene:ENSRNA049457302;Name=Intron_gpII;biotype=sense_intronic;description=Group II catalytic intron;gene_id=ENSRNA049457302;logic_name=rfam_12.2_gene
+Mt	Ensembl_Plants	lnc_RNA	57382	57478	.	-	.	ID=transcript:ENSRNA049457302-T1;Parent=gene:ENSRNA049457302;biotype=sense_intronic;transcript_id=ENSRNA049457302-T1
+Mt	Ensembl_Plants	exon	57382	57478	.	-	.	Parent=transcript:ENSRNA049457302-T1;Name=ENSRNA049457302-E1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ENSRNA049457302-E1;rank=1
+###
+Mt	ensembl	gene	57423	57722	.	-	.	ID=gene:ZeamMp020;biotype=protein_coding;description=orf99-b1;gene_id=ZeamMp020;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	57423	57722	.	-	.	ID=transcript:ZeamMp020;Parent=gene:ZeamMp020;biotype=protein_coding;transcript_id=ZeamMp020
+Mt	NCBI	exon	57423	57722	.	-	.	Parent=transcript:ZeamMp020;Name=ZeamMp020.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp020.exon1;rank=1
+Mt	NCBI	CDS	57423	57722	.	-	0	ID=CDS:ZeamMp020;Parent=transcript:ZeamMp020;protein_id=ZeamMp020
+###
+Mt	ensembl	gene	58052	58528	.	+	.	ID=gene:ZeamMp021;biotype=protein_coding;description=orf158-a1;gene_id=ZeamMp021;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	58052	58528	.	+	.	ID=transcript:ZeamMp021;Parent=gene:ZeamMp021;biotype=protein_coding;transcript_id=ZeamMp021
+Mt	NCBI	exon	58052	58528	.	+	.	Parent=transcript:ZeamMp021;Name=ZeamMp021.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp021.exon1;rank=1
+Mt	NCBI	CDS	58052	58528	.	+	0	ID=CDS:ZeamMp021;Parent=transcript:ZeamMp021;protein_id=ZeamMp021
+###
+Mt	ensembl	gene	60824	63559	.	-	.	ID=gene:ZeamMp022;biotype=protein_coding;description=orf911;gene_id=ZeamMp022;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	60824	63559	.	-	.	ID=transcript:ZeamMp022;Parent=gene:ZeamMp022;biotype=protein_coding;transcript_id=ZeamMp022
+Mt	NCBI	exon	60824	63559	.	-	.	Parent=transcript:ZeamMp022;Name=ZeamMp022.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp022.exon1;rank=1
+Mt	NCBI	CDS	60824	63559	.	-	0	ID=CDS:ZeamMp022;Parent=transcript:ZeamMp022;protein_id=ZeamMp022
+###
+Mt	ensembl	gene	63562	63945	.	-	.	ID=gene:ZeamMp023;biotype=protein_coding;description=orf127;gene_id=ZeamMp023;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	63562	63945	.	-	.	ID=transcript:ZeamMp023;Parent=gene:ZeamMp023;biotype=protein_coding;transcript_id=ZeamMp023
+Mt	NCBI	exon	63562	63945	.	-	.	Parent=transcript:ZeamMp023;Name=ZeamMp023.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp023.exon1;rank=1
+Mt	NCBI	CDS	63562	63945	.	-	0	ID=CDS:ZeamMp023;Parent=transcript:ZeamMp023;protein_id=ZeamMp023
+###
+Mt	ensembl	gene	64470	64850	.	+	.	ID=gene:ZeamMp025;biotype=protein_coding;description=orf126-b1;gene_id=ZeamMp025;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	64470	64850	.	+	.	ID=transcript:ZeamMp025;Parent=gene:ZeamMp025;biotype=protein_coding;transcript_id=ZeamMp025
+Mt	NCBI	exon	64470	64850	.	+	.	Parent=transcript:ZeamMp025;Name=ZeamMp025.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp025.exon1;rank=1
+Mt	NCBI	CDS	64470	64850	.	+	0	ID=CDS:ZeamMp025;Parent=transcript:ZeamMp025;protein_id=ZeamMp025
+###
+Mt	ensembl	gene	65335	65682	.	+	.	ID=gene:ZeamMp026;biotype=protein_coding;description=orf115-c1;gene_id=ZeamMp026;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	65335	65682	.	+	.	ID=transcript:ZeamMp026;Parent=gene:ZeamMp026;biotype=protein_coding;transcript_id=ZeamMp026
+Mt	NCBI	exon	65335	65682	.	+	.	Parent=transcript:ZeamMp026;Name=ZeamMp026.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp026.exon1;rank=1
+Mt	NCBI	CDS	65335	65682	.	+	0	ID=CDS:ZeamMp026;Parent=transcript:ZeamMp026;protein_id=ZeamMp026
+###
+Mt	ensembl	gene	68277	68597	.	-	.	ID=gene:ZeamMp027;biotype=protein_coding;description=orf106-a1;gene_id=ZeamMp027;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	68277	68597	.	-	.	ID=transcript:ZeamMp027;Parent=gene:ZeamMp027;biotype=protein_coding;transcript_id=ZeamMp027
+Mt	NCBI	exon	68277	68597	.	-	.	Parent=transcript:ZeamMp027;Name=ZeamMp027.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp027.exon1;rank=1
+Mt	NCBI	CDS	68277	68597	.	-	0	ID=CDS:ZeamMp027;Parent=transcript:ZeamMp027;protein_id=ZeamMp027
+###
+Mt	ensembl	gene	71056	71394	.	+	.	ID=gene:ZeamMp028;biotype=protein_coding;description=orf112-a1;gene_id=ZeamMp028;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	71056	71394	.	+	.	ID=transcript:ZeamMp028;Parent=gene:ZeamMp028;biotype=protein_coding;transcript_id=ZeamMp028
+Mt	NCBI	exon	71056	71394	.	+	.	Parent=transcript:ZeamMp028;Name=ZeamMp028.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp028.exon1;rank=1
+Mt	NCBI	CDS	71056	71394	.	+	0	ID=CDS:ZeamMp028;Parent=transcript:ZeamMp028;protein_id=ZeamMp028
+###
+Mt	ensembl	gene	73895	74197	.	+	.	ID=gene:ZeamMp029;biotype=protein_coding;description=orf100-a1;gene_id=ZeamMp029;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	73895	74197	.	+	.	ID=transcript:ZeamMp029;Parent=gene:ZeamMp029;biotype=protein_coding;transcript_id=ZeamMp029
+Mt	NCBI	exon	73895	74197	.	+	.	Parent=transcript:ZeamMp029;Name=ZeamMp029.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp029.exon1;rank=1
+Mt	NCBI	CDS	73895	74197	.	+	0	ID=CDS:ZeamMp029;Parent=transcript:ZeamMp029;protein_id=ZeamMp029
+###
+Mt	Ensembl_Plants	ncRNA_gene	74874	75100	.	-	.	ID=gene:ENSRNA049457570;Name=LSU_rRNA_eukarya;biotype=rRNA;description=Eukaryotic large subunit ribosomal RNA;gene_id=ENSRNA049457570;logic_name=rfam_12.2_gene
+Mt	Ensembl_Plants	rRNA	74874	75100	.	-	.	ID=transcript:ENSRNA049457570-T1;Parent=gene:ENSRNA049457570;biotype=rRNA;transcript_id=ENSRNA049457570-T1
+Mt	Ensembl_Plants	exon	74874	75100	.	-	.	Parent=transcript:ENSRNA049457570-T1;Name=ENSRNA049457570-E1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ENSRNA049457570-E1;rank=1
+###
+Mt	ensembl	gene	75521	75886	.	-	.	ID=gene:ZeamMp030;biotype=protein_coding;description=orf121-a-ct;gene_id=ZeamMp030;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	75521	75886	.	-	.	ID=transcript:ZeamMp030;Parent=gene:ZeamMp030;biotype=protein_coding;transcript_id=ZeamMp030
+Mt	NCBI	exon	75521	75886	.	-	.	Parent=transcript:ZeamMp030;Name=ZeamMp030.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp030.exon1;rank=1
+Mt	NCBI	CDS	75521	75886	.	-	0	ID=CDS:ZeamMp030;Parent=transcript:ZeamMp030;protein_id=ZeamMp030
+###
+Mt	Ensembl_Plants	ncRNA_gene	75892	76005	.	-	.	ID=gene:ENSRNA049457460;Name=Intron_gpII;biotype=sense_intronic;description=Group II catalytic intron;gene_id=ENSRNA049457460;logic_name=rfam_12.2_gene
+Mt	Ensembl_Plants	lnc_RNA	75892	76005	.	-	.	ID=transcript:ENSRNA049457460-T1;Parent=gene:ENSRNA049457460;biotype=sense_intronic;transcript_id=ENSRNA049457460-T1
+Mt	Ensembl_Plants	exon	75892	76005	.	-	.	Parent=transcript:ENSRNA049457460-T1;Name=ENSRNA049457460-E1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ENSRNA049457460-E1;rank=1
+###
+Mt	ensembl	gene	76132	84976	.	-	.	ID=gene:ZeamMp032;biotype=protein_coding;description=nad4;gene_id=ZeamMp032;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	76132	84976	.	-	.	ID=transcript:ZeamMp032;Parent=gene:ZeamMp032;biotype=protein_coding;transcript_id=ZeamMp032
+Mt	NCBI	exon	76132	76220	.	-	.	Parent=transcript:ZeamMp032;Name=ZeamMp032.exon4;constitutive=1;ensembl_end_phase=0;ensembl_phase=1;exon_id=ZeamMp032.exon4;rank=4
+Mt	NCBI	CDS	76132	76220	.	-	2	ID=CDS:ZeamMp032;Parent=transcript:ZeamMp032;protein_id=ZeamMp032
+Mt	NCBI	exon	78912	79334	.	-	.	Parent=transcript:ZeamMp032;Name=ZeamMp032.exon3;constitutive=1;ensembl_end_phase=1;ensembl_phase=1;exon_id=ZeamMp032.exon3;rank=3
+Mt	NCBI	CDS	78912	79334	.	-	2	ID=CDS:ZeamMp032;Parent=transcript:ZeamMp032;protein_id=ZeamMp032
+Mt	NCBI	exon	82760	83274	.	-	.	Parent=transcript:ZeamMp032;Name=ZeamMp032.exon2;constitutive=1;ensembl_end_phase=1;ensembl_phase=2;exon_id=ZeamMp032.exon2;rank=2
+Mt	NCBI	CDS	82760	83274	.	-	1	ID=CDS:ZeamMp032;Parent=transcript:ZeamMp032;protein_id=ZeamMp032
+Mt	NCBI	exon	84516	84976	.	-	.	Parent=transcript:ZeamMp032;Name=ZeamMp032.exon1;constitutive=1;ensembl_end_phase=2;ensembl_phase=0;exon_id=ZeamMp032.exon1;rank=1
+Mt	NCBI	CDS	84516	84976	.	-	0	ID=CDS:ZeamMp032;Parent=transcript:ZeamMp032;protein_id=ZeamMp032
+###
+Mt	ensembl	ncRNA_gene	94257	94329	.	-	.	ID=gene:ZeamMt007;biotype=tRNA;description=trnKtRNA-Lys;gene_id=ZeamMt007;logic_name=organellar_genes_ncbi
+Mt	NCBI	tRNA	94257	94329	.	-	.	ID=transcript:ZeamMt007;Parent=gene:ZeamMt007;biotype=tRNA;transcript_id=ZeamMt007
+Mt	NCBI	exon	94257	94329	.	-	.	Parent=transcript:ZeamMt007;Name=ZeamMt007.exon1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ZeamMt007.exon1;rank=1
+###
+Mt	ensembl	gene	95774	98073	.	+	.	ID=gene:ZeamMp033;biotype=protein_coding;description=ccmFC;gene_id=ZeamMp033;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	95774	98073	.	+	.	ID=transcript:ZeamMp033;Parent=gene:ZeamMp033;biotype=protein_coding;transcript_id=ZeamMp033
+Mt	NCBI	exon	95774	96528	.	+	.	Parent=transcript:ZeamMp033;Name=ZeamMp033.exon1;constitutive=1;ensembl_end_phase=2;ensembl_phase=0;exon_id=ZeamMp033.exon1;rank=1
+Mt	NCBI	CDS	95774	96528	.	+	0	ID=CDS:ZeamMp033;Parent=transcript:ZeamMp033;protein_id=ZeamMp033
+Mt	NCBI	exon	97527	98073	.	+	.	Parent=transcript:ZeamMp033;Name=ZeamMp033.exon2;constitutive=1;ensembl_end_phase=0;ensembl_phase=2;exon_id=ZeamMp033.exon2;rank=2
+Mt	NCBI	CDS	97527	98073	.	+	1	ID=CDS:ZeamMp033;Parent=transcript:ZeamMp033;protein_id=ZeamMp033
+###
+Mt	ensembl	gene	98035	98343	.	-	.	ID=gene:ZeamMp034;biotype=protein_coding;description=orf102-a;gene_id=ZeamMp034;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	98035	98343	.	-	.	ID=transcript:ZeamMp034;Parent=gene:ZeamMp034;biotype=protein_coding;transcript_id=ZeamMp034
+Mt	NCBI	exon	98035	98343	.	-	.	Parent=transcript:ZeamMp034;Name=ZeamMp034.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp034.exon1;rank=1
+Mt	NCBI	CDS	98035	98343	.	-	0	ID=CDS:ZeamMp034;Parent=transcript:ZeamMp034;protein_id=ZeamMp034
+###
+Mt	ensembl	gene	99693	100007	.	+	.	ID=gene:ZeamMp035;biotype=protein_coding;description=orf104-a;gene_id=ZeamMp035;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	99693	100007	.	+	.	ID=transcript:ZeamMp035;Parent=gene:ZeamMp035;biotype=protein_coding;transcript_id=ZeamMp035
+Mt	NCBI	exon	99693	100007	.	+	.	Parent=transcript:ZeamMp035;Name=ZeamMp035.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp035.exon1;rank=1
+Mt	NCBI	CDS	99693	100007	.	+	0	ID=CDS:ZeamMp035;Parent=transcript:ZeamMp035;protein_id=ZeamMp035
+###
+Mt	ensembl	pseudogene	100905	100978	.	+	.	ID=gene:ZeamMt008;biotype=tRNA_pseudogene;description=trnDtRNA-Asp;gene_id=ZeamMt008;logic_name=organellar_genes_ncbi
+Mt	NCBI	pseudogenic_transcript	100905	100978	.	+	.	ID=transcript:ZeamMt008;Parent=gene:ZeamMt008;biotype=tRNA_pseudogene;transcript_id=ZeamMt008
+Mt	NCBI	exon	100905	100978	.	+	.	Parent=transcript:ZeamMt008;Name=ZeamMt008.exon1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ZeamMt008.exon1;rank=1
+###
+Mt	ensembl	gene	101544	102116	.	+	.	ID=gene:ZeamMp036;biotype=protein_coding;description=nad9;gene_id=ZeamMp036;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	101544	102116	.	+	.	ID=transcript:ZeamMp036;Parent=gene:ZeamMp036;biotype=protein_coding;transcript_id=ZeamMp036
+Mt	NCBI	exon	101544	102116	.	+	.	Parent=transcript:ZeamMp036;Name=ZeamMp036.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp036.exon1;rank=1
+Mt	NCBI	CDS	101544	102116	.	+	0	ID=CDS:ZeamMp036;Parent=transcript:ZeamMp036;protein_id=ZeamMp036
+###
+Mt	ensembl	ncRNA_gene	102895	102977	.	+	.	ID=gene:ZeamMt009;biotype=tRNA;description=trnYtRNA-Tyr;gene_id=ZeamMt009;logic_name=organellar_genes_ncbi
+Mt	NCBI	tRNA	102895	102977	.	+	.	ID=transcript:ZeamMt009;Parent=gene:ZeamMt009;biotype=tRNA;transcript_id=ZeamMt009
+Mt	NCBI	exon	102895	102977	.	+	.	Parent=transcript:ZeamMt009;Name=ZeamMt009.exon1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ZeamMt009.exon1;rank=1
+###
+Mt	ensembl	gene	105917	106267	.	+	.	ID=gene:ZeamMp037;biotype=protein_coding;description=orf116-b;gene_id=ZeamMp037;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	105917	106267	.	+	.	ID=transcript:ZeamMp037;Parent=gene:ZeamMp037;biotype=protein_coding;transcript_id=ZeamMp037
+Mt	NCBI	exon	105917	106267	.	+	.	Parent=transcript:ZeamMp037;Name=ZeamMp037.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp037.exon1;rank=1
+Mt	NCBI	CDS	105917	106267	.	+	0	ID=CDS:ZeamMp037;Parent=transcript:ZeamMp037;protein_id=ZeamMp037
+###
+Mt	ensembl	gene	107700	108053	.	+	.	ID=gene:ZeamMp038;biotype=protein_coding;description=orf117-a;gene_id=ZeamMp038;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	107700	108053	.	+	.	ID=transcript:ZeamMp038;Parent=gene:ZeamMp038;biotype=protein_coding;transcript_id=ZeamMp038
+Mt	NCBI	exon	107700	108053	.	+	.	Parent=transcript:ZeamMp038;Name=ZeamMp038.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp038.exon1;rank=1
+Mt	NCBI	CDS	107700	108053	.	+	0	ID=CDS:ZeamMp038;Parent=transcript:ZeamMp038;protein_id=ZeamMp038
+###
+Mt	ensembl	gene	108119	108487	.	-	.	ID=gene:ZeamMp039;biotype=protein_coding;description=orf122;gene_id=ZeamMp039;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	108119	108487	.	-	.	ID=transcript:ZeamMp039;Parent=gene:ZeamMp039;biotype=protein_coding;transcript_id=ZeamMp039
+Mt	NCBI	exon	108119	108487	.	-	.	Parent=transcript:ZeamMp039;Name=ZeamMp039.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp039.exon1;rank=1
+Mt	NCBI	CDS	108119	108487	.	-	0	ID=CDS:ZeamMp039;Parent=transcript:ZeamMp039;protein_id=ZeamMp039
+###
+Mt	ensembl	gene	108349	108693	.	+	.	ID=gene:ZeamMp040;biotype=protein_coding;description=orf114-a;gene_id=ZeamMp040;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	108349	108693	.	+	.	ID=transcript:ZeamMp040;Parent=gene:ZeamMp040;biotype=protein_coding;transcript_id=ZeamMp040
+Mt	NCBI	exon	108349	108693	.	+	.	Parent=transcript:ZeamMp040;Name=ZeamMp040.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp040.exon1;rank=1
+Mt	NCBI	CDS	108349	108693	.	+	0	ID=CDS:ZeamMp040;Parent=transcript:ZeamMp040;protein_id=ZeamMp040
+###
+Mt	ensembl	ncRNA_gene	111207	111278	.	+	.	ID=gene:ZeamMt010;biotype=tRNA;description=trnMtRNA-Met;gene_id=ZeamMt010;logic_name=organellar_genes_ncbi
+Mt	NCBI	tRNA	111207	111278	.	+	.	ID=transcript:ZeamMt010;Parent=gene:ZeamMt010;biotype=tRNA;transcript_id=ZeamMt010
+Mt	NCBI	exon	111207	111278	.	+	.	Parent=transcript:ZeamMt010;Name=ZeamMt010.exon1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ZeamMt010.exon1;rank=1
+###
+Mt	Ensembl_Plants	ncRNA_gene	111525	111613	.	+	.	ID=gene:ENSRNA049457359;Name=Intron_gpII;biotype=sense_intronic;description=Group II catalytic intron;gene_id=ENSRNA049457359;logic_name=rfam_12.2_gene
+Mt	Ensembl_Plants	lnc_RNA	111525	111613	.	+	.	ID=transcript:ENSRNA049457359-T1;Parent=gene:ENSRNA049457359;biotype=sense_intronic;transcript_id=ENSRNA049457359-T1
+Mt	Ensembl_Plants	exon	111525	111613	.	+	.	Parent=transcript:ENSRNA049457359-T1;Name=ENSRNA049457359-E1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ENSRNA049457359-E1;rank=1
+###
+Mt	ensembl	gene	112185	112484	.	+	.	ID=gene:ZeamMp041;biotype=protein_coding;description=orf99-c;gene_id=ZeamMp041;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	112185	112484	.	+	.	ID=transcript:ZeamMp041;Parent=gene:ZeamMp041;biotype=protein_coding;transcript_id=ZeamMp041
+Mt	NCBI	exon	112185	112484	.	+	.	Parent=transcript:ZeamMp041;Name=ZeamMp041.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp041.exon1;rank=1
+Mt	NCBI	CDS	112185	112484	.	+	0	ID=CDS:ZeamMp041;Parent=transcript:ZeamMp041;protein_id=ZeamMp041
+###
+Mt	ensembl	gene	112524	112841	.	+	.	ID=gene:ZeamMp042;biotype=protein_coding;description=orf105-a;gene_id=ZeamMp042;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	112524	112841	.	+	.	ID=transcript:ZeamMp042;Parent=gene:ZeamMp042;biotype=protein_coding;transcript_id=ZeamMp042
+Mt	NCBI	exon	112524	112841	.	+	.	Parent=transcript:ZeamMp042;Name=ZeamMp042.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp042.exon1;rank=1
+Mt	NCBI	CDS	112524	112841	.	+	0	ID=CDS:ZeamMp042;Parent=transcript:ZeamMp042;protein_id=ZeamMp042
+###
+Mt	ensembl	gene	112838	113260	.	-	.	ID=gene:ZeamMp043;biotype=protein_coding;description=orf140-a;gene_id=ZeamMp043;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	112838	113260	.	-	.	ID=transcript:ZeamMp043;Parent=gene:ZeamMp043;biotype=protein_coding;transcript_id=ZeamMp043
+Mt	NCBI	exon	112838	113260	.	-	.	Parent=transcript:ZeamMp043;Name=ZeamMp043.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp043.exon1;rank=1
+Mt	NCBI	CDS	112838	113260	.	-	0	ID=CDS:ZeamMp043;Parent=transcript:ZeamMp043;protein_id=ZeamMp043
+###
+Mt	ensembl	gene	113045	113350	.	+	.	ID=gene:ZeamMp044;biotype=protein_coding;description=orf101-a;gene_id=ZeamMp044;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	113045	113350	.	+	.	ID=transcript:ZeamMp044;Parent=gene:ZeamMp044;biotype=protein_coding;transcript_id=ZeamMp044
+Mt	NCBI	exon	113045	113350	.	+	.	Parent=transcript:ZeamMp044;Name=ZeamMp044.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp044.exon1;rank=1
+Mt	NCBI	CDS	113045	113350	.	+	0	ID=CDS:ZeamMp044;Parent=transcript:ZeamMp044;protein_id=ZeamMp044
+###
+Mt	ensembl	gene	114492	114968	.	-	.	ID=gene:ZeamMp045;biotype=protein_coding;description=orf158-a2;gene_id=ZeamMp045;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	114492	114968	.	-	.	ID=transcript:ZeamMp045;Parent=gene:ZeamMp045;biotype=protein_coding;transcript_id=ZeamMp045
+Mt	NCBI	exon	114492	114968	.	-	.	Parent=transcript:ZeamMp045;Name=ZeamMp045.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp045.exon1;rank=1
+Mt	NCBI	CDS	114492	114968	.	-	0	ID=CDS:ZeamMp045;Parent=transcript:ZeamMp045;protein_id=ZeamMp045
+###
+Mt	ensembl	gene	115298	115597	.	+	.	ID=gene:ZeamMp046;biotype=protein_coding;description=orf99-b2;gene_id=ZeamMp046;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	115298	115597	.	+	.	ID=transcript:ZeamMp046;Parent=gene:ZeamMp046;biotype=protein_coding;transcript_id=ZeamMp046
+Mt	NCBI	exon	115298	115597	.	+	.	Parent=transcript:ZeamMp046;Name=ZeamMp046.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp046.exon1;rank=1
+Mt	NCBI	CDS	115298	115597	.	+	0	ID=CDS:ZeamMp046;Parent=transcript:ZeamMp046;protein_id=ZeamMp046
+###
+Mt	Ensembl_Plants	ncRNA_gene	115542	115638	.	+	.	ID=gene:ENSRNA049457279;Name=Intron_gpII;biotype=sense_intronic;description=Group II catalytic intron;gene_id=ENSRNA049457279;logic_name=rfam_12.2_gene
+Mt	Ensembl_Plants	lnc_RNA	115542	115638	.	+	.	ID=transcript:ENSRNA049457279-T1;Parent=gene:ENSRNA049457279;biotype=sense_intronic;transcript_id=ENSRNA049457279-T1
+Mt	Ensembl_Plants	exon	115542	115638	.	+	.	Parent=transcript:ENSRNA049457279-T1;Name=ENSRNA049457279-E1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ENSRNA049457279-E1;rank=1
+###
+Mt	ensembl	gene	120983	121282	.	-	.	ID=gene:ZeamMp047;biotype=protein_coding;description=orf99-a2;gene_id=ZeamMp047;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	120983	121282	.	-	.	ID=transcript:ZeamMp047;Parent=gene:ZeamMp047;biotype=protein_coding;transcript_id=ZeamMp047
+Mt	NCBI	exon	120983	121282	.	-	.	Parent=transcript:ZeamMp047;Name=ZeamMp047.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp047.exon1;rank=1
+Mt	NCBI	CDS	120983	121282	.	-	0	ID=CDS:ZeamMp047;Parent=transcript:ZeamMp047;protein_id=ZeamMp047
+###
+Mt	ensembl	ncRNA_gene	123748	123822	.	-	.	ID=gene:ZeamMt011;biotype=tRNA;description=trnP-a2tRNA-Pro;gene_id=ZeamMt011;logic_name=organellar_genes_ncbi
+Mt	NCBI	tRNA	123748	123822	.	-	.	ID=transcript:ZeamMt011;Parent=gene:ZeamMt011;biotype=tRNA;transcript_id=ZeamMt011
+Mt	NCBI	exon	123748	123822	.	-	.	Parent=transcript:ZeamMt011;Name=ZeamMt011.exon1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ZeamMt011.exon1;rank=1
+###
+Mt	Ensembl_Plants	ncRNA_gene	125872	125943	.	+	.	ID=gene:ENSRNA049451736;Name=tRNA-Glu;biotype=tRNA;description=tRNA-Glu for anticodon UUC;gene_id=ENSRNA049451736;logic_name=trnascan_gene
+Mt	Ensembl_Plants	tRNA	125872	125943	.	+	.	ID=transcript:ENSRNA049451736-T1;Parent=gene:ENSRNA049451736;biotype=tRNA;transcript_id=ENSRNA049451736-T1
+Mt	Ensembl_Plants	exon	125872	125943	.	+	.	Parent=transcript:ENSRNA049451736-T1;Name=ENSRNA049451736-E1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ENSRNA049451736-E1;rank=1
+###
+Mt	ensembl	ncRNA_gene	125872	125943	.	+	.	ID=gene:ZeamMt012;biotype=tRNA;description=trnE-a2tRNA-Glu;gene_id=ZeamMt012;logic_name=organellar_genes_ncbi
+Mt	NCBI	tRNA	125872	125943	.	+	.	ID=transcript:ZeamMt012;Parent=gene:ZeamMt012;biotype=tRNA;transcript_id=ZeamMt012
+Mt	NCBI	exon	125872	125943	.	+	.	Parent=transcript:ZeamMt012;Name=ZeamMt012.exon1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ZeamMt012.exon1;rank=1
+###
+Mt	ensembl	ncRNA_gene	128784	128857	.	-	.	ID=gene:ZeamMt013;biotype=tRNA;description=trnI-a2tRNA-Met;gene_id=ZeamMt013;logic_name=organellar_genes_ncbi
+Mt	NCBI	tRNA	128784	128857	.	-	.	ID=transcript:ZeamMt013;Parent=gene:ZeamMt013;biotype=tRNA;transcript_id=ZeamMt013
+Mt	NCBI	exon	128784	128857	.	-	.	Parent=transcript:ZeamMt013;Name=ZeamMt013.exon1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ZeamMt013.exon1;rank=1
+###
+Mt	ensembl	ncRNA_gene	129585	129658	.	+	.	ID=gene:ZeamMt014;biotype=tRNA;description=trnD-a2tRNA-Asp;gene_id=ZeamMt014;logic_name=organellar_genes_ncbi
+Mt	NCBI	tRNA	129585	129658	.	+	.	ID=transcript:ZeamMt014;Parent=gene:ZeamMt014;biotype=tRNA;transcript_id=ZeamMt014
+Mt	NCBI	exon	129585	129658	.	+	.	Parent=transcript:ZeamMt014;Name=ZeamMt014.exon1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ZeamMt014.exon1;rank=1
+###
+Mt	Ensembl_Plants	ncRNA_gene	130286	130357	.	-	.	ID=gene:ENSRNA049451664;Name=tRNA-Asn;biotype=tRNA;description=tRNA-Asn for anticodon GUU;gene_id=ENSRNA049451664;logic_name=trnascan_gene
+Mt	Ensembl_Plants	tRNA	130286	130357	.	-	.	ID=transcript:ENSRNA049451664-T1;Parent=gene:ENSRNA049451664;biotype=tRNA;transcript_id=ENSRNA049451664-T1
+Mt	Ensembl_Plants	exon	130286	130357	.	-	.	Parent=transcript:ENSRNA049451664-T1;Name=ENSRNA049451664-E1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ENSRNA049451664-E1;rank=1
+###
+Mt	ensembl	ncRNA_gene	130286	130357	.	-	.	ID=gene:ZeamMt015;biotype=tRNA;description=trnN-a2-cttRNA-Asn;gene_id=ZeamMt015;logic_name=organellar_genes_ncbi
+Mt	NCBI	tRNA	130286	130357	.	-	.	ID=transcript:ZeamMt015;Parent=gene:ZeamMt015;biotype=tRNA;transcript_id=ZeamMt015
+Mt	NCBI	exon	130286	130357	.	-	.	Parent=transcript:ZeamMt015;Name=ZeamMt015.exon1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ZeamMt015.exon1;rank=1
+###
+Mt	ensembl	gene	132043	132348	.	-	.	ID=gene:ZeamMp049;biotype=protein_coding;description=orf101-b;gene_id=ZeamMp049;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	132043	132348	.	-	.	ID=transcript:ZeamMp049;Parent=gene:ZeamMp049;biotype=protein_coding;transcript_id=ZeamMp049
+Mt	NCBI	exon	132043	132348	.	-	.	Parent=transcript:ZeamMp049;Name=ZeamMp049.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp049.exon1;rank=1
+Mt	NCBI	CDS	132043	132348	.	-	0	ID=CDS:ZeamMp049;Parent=transcript:ZeamMp049;protein_id=ZeamMp049
+###
+Mt	ensembl	ncRNA_gene	132607	132679	.	-	.	ID=gene:ZeamMt016;biotype=tRNA;description=trnF-cttRNA-Phe;gene_id=ZeamMt016;logic_name=organellar_genes_ncbi
+Mt	NCBI	tRNA	132607	132679	.	-	.	ID=transcript:ZeamMt016;Parent=gene:ZeamMt016;biotype=tRNA;transcript_id=ZeamMt016
+Mt	NCBI	exon	132607	132679	.	-	.	Parent=transcript:ZeamMt016;Name=ZeamMt016.exon1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ZeamMt016.exon1;rank=1
+###
+Mt	ensembl	gene	138031	138330	.	-	.	ID=gene:ZeamMp050;biotype=protein_coding;description=orf99-d;gene_id=ZeamMp050;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	138031	138330	.	-	.	ID=transcript:ZeamMp050;Parent=gene:ZeamMp050;biotype=protein_coding;transcript_id=ZeamMp050
+Mt	NCBI	exon	138031	138330	.	-	.	Parent=transcript:ZeamMp050;Name=ZeamMp050.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp050.exon1;rank=1
+Mt	NCBI	CDS	138031	138330	.	-	0	ID=CDS:ZeamMp050;Parent=transcript:ZeamMp050;protein_id=ZeamMp050
+###
+Mt	ensembl	pseudogene	138489	138560	.	-	.	ID=gene:ZeamMt017;biotype=tRNA_pseudogene;description=trnR-atRNA-Arg;gene_id=ZeamMt017;logic_name=organellar_genes_ncbi
+Mt	NCBI	pseudogenic_transcript	138489	138560	.	-	.	ID=transcript:ZeamMt017;Parent=gene:ZeamMt017;biotype=tRNA_pseudogene;transcript_id=ZeamMt017
+Mt	NCBI	exon	138489	138560	.	-	.	Parent=transcript:ZeamMt017;Name=ZeamMt017.exon1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ZeamMt017.exon1;rank=1
+###
+Mt	ensembl	gene	138553	139212	.	-	.	ID=gene:ZeamMp051;biotype=protein_coding;description=atp4;gene_id=ZeamMp051;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	138553	139212	.	-	.	ID=transcript:ZeamMp051;Parent=gene:ZeamMp051;biotype=protein_coding;transcript_id=ZeamMp051
+Mt	NCBI	exon	138553	139212	.	-	.	Parent=transcript:ZeamMp051;Name=ZeamMp051.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp051.exon1;rank=1
+Mt	NCBI	CDS	138553	139212	.	-	0	ID=CDS:ZeamMp051;Parent=transcript:ZeamMp051;protein_id=ZeamMp051
+###
+Mt	ensembl	gene	142490	142849	.	-	.	ID=gene:ZeamMp052;biotype=protein_coding;description=orf119-a;gene_id=ZeamMp052;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	142490	142849	.	-	.	ID=transcript:ZeamMp052;Parent=gene:ZeamMp052;biotype=protein_coding;transcript_id=ZeamMp052
+Mt	NCBI	exon	142490	142849	.	-	.	Parent=transcript:ZeamMp052;Name=ZeamMp052.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp052.exon1;rank=1
+Mt	NCBI	CDS	142490	142849	.	-	0	ID=CDS:ZeamMp052;Parent=transcript:ZeamMp052;protein_id=ZeamMp052
+###
+Mt	ensembl	gene	155608	155940	.	-	.	ID=gene:ZeamMp053;biotype=protein_coding;description=orf110-b;gene_id=ZeamMp053;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	155608	155940	.	-	.	ID=transcript:ZeamMp053;Parent=gene:ZeamMp053;biotype=protein_coding;transcript_id=ZeamMp053
+Mt	NCBI	exon	155608	155940	.	-	.	Parent=transcript:ZeamMp053;Name=ZeamMp053.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp053.exon1;rank=1
+Mt	NCBI	CDS	155608	155940	.	-	0	ID=CDS:ZeamMp053;Parent=transcript:ZeamMp053;protein_id=ZeamMp053
+###
+Mt	ensembl	gene	157640	158260	.	-	.	ID=gene:ZeamMp054;biotype=protein_coding;description=orf206;gene_id=ZeamMp054;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	157640	158260	.	-	.	ID=transcript:ZeamMp054;Parent=gene:ZeamMp054;biotype=protein_coding;transcript_id=ZeamMp054
+Mt	NCBI	exon	157640	158260	.	-	.	Parent=transcript:ZeamMp054;Name=ZeamMp054.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp054.exon1;rank=1
+Mt	NCBI	CDS	157640	158260	.	-	0	ID=CDS:ZeamMp054;Parent=transcript:ZeamMp054;protein_id=ZeamMp054
+###
+Mt	ensembl	gene	159926	160279	.	-	.	ID=gene:ZeamMp055;biotype=protein_coding;description=orf117-b;gene_id=ZeamMp055;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	159926	160279	.	-	.	ID=transcript:ZeamMp055;Parent=gene:ZeamMp055;biotype=protein_coding;transcript_id=ZeamMp055
+Mt	NCBI	exon	159926	160279	.	-	.	Parent=transcript:ZeamMp055;Name=ZeamMp055.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp055.exon1;rank=1
+Mt	NCBI	CDS	159926	160279	.	-	0	ID=CDS:ZeamMp055;Parent=transcript:ZeamMp055;protein_id=ZeamMp055
+###
+Mt	ensembl	gene	160378	160698	.	+	.	ID=gene:ZeamMp056;biotype=protein_coding;description=orf106-b;gene_id=ZeamMp056;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	160378	160698	.	+	.	ID=transcript:ZeamMp056;Parent=gene:ZeamMp056;biotype=protein_coding;transcript_id=ZeamMp056
+Mt	NCBI	exon	160378	160698	.	+	.	Parent=transcript:ZeamMp056;Name=ZeamMp056.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp056.exon1;rank=1
+Mt	NCBI	CDS	160378	160698	.	+	0	ID=CDS:ZeamMp056;Parent=transcript:ZeamMp056;protein_id=ZeamMp056
+###
+Mt	ensembl	gene	160734	161291	.	-	.	ID=gene:ZeamMp057;Name=rpl16;biotype=protein_coding;description=rpl16;gene_id=ZeamMp057;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	160734	161291	.	-	.	ID=transcript:ZeamMp057;Parent=gene:ZeamMp057;biotype=protein_coding;transcript_id=ZeamMp057
+Mt	NCBI	exon	160734	161291	.	-	.	Parent=transcript:ZeamMp057;Name=ZeamMp057.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp057.exon1;rank=1
+Mt	NCBI	CDS	160734	161291	.	-	0	ID=CDS:ZeamMp057;Parent=transcript:ZeamMp057;protein_id=ZeamMp057
+###
+Mt	ensembl	gene	161140	164661	.	-	.	ID=gene:ZeamMp024;biotype=protein_coding;description=rps3;gene_id=ZeamMp024;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	161140	164661	.	-	.	ID=transcript:ZeamMp024;Parent=gene:ZeamMp024;biotype=protein_coding;transcript_id=ZeamMp024
+Mt	NCBI	exon	161140	162745	.	-	.	Parent=transcript:ZeamMp024;Name=ZeamMp024.exon2;constitutive=1;ensembl_end_phase=0;ensembl_phase=2;exon_id=ZeamMp024.exon2;rank=2
+Mt	NCBI	CDS	161140	162745	.	-	1	ID=CDS:ZeamMp024;Parent=transcript:ZeamMp024;protein_id=ZeamMp024
+Mt	NCBI	exon	164588	164661	.	-	.	Parent=transcript:ZeamMp024;Name=ZeamMp024.exon1;constitutive=1;ensembl_end_phase=2;ensembl_phase=0;exon_id=ZeamMp024.exon1;rank=1
+Mt	NCBI	CDS	164588	164661	.	-	0	ID=CDS:ZeamMp024;Parent=transcript:ZeamMp024;protein_id=ZeamMp024
+###
+Mt	ensembl	gene	163212	163541	.	+	.	ID=gene:ZeamMp058;biotype=protein_coding;description=orf109-a;gene_id=ZeamMp058;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	163212	163541	.	+	.	ID=transcript:ZeamMp058;Parent=gene:ZeamMp058;biotype=protein_coding;transcript_id=ZeamMp058
+Mt	NCBI	exon	163212	163541	.	+	.	Parent=transcript:ZeamMp058;Name=ZeamMp058.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp058.exon1;rank=1
+Mt	NCBI	CDS	163212	163541	.	+	0	ID=CDS:ZeamMp058;Parent=transcript:ZeamMp058;protein_id=ZeamMp058
+###
+Mt	ensembl	gene	165090	165470	.	+	.	ID=gene:ZeamMp059;biotype=protein_coding;description=orf126-b2;gene_id=ZeamMp059;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	165090	165470	.	+	.	ID=transcript:ZeamMp059;Parent=gene:ZeamMp059;biotype=protein_coding;transcript_id=ZeamMp059
+Mt	NCBI	exon	165090	165470	.	+	.	Parent=transcript:ZeamMp059;Name=ZeamMp059.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp059.exon1;rank=1
+Mt	NCBI	CDS	165090	165470	.	+	0	ID=CDS:ZeamMp059;Parent=transcript:ZeamMp059;protein_id=ZeamMp059
+###
+Mt	ensembl	gene	165955	166302	.	+	.	ID=gene:ZeamMp060;biotype=protein_coding;description=orf115-c2;gene_id=ZeamMp060;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	165955	166302	.	+	.	ID=transcript:ZeamMp060;Parent=gene:ZeamMp060;biotype=protein_coding;transcript_id=ZeamMp060
+Mt	NCBI	exon	165955	166302	.	+	.	Parent=transcript:ZeamMp060;Name=ZeamMp060.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp060.exon1;rank=1
+Mt	NCBI	CDS	165955	166302	.	+	0	ID=CDS:ZeamMp060;Parent=transcript:ZeamMp060;protein_id=ZeamMp060
+###
+Mt	ensembl	gene	168897	169217	.	-	.	ID=gene:ZeamMp061;biotype=protein_coding;description=orf106-a2;gene_id=ZeamMp061;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	168897	169217	.	-	.	ID=transcript:ZeamMp061;Parent=gene:ZeamMp061;biotype=protein_coding;transcript_id=ZeamMp061
+Mt	NCBI	exon	168897	169217	.	-	.	Parent=transcript:ZeamMp061;Name=ZeamMp061.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp061.exon1;rank=1
+Mt	NCBI	CDS	168897	169217	.	-	0	ID=CDS:ZeamMp061;Parent=transcript:ZeamMp061;protein_id=ZeamMp061
+###
+Mt	ensembl	gene	171676	172014	.	+	.	ID=gene:ZeamMp062;biotype=protein_coding;description=orf112-a2;gene_id=ZeamMp062;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	171676	172014	.	+	.	ID=transcript:ZeamMp062;Parent=gene:ZeamMp062;biotype=protein_coding;transcript_id=ZeamMp062
+Mt	NCBI	exon	171676	172014	.	+	.	Parent=transcript:ZeamMp062;Name=ZeamMp062.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp062.exon1;rank=1
+Mt	NCBI	CDS	171676	172014	.	+	0	ID=CDS:ZeamMp062;Parent=transcript:ZeamMp062;protein_id=ZeamMp062
+###
+Mt	ensembl	gene	174515	174817	.	+	.	ID=gene:ZeamMp063;biotype=protein_coding;description=orf100-a2;gene_id=ZeamMp063;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	174515	174817	.	+	.	ID=transcript:ZeamMp063;Parent=gene:ZeamMp063;biotype=protein_coding;transcript_id=ZeamMp063
+Mt	NCBI	exon	174515	174817	.	+	.	Parent=transcript:ZeamMp063;Name=ZeamMp063.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp063.exon1;rank=1
+Mt	NCBI	CDS	174515	174817	.	+	0	ID=CDS:ZeamMp063;Parent=transcript:ZeamMp063;protein_id=ZeamMp063
+###
+Mt	ensembl	pseudogene	179618	179691	.	-	.	ID=gene:ZeamMt018;biotype=tRNA_pseudogene;description=trnI-cttRNA-Ile;gene_id=ZeamMt018;logic_name=organellar_genes_ncbi
+Mt	NCBI	pseudogenic_transcript	179618	179691	.	-	.	ID=transcript:ZeamMt018;Parent=gene:ZeamMt018;biotype=tRNA_pseudogene;transcript_id=ZeamMt018
+Mt	NCBI	exon	179618	179691	.	-	.	Parent=transcript:ZeamMt018;Name=ZeamMt018.exon1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ZeamMt018.exon1;rank=1
+###
+Mt	ensembl	gene	179996	180679	.	+	.	ID=gene:ZeamMp064;biotype=protein_coding;description=orf227-ct;gene_id=ZeamMp064;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	179996	180679	.	+	.	ID=transcript:ZeamMp064;Parent=gene:ZeamMp064;biotype=protein_coding;transcript_id=ZeamMp064
+Mt	NCBI	exon	179996	180679	.	+	.	Parent=transcript:ZeamMp064;Name=ZeamMp064.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp064.exon1;rank=1
+Mt	NCBI	CDS	179996	180679	.	+	0	ID=CDS:ZeamMp064;Parent=transcript:ZeamMp064;protein_id=ZeamMp064
+###
+Mt	ensembl	gene	185996	186382	.	+	.	ID=gene:ZeamMp065;biotype=protein_coding;description=orf128;gene_id=ZeamMp065;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	185996	186382	.	+	.	ID=transcript:ZeamMp065;Parent=gene:ZeamMp065;biotype=protein_coding;transcript_id=ZeamMp065
+Mt	NCBI	exon	185996	186382	.	+	.	Parent=transcript:ZeamMp065;Name=ZeamMp065.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp065.exon1;rank=1
+Mt	NCBI	CDS	185996	186382	.	+	0	ID=CDS:ZeamMp065;Parent=transcript:ZeamMp065;protein_id=ZeamMp065
+###
+Mt	ensembl	gene	191869	192351	.	-	.	ID=gene:ZeamMp066;biotype=protein_coding;description=orf160-a;gene_id=ZeamMp066;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	191869	192351	.	-	.	ID=transcript:ZeamMp066;Parent=gene:ZeamMp066;biotype=protein_coding;transcript_id=ZeamMp066
+Mt	NCBI	exon	191869	192351	.	-	.	Parent=transcript:ZeamMp066;Name=ZeamMp066.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp066.exon1;rank=1
+Mt	NCBI	CDS	191869	192351	.	-	0	ID=CDS:ZeamMp066;Parent=transcript:ZeamMp066;protein_id=ZeamMp066
+###
+Mt	ensembl	gene	194577	194993	.	+	.	ID=gene:ZeamMp067;biotype=protein_coding;description=orf138-a;gene_id=ZeamMp067;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	194577	194993	.	+	.	ID=transcript:ZeamMp067;Parent=gene:ZeamMp067;biotype=protein_coding;transcript_id=ZeamMp067
+Mt	NCBI	exon	194577	194993	.	+	.	Parent=transcript:ZeamMp067;Name=ZeamMp067.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp067.exon1;rank=1
+Mt	NCBI	CDS	194577	194993	.	+	0	ID=CDS:ZeamMp067;Parent=transcript:ZeamMp067;protein_id=ZeamMp067
+###
+Mt	ensembl	gene	199269	199586	.	+	.	ID=gene:ZeamMp068;biotype=protein_coding;description=orf105-b;gene_id=ZeamMp068;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	199269	199586	.	+	.	ID=transcript:ZeamMp068;Parent=gene:ZeamMp068;biotype=protein_coding;transcript_id=ZeamMp068
+Mt	NCBI	exon	199269	199586	.	+	.	Parent=transcript:ZeamMp068;Name=ZeamMp068.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp068.exon1;rank=1
+Mt	NCBI	CDS	199269	199586	.	+	0	ID=CDS:ZeamMp068;Parent=transcript:ZeamMp068;protein_id=ZeamMp068
+###
+Mt	ensembl	gene	200741	201463	.	+	.	ID=gene:ZeamMp069;biotype=protein_coding;description=ccmC;gene_id=ZeamMp069;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	200741	201463	.	+	.	ID=transcript:ZeamMp069;Parent=gene:ZeamMp069;biotype=protein_coding;transcript_id=ZeamMp069
+Mt	NCBI	exon	200741	201463	.	+	.	Parent=transcript:ZeamMp069;Name=ZeamMp069.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp069.exon1;rank=1
+Mt	NCBI	CDS	200741	201463	.	+	0	ID=CDS:ZeamMp069;Parent=transcript:ZeamMp069;protein_id=ZeamMp069
+###
+Mt	ensembl	pseudogene	201500	201584	.	+	.	ID=gene:ZeamMt019;biotype=tRNA_pseudogene;description=trnL-atRNA-Leu;gene_id=ZeamMt019;logic_name=organellar_genes_ncbi
+Mt	NCBI	pseudogenic_transcript	201500	201584	.	+	.	ID=transcript:ZeamMt019;Parent=gene:ZeamMt019;biotype=tRNA_pseudogene;transcript_id=ZeamMt019
+Mt	NCBI	exon	201500	201534	.	+	.	Parent=transcript:ZeamMt019;Name=ZeamMt019.exon1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ZeamMt019.exon1;rank=1
+Mt	NCBI	exon	201547	201584	.	+	.	Parent=transcript:ZeamMt019;Name=ZeamMt019.exon2;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ZeamMt019.exon2;rank=2
+###
+Mt	ensembl	gene	201993	202316	.	-	.	ID=gene:ZeamMp070;biotype=protein_coding;description=orf107-c;gene_id=ZeamMp070;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	201993	202316	.	-	.	ID=transcript:ZeamMp070;Parent=gene:ZeamMp070;biotype=protein_coding;transcript_id=ZeamMp070
+Mt	NCBI	exon	201993	202316	.	-	.	Parent=transcript:ZeamMp070;Name=ZeamMp070.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp070.exon1;rank=1
+Mt	NCBI	CDS	201993	202316	.	-	0	ID=CDS:ZeamMp070;Parent=transcript:ZeamMp070;protein_id=ZeamMp070
+###
+Mt	ensembl	gene	204827	205144	.	-	.	ID=gene:ZeamMp073;biotype=protein_coding;description=orf105-c;gene_id=ZeamMp073;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	204827	205144	.	-	.	ID=transcript:ZeamMp073;Parent=gene:ZeamMp073;biotype=protein_coding;transcript_id=ZeamMp073
+Mt	NCBI	exon	204827	205144	.	-	.	Parent=transcript:ZeamMp073;Name=ZeamMp073.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp073.exon1;rank=1
+Mt	NCBI	CDS	204827	205144	.	-	0	ID=CDS:ZeamMp073;Parent=transcript:ZeamMp073;protein_id=ZeamMp073
+###
+Mt	Ensembl_Plants	ncRNA_gene	205593	205731	.	+	.	ID=gene:ENSRNA049457531;Name=Intron_gpII;biotype=sense_intronic;description=Group II catalytic intron;gene_id=ENSRNA049457531;logic_name=rfam_12.2_gene
+Mt	Ensembl_Plants	lnc_RNA	205593	205731	.	+	.	ID=transcript:ENSRNA049457531-T1;Parent=gene:ENSRNA049457531;biotype=sense_intronic;transcript_id=ENSRNA049457531-T1
+Mt	Ensembl_Plants	exon	205593	205731	.	+	.	Parent=transcript:ENSRNA049457531-T1;Name=ENSRNA049457531-E1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ENSRNA049457531-E1;rank=1
+###
+Mt	ensembl	gene	210666	211163	.	-	.	ID=gene:ZeamMp074;biotype=protein_coding;description=orf165;gene_id=ZeamMp074;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	210666	211163	.	-	.	ID=transcript:ZeamMp074;Parent=gene:ZeamMp074;biotype=protein_coding;transcript_id=ZeamMp074
+Mt	NCBI	exon	210666	211163	.	-	.	Parent=transcript:ZeamMp074;Name=ZeamMp074.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp074.exon1;rank=1
+Mt	NCBI	CDS	210666	211163	.	-	0	ID=CDS:ZeamMp074;Parent=transcript:ZeamMp074;protein_id=ZeamMp074
+###
+Mt	ensembl	gene	211244	211624	.	-	.	ID=gene:ZeamMp075;biotype=protein_coding;description=orf126-c;gene_id=ZeamMp075;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	211244	211624	.	-	.	ID=transcript:ZeamMp075;Parent=gene:ZeamMp075;biotype=protein_coding;transcript_id=ZeamMp075
+Mt	NCBI	exon	211244	211624	.	-	.	Parent=transcript:ZeamMp075;Name=ZeamMp075.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp075.exon1;rank=1
+Mt	NCBI	CDS	211244	211624	.	-	0	ID=CDS:ZeamMp075;Parent=transcript:ZeamMp075;protein_id=ZeamMp075
+###
+Mt	ensembl	gene	214706	215020	.	-	.	ID=gene:ZeamMp076;biotype=protein_coding;description=orf104-b;gene_id=ZeamMp076;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	214706	215020	.	-	.	ID=transcript:ZeamMp076;Parent=gene:ZeamMp076;biotype=protein_coding;transcript_id=ZeamMp076
+Mt	NCBI	exon	214706	215020	.	-	.	Parent=transcript:ZeamMp076;Name=ZeamMp076.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp076.exon1;rank=1
+Mt	NCBI	CDS	214706	215020	.	-	0	ID=CDS:ZeamMp076;Parent=transcript:ZeamMp076;protein_id=ZeamMp076
+###
+Mt	ensembl	gene	222181	222597	.	-	.	ID=gene:ZeamMp077;biotype=protein_coding;description=orf138-b;gene_id=ZeamMp077;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	222181	222597	.	-	.	ID=transcript:ZeamMp077;Parent=gene:ZeamMp077;biotype=protein_coding;transcript_id=ZeamMp077
+Mt	NCBI	exon	222181	222597	.	-	.	Parent=transcript:ZeamMp077;Name=ZeamMp077.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp077.exon1;rank=1
+Mt	NCBI	CDS	222181	222597	.	-	0	ID=CDS:ZeamMp077;Parent=transcript:ZeamMp077;protein_id=ZeamMp077
+###
+Mt	ensembl	gene	222801	223196	.	-	.	ID=gene:ZeamMp078;biotype=protein_coding;description=orf131-a;gene_id=ZeamMp078;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	222801	223196	.	-	.	ID=transcript:ZeamMp078;Parent=gene:ZeamMp078;biotype=protein_coding;transcript_id=ZeamMp078
+Mt	NCBI	exon	222801	223196	.	-	.	Parent=transcript:ZeamMp078;Name=ZeamMp078.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp078.exon1;rank=1
+Mt	NCBI	CDS	222801	223196	.	-	0	ID=CDS:ZeamMp078;Parent=transcript:ZeamMp078;protein_id=ZeamMp078
+###
+Mt	ensembl	gene	224213	225121	.	-	.	ID=gene:ZeamMp079;biotype=protein_coding;description=orf302;gene_id=ZeamMp079;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	224213	225121	.	-	.	ID=transcript:ZeamMp079;Parent=gene:ZeamMp079;biotype=protein_coding;transcript_id=ZeamMp079
+Mt	NCBI	exon	224213	225121	.	-	.	Parent=transcript:ZeamMp079;Name=ZeamMp079.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp079.exon1;rank=1
+Mt	NCBI	CDS	224213	225121	.	-	0	ID=CDS:ZeamMp079;Parent=transcript:ZeamMp079;protein_id=ZeamMp079
+###
+Mt	ensembl	gene	226253	226645	.	+	.	ID=gene:ZeamMp080;biotype=protein_coding;description=orf130;gene_id=ZeamMp080;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	226253	226645	.	+	.	ID=transcript:ZeamMp080;Parent=gene:ZeamMp080;biotype=protein_coding;transcript_id=ZeamMp080
+Mt	NCBI	exon	226253	226645	.	+	.	Parent=transcript:ZeamMp080;Name=ZeamMp080.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp080.exon1;rank=1
+Mt	NCBI	CDS	226253	226645	.	+	0	ID=CDS:ZeamMp080;Parent=transcript:ZeamMp080;protein_id=ZeamMp080
+###
+Mt	ensembl	gene	232739	233200	.	-	.	ID=gene:ZeamMp081;biotype=protein_coding;description=atp8;gene_id=ZeamMp081;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	232739	233200	.	-	.	ID=transcript:ZeamMp081;Parent=gene:ZeamMp081;biotype=protein_coding;transcript_id=ZeamMp081
+Mt	NCBI	exon	232739	233200	.	-	.	Parent=transcript:ZeamMp081;Name=ZeamMp081.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp081.exon1;rank=1
+Mt	NCBI	CDS	232739	233200	.	-	0	ID=CDS:ZeamMp081;Parent=transcript:ZeamMp081;protein_id=ZeamMp081
+###
+Mt	ensembl	gene	233670	234005	.	-	.	ID=gene:ZeamMp082;biotype=protein_coding;description=orf111-a;gene_id=ZeamMp082;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	233670	234005	.	-	.	ID=transcript:ZeamMp082;Parent=gene:ZeamMp082;biotype=protein_coding;transcript_id=ZeamMp082
+Mt	NCBI	exon	233670	234005	.	-	.	Parent=transcript:ZeamMp082;Name=ZeamMp082.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp082.exon1;rank=1
+Mt	NCBI	CDS	233670	234005	.	-	0	ID=CDS:ZeamMp082;Parent=transcript:ZeamMp082;protein_id=ZeamMp082
+###
+Mt	ensembl	gene	234411	234776	.	+	.	ID=gene:ZeamMp083;biotype=protein_coding;description=orf121-b;gene_id=ZeamMp083;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	234411	234776	.	+	.	ID=transcript:ZeamMp083;Parent=gene:ZeamMp083;biotype=protein_coding;transcript_id=ZeamMp083
+Mt	NCBI	exon	234411	234776	.	+	.	Parent=transcript:ZeamMp083;Name=ZeamMp083.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp083.exon1;rank=1
+Mt	NCBI	CDS	234411	234776	.	+	0	ID=CDS:ZeamMp083;Parent=transcript:ZeamMp083;protein_id=ZeamMp083
+###
+Mt	ensembl	gene	236902	237477	.	-	.	ID=gene:ZeamMp084;biotype=protein_coding;description=orf191;gene_id=ZeamMp084;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	236902	237477	.	-	.	ID=transcript:ZeamMp084;Parent=gene:ZeamMp084;biotype=protein_coding;transcript_id=ZeamMp084
+Mt	NCBI	exon	236902	237477	.	-	.	Parent=transcript:ZeamMp084;Name=ZeamMp084.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp084.exon1;rank=1
+Mt	NCBI	CDS	236902	237477	.	-	0	ID=CDS:ZeamMp084;Parent=transcript:ZeamMp084;protein_id=ZeamMp084
+###
+Mt	ensembl	pseudogene	236960	237351	.	+	.	ID=gene:ZeamMp085;biotype=pseudogene;description=orf130;gene_id=ZeamMp085;logic_name=organellar_genes_ncbi
+Mt	NCBI	pseudogenic_transcript	236960	237351	.	+	.	ID=transcript:ZeamMp085;Parent=gene:ZeamMp085;biotype=pseudogene;transcript_id=ZeamMp085
+Mt	NCBI	exon	236960	237351	.	+	.	Parent=transcript:ZeamMp085;Name=ZeamMp085.exon1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ZeamMp085.exon1;rank=1
+###
+Mt	ensembl	gene	237577	243574	.	-	.	ID=gene:ZeamMp086;biotype=protein_coding;description=nad7;gene_id=ZeamMp086;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	237577	243574	.	-	.	ID=transcript:ZeamMp086;Parent=gene:ZeamMp086;biotype=protein_coding;transcript_id=ZeamMp086
+Mt	NCBI	exon	237577	237838	.	-	.	Parent=transcript:ZeamMp086;Name=ZeamMp086.exon5;constitutive=1;ensembl_end_phase=0;ensembl_phase=2;exon_id=ZeamMp086.exon5;rank=5
+Mt	NCBI	CDS	237577	237838	.	-	1	ID=CDS:ZeamMp086;Parent=transcript:ZeamMp086;protein_id=ZeamMp086
+Mt	NCBI	exon	239530	239773	.	-	.	Parent=transcript:ZeamMp086;Name=ZeamMp086.exon4;constitutive=1;ensembl_end_phase=2;ensembl_phase=1;exon_id=ZeamMp086.exon4;rank=4
+Mt	NCBI	CDS	239530	239773	.	-	2	ID=CDS:ZeamMp086;Parent=transcript:ZeamMp086;protein_id=ZeamMp086
+Mt	NCBI	exon	240762	241228	.	-	.	Parent=transcript:ZeamMp086;Name=ZeamMp086.exon3;constitutive=1;ensembl_end_phase=1;ensembl_phase=2;exon_id=ZeamMp086.exon3;rank=3
+Mt	NCBI	CDS	240762	241228	.	-	1	ID=CDS:ZeamMp086;Parent=transcript:ZeamMp086;protein_id=ZeamMp086
+Mt	NCBI	exon	242526	242594	.	-	.	Parent=transcript:ZeamMp086;Name=ZeamMp086.exon2;constitutive=1;ensembl_end_phase=2;ensembl_phase=2;exon_id=ZeamMp086.exon2;rank=2
+Mt	NCBI	CDS	242526	242594	.	-	1	ID=CDS:ZeamMp086;Parent=transcript:ZeamMp086;protein_id=ZeamMp086
+Mt	NCBI	exon	243432	243574	.	-	.	Parent=transcript:ZeamMp086;Name=ZeamMp086.exon1;constitutive=1;ensembl_end_phase=2;ensembl_phase=0;exon_id=ZeamMp086.exon1;rank=1
+Mt	NCBI	CDS	243432	243574	.	-	0	ID=CDS:ZeamMp086;Parent=transcript:ZeamMp086;protein_id=ZeamMp086
+###
+Mt	Ensembl_Plants	ncRNA_gene	237839	237972	.	-	.	ID=gene:ENSRNA049457334;Name=Intron_gpII;biotype=sense_intronic;description=Group II catalytic intron;gene_id=ENSRNA049457334;logic_name=rfam_12.2_gene
+Mt	Ensembl_Plants	lnc_RNA	237839	237972	.	-	.	ID=transcript:ENSRNA049457334-T1;Parent=gene:ENSRNA049457334;biotype=sense_intronic;transcript_id=ENSRNA049457334-T1
+Mt	Ensembl_Plants	exon	237839	237972	.	-	.	Parent=transcript:ENSRNA049457334-T1;Name=ENSRNA049457334-E1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ENSRNA049457334-E1;rank=1
+###
+Mt	Ensembl_Plants	ncRNA_gene	242595	242660	.	-	.	ID=gene:ENSRNA049457187;Name=Intron_gpII;biotype=sense_intronic;description=Group II catalytic intron;gene_id=ENSRNA049457187;logic_name=rfam_12.2_gene
+Mt	Ensembl_Plants	lnc_RNA	242595	242660	.	-	.	ID=transcript:ENSRNA049457187-T1;Parent=gene:ENSRNA049457187;biotype=sense_intronic;transcript_id=ENSRNA049457187-T1
+Mt	Ensembl_Plants	exon	242595	242660	.	-	.	Parent=transcript:ENSRNA049457187-T1;Name=ENSRNA049457187-E1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ENSRNA049457187-E1;rank=1
+###
+Mt	ensembl	gene	249901	250248	.	+	.	ID=gene:ZeamMp087;biotype=protein_coding;description=orf115-a2;gene_id=ZeamMp087;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	249901	250248	.	+	.	ID=transcript:ZeamMp087;Parent=gene:ZeamMp087;biotype=protein_coding;transcript_id=ZeamMp087
+Mt	NCBI	exon	249901	250248	.	+	.	Parent=transcript:ZeamMp087;Name=ZeamMp087.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp087.exon1;rank=1
+Mt	NCBI	CDS	249901	250248	.	+	0	ID=CDS:ZeamMp087;Parent=transcript:ZeamMp087;protein_id=ZeamMp087
+###
+Mt	ensembl	gene	250363	253842	.	+	.	ID=gene:ZeamMp088;biotype=protein_coding;description=orf1159;gene_id=ZeamMp088;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	250363	253842	.	+	.	ID=transcript:ZeamMp088;Parent=gene:ZeamMp088;biotype=protein_coding;transcript_id=ZeamMp088
+Mt	NCBI	exon	250363	253842	.	+	.	Parent=transcript:ZeamMp088;Name=ZeamMp088.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp088.exon1;rank=1
+Mt	NCBI	CDS	250363	253842	.	+	0	ID=CDS:ZeamMp088;Parent=transcript:ZeamMp088;protein_id=ZeamMp088
+###
+Mt	ensembl	gene	253784	254131	.	+	.	ID=gene:ZeamMp089;biotype=protein_coding;description=orf115-d;gene_id=ZeamMp089;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	253784	254131	.	+	.	ID=transcript:ZeamMp089;Parent=gene:ZeamMp089;biotype=protein_coding;transcript_id=ZeamMp089
+Mt	NCBI	exon	253784	254131	.	+	.	Parent=transcript:ZeamMp089;Name=ZeamMp089.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp089.exon1;rank=1
+Mt	NCBI	CDS	253784	254131	.	+	0	ID=CDS:ZeamMp089;Parent=transcript:ZeamMp089;protein_id=ZeamMp089
+###
+Mt	ensembl	gene	254397	255221	.	-	.	ID=gene:ZeamMp090;biotype=protein_coding;description=orf275;gene_id=ZeamMp090;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	254397	255221	.	-	.	ID=transcript:ZeamMp090;Parent=gene:ZeamMp090;biotype=protein_coding;transcript_id=ZeamMp090
+Mt	NCBI	exon	254397	255221	.	-	.	Parent=transcript:ZeamMp090;Name=ZeamMp090.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp090.exon1;rank=1
+Mt	NCBI	CDS	254397	255221	.	-	0	ID=CDS:ZeamMp090;Parent=transcript:ZeamMp090;protein_id=ZeamMp090
+###
+Mt	ensembl	ncRNA_gene	259284	259354	.	-	.	ID=gene:ZeamMt020;biotype=tRNA;description=trnC-cttRNA-Cys;gene_id=ZeamMt020;logic_name=organellar_genes_ncbi
+Mt	NCBI	tRNA	259284	259354	.	-	.	ID=transcript:ZeamMt020;Parent=gene:ZeamMt020;biotype=tRNA;transcript_id=ZeamMt020
+Mt	NCBI	exon	259284	259354	.	-	.	Parent=transcript:ZeamMt020;Name=ZeamMt020.exon1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ZeamMt020.exon1;rank=1
+###
+Mt	Ensembl_Plants	ncRNA_gene	259597	259658	.	-	.	ID=gene:ENSRNA049457503;Name=Intron_gpII;biotype=sense_intronic;description=Group II catalytic intron;gene_id=ENSRNA049457503;logic_name=rfam_12.2_gene
+Mt	Ensembl_Plants	lnc_RNA	259597	259658	.	-	.	ID=transcript:ENSRNA049457503-T1;Parent=gene:ENSRNA049457503;biotype=sense_intronic;transcript_id=ENSRNA049457503-T1
+Mt	Ensembl_Plants	exon	259597	259658	.	-	.	Parent=transcript:ENSRNA049457503-T1;Name=ENSRNA049457503-E1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ENSRNA049457503-E1;rank=1
+###
+Mt	ensembl	gene	261340	261879	.	-	.	ID=gene:ZeamMp091;biotype=protein_coding;description=orf179;gene_id=ZeamMp091;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	261340	261879	.	-	.	ID=transcript:ZeamMp091;Parent=gene:ZeamMp091;biotype=protein_coding;transcript_id=ZeamMp091
+Mt	NCBI	exon	261340	261879	.	-	.	Parent=transcript:ZeamMp091;Name=ZeamMp091.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp091.exon1;rank=1
+Mt	NCBI	CDS	261340	261879	.	-	0	ID=CDS:ZeamMp091;Parent=transcript:ZeamMp091;protein_id=ZeamMp091
+###
+Mt	ensembl	gene	262384	262761	.	-	.	ID=gene:ZeamMp092;biotype=protein_coding;description=rps12;gene_id=ZeamMp092;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	262384	262761	.	-	.	ID=transcript:ZeamMp092;Parent=gene:ZeamMp092;biotype=protein_coding;transcript_id=ZeamMp092
+Mt	NCBI	exon	262384	262761	.	-	.	Parent=transcript:ZeamMp092;Name=ZeamMp092.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp092.exon1;rank=1
+Mt	NCBI	CDS	262384	262761	.	-	0	ID=CDS:ZeamMp092;Parent=transcript:ZeamMp092;protein_id=ZeamMp092
+###
+Mt	ensembl	gene	262806	263162	.	-	.	ID=gene:ZeamMp093;biotype=protein_coding;description=nad3;gene_id=ZeamMp093;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	262806	263162	.	-	.	ID=transcript:ZeamMp093;Parent=gene:ZeamMp093;biotype=protein_coding;transcript_id=ZeamMp093
+Mt	NCBI	exon	262806	263162	.	-	.	Parent=transcript:ZeamMp093;Name=ZeamMp093.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp093.exon1;rank=1
+Mt	NCBI	CDS	262806	263162	.	-	0	ID=CDS:ZeamMp093;Parent=transcript:ZeamMp093;protein_id=ZeamMp093
+###
+Mt	ensembl	pseudogene	263239	263356	.	-	.	ID=gene:ZeamMt021;biotype=tRNA_pseudogene;description=trnL-btRNA-Leu;gene_id=ZeamMt021;logic_name=organellar_genes_ncbi
+Mt	NCBI	pseudogenic_transcript	263239	263356	.	-	.	ID=transcript:ZeamMt021;Parent=gene:ZeamMt021;biotype=tRNA_pseudogene;transcript_id=ZeamMt021
+Mt	NCBI	exon	263239	263271	.	-	.	Parent=transcript:ZeamMt021;Name=ZeamMt021.exon2;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ZeamMt021.exon2;rank=2
+Mt	NCBI	exon	263320	263356	.	-	.	Parent=transcript:ZeamMt021;Name=ZeamMt021.exon1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ZeamMt021.exon1;rank=1
+###
+Mt	ensembl	ncRNA_gene	263607	263694	.	-	.	ID=gene:ZeamMt022;biotype=tRNA;description=trnS-atRNA-Ser;gene_id=ZeamMt022;logic_name=organellar_genes_ncbi
+Mt	NCBI	tRNA	263607	263694	.	-	.	ID=transcript:ZeamMt022;Parent=gene:ZeamMt022;biotype=tRNA;transcript_id=ZeamMt022
+Mt	NCBI	exon	263607	263694	.	-	.	Parent=transcript:ZeamMt022;Name=ZeamMt022.exon1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ZeamMt022.exon1;rank=1
+###
+Mt	ensembl	gene	265988	266410	.	-	.	ID=gene:ZeamMp094;biotype=protein_coding;description=orf140-b;gene_id=ZeamMp094;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	265988	266410	.	-	.	ID=transcript:ZeamMp094;Parent=gene:ZeamMp094;biotype=protein_coding;transcript_id=ZeamMp094
+Mt	NCBI	exon	265988	266410	.	-	.	Parent=transcript:ZeamMp094;Name=ZeamMp094.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp094.exon1;rank=1
+Mt	NCBI	CDS	265988	266410	.	-	0	ID=CDS:ZeamMp094;Parent=transcript:ZeamMp094;protein_id=ZeamMp094
+###
+Mt	ensembl	gene	267745	269766	.	-	.	ID=gene:ZeamMp095;biotype=protein_coding;description=mat-r;gene_id=ZeamMp095;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	267745	269766	.	-	.	ID=transcript:ZeamMp095;Parent=gene:ZeamMp095;biotype=protein_coding;transcript_id=ZeamMp095
+Mt	NCBI	exon	267745	269766	.	-	.	Parent=transcript:ZeamMp095;Name=ZeamMp095.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp095.exon1;rank=1
+Mt	NCBI	CDS	267745	269766	.	-	0	ID=CDS:ZeamMp095;Parent=transcript:ZeamMp095;protein_id=ZeamMp095
+###
+Mt	ensembl	gene	271154	271498	.	-	.	ID=gene:ZeamMp096;biotype=protein_coding;description=orf114-b;gene_id=ZeamMp096;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	271154	271498	.	-	.	ID=transcript:ZeamMp096;Parent=gene:ZeamMp096;biotype=protein_coding;transcript_id=ZeamMp096
+Mt	NCBI	exon	271154	271498	.	-	.	Parent=transcript:ZeamMp096;Name=ZeamMp096.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp096.exon1;rank=1
+Mt	NCBI	CDS	271154	271498	.	-	0	ID=CDS:ZeamMp096;Parent=transcript:ZeamMp096;protein_id=ZeamMp096
+###
+Mt	ensembl	gene	273328	273846	.	-	.	ID=gene:ZeamMp097;biotype=protein_coding;description=rps1;gene_id=ZeamMp097;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	273328	273846	.	-	.	ID=transcript:ZeamMp097;Parent=gene:ZeamMp097;biotype=protein_coding;transcript_id=ZeamMp097
+Mt	NCBI	exon	273328	273846	.	-	.	Parent=transcript:ZeamMp097;Name=ZeamMp097.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp097.exon1;rank=1
+Mt	NCBI	CDS	273328	273846	.	-	0	ID=CDS:ZeamMp097;Parent=transcript:ZeamMp097;protein_id=ZeamMp097
+###
+Mt	ensembl	gene	273987	275849	.	-	.	ID=gene:ZeamMp098;biotype=protein_coding;description=ccmFN;gene_id=ZeamMp098;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	273987	275849	.	-	.	ID=transcript:ZeamMp098;Parent=gene:ZeamMp098;biotype=protein_coding;transcript_id=ZeamMp098
+Mt	NCBI	exon	273987	275849	.	-	.	Parent=transcript:ZeamMp098;Name=ZeamMp098.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp098.exon1;rank=1
+Mt	NCBI	CDS	273987	275849	.	-	0	ID=CDS:ZeamMp098;Parent=transcript:ZeamMp098;protein_id=ZeamMp098
+###
+Mt	ensembl	gene	277988	278428	.	+	.	ID=gene:ZeamMp101;biotype=protein_coding;description=orf146-a;gene_id=ZeamMp101;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	277988	278428	.	+	.	ID=transcript:ZeamMp101;Parent=gene:ZeamMp101;biotype=protein_coding;transcript_id=ZeamMp101
+Mt	NCBI	exon	277988	278428	.	+	.	Parent=transcript:ZeamMp101;Name=ZeamMp101.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp101.exon1;rank=1
+Mt	NCBI	CDS	277988	278428	.	+	0	ID=CDS:ZeamMp101;Parent=transcript:ZeamMp101;protein_id=ZeamMp101
+###
+Mt	ensembl	ncRNA_gene	277993	278064	.	-	.	ID=gene:ZeamMt023;biotype=tRNA;description=trnQtRNA-Gln;gene_id=ZeamMt023;logic_name=organellar_genes_ncbi
+Mt	NCBI	tRNA	277993	278064	.	-	.	ID=transcript:ZeamMt023;Parent=gene:ZeamMt023;biotype=tRNA;transcript_id=ZeamMt023
+Mt	NCBI	exon	277993	278064	.	-	.	Parent=transcript:ZeamMt023;Name=ZeamMt023.exon1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ZeamMt023.exon1;rank=1
+###
+Mt	ensembl	pseudogene	281727	282037	.	-	.	ID=gene:ZeamMp102;biotype=pseudogene;description=orf100-a;gene_id=ZeamMp102;logic_name=organellar_genes_ncbi
+Mt	NCBI	pseudogenic_transcript	281727	282037	.	-	.	ID=transcript:ZeamMp102;Parent=gene:ZeamMp102;biotype=pseudogene;transcript_id=ZeamMp102
+Mt	NCBI	exon	281727	282037	.	-	.	Parent=transcript:ZeamMp102;Name=ZeamMp102.exon1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ZeamMp102.exon1;rank=1
+###
+Mt	ensembl	gene	284756	285205	.	+	.	ID=gene:ZeamMp103;biotype=protein_coding;description=orf149-b;gene_id=ZeamMp103;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	284756	285205	.	+	.	ID=transcript:ZeamMp103;Parent=gene:ZeamMp103;biotype=protein_coding;transcript_id=ZeamMp103
+Mt	NCBI	exon	284756	285205	.	+	.	Parent=transcript:ZeamMp103;Name=ZeamMp103.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp103.exon1;rank=1
+Mt	NCBI	CDS	284756	285205	.	+	0	ID=CDS:ZeamMp103;Parent=transcript:ZeamMp103;protein_id=ZeamMp103
+###
+Mt	ensembl	gene	287309	287710	.	+	.	ID=gene:ZeamMp104;biotype=protein_coding;description=orf133-a;gene_id=ZeamMp104;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	287309	287710	.	+	.	ID=transcript:ZeamMp104;Parent=gene:ZeamMp104;biotype=protein_coding;transcript_id=ZeamMp104
+Mt	NCBI	exon	287309	287710	.	+	.	Parent=transcript:ZeamMp104;Name=ZeamMp104.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp104.exon1;rank=1
+Mt	NCBI	CDS	287309	287710	.	+	0	ID=CDS:ZeamMp104;Parent=transcript:ZeamMp104;protein_id=ZeamMp104
+###
+Mt	ensembl	gene	288627	289007	.	-	.	ID=gene:ZeamMp105;biotype=protein_coding;description=orf126-d;gene_id=ZeamMp105;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	288627	289007	.	-	.	ID=transcript:ZeamMp105;Parent=gene:ZeamMp105;biotype=protein_coding;transcript_id=ZeamMp105
+Mt	NCBI	exon	288627	289007	.	-	.	Parent=transcript:ZeamMp105;Name=ZeamMp105.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp105.exon1;rank=1
+Mt	NCBI	CDS	288627	289007	.	-	0	ID=CDS:ZeamMp105;Parent=transcript:ZeamMp105;protein_id=ZeamMp105
+###
+Mt	ensembl	gene	293481	293798	.	+	.	ID=gene:ZeamMp106;biotype=protein_coding;description=orf105-f;gene_id=ZeamMp106;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	293481	293798	.	+	.	ID=transcript:ZeamMp106;Parent=gene:ZeamMp106;biotype=protein_coding;transcript_id=ZeamMp106
+Mt	NCBI	exon	293481	293798	.	+	.	Parent=transcript:ZeamMp106;Name=ZeamMp106.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp106.exon1;rank=1
+Mt	NCBI	CDS	293481	293798	.	+	0	ID=CDS:ZeamMp106;Parent=transcript:ZeamMp106;protein_id=ZeamMp106
+###
+Mt	ensembl	gene	295310	295627	.	+	.	ID=gene:ZeamMp107;biotype=protein_coding;description=orf105-g;gene_id=ZeamMp107;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	295310	295627	.	+	.	ID=transcript:ZeamMp107;Parent=gene:ZeamMp107;biotype=protein_coding;transcript_id=ZeamMp107
+Mt	NCBI	exon	295310	295627	.	+	.	Parent=transcript:ZeamMp107;Name=ZeamMp107.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp107.exon1;rank=1
+Mt	NCBI	CDS	295310	295627	.	+	0	ID=CDS:ZeamMp107;Parent=transcript:ZeamMp107;protein_id=ZeamMp107
+###
+Mt	ensembl	gene	299238	299462	.	-	.	ID=gene:ZeamMp108;biotype=protein_coding;description=atp9;gene_id=ZeamMp108;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	299238	299462	.	-	.	ID=transcript:ZeamMp108;Parent=gene:ZeamMp108;biotype=protein_coding;transcript_id=ZeamMp108
+Mt	NCBI	exon	299238	299462	.	-	.	Parent=transcript:ZeamMp108;Name=ZeamMp108.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp108.exon1;rank=1
+Mt	NCBI	CDS	299238	299462	.	-	0	ID=CDS:ZeamMp108;Parent=transcript:ZeamMp108;protein_id=ZeamMp108
+###
+Mt	ensembl	gene	306309	306650	.	-	.	ID=gene:ZeamMp109;biotype=protein_coding;description=orf113-a;gene_id=ZeamMp109;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	306309	306650	.	-	.	ID=transcript:ZeamMp109;Parent=gene:ZeamMp109;biotype=protein_coding;transcript_id=ZeamMp109
+Mt	NCBI	exon	306309	306650	.	-	.	Parent=transcript:ZeamMp109;Name=ZeamMp109.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp109.exon1;rank=1
+Mt	NCBI	CDS	306309	306650	.	-	0	ID=CDS:ZeamMp109;Parent=transcript:ZeamMp109;protein_id=ZeamMp109
+###
+Mt	ensembl	gene	307593	308036	.	+	.	ID=gene:ZeamMp110;biotype=protein_coding;description=orf147-a;gene_id=ZeamMp110;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	307593	308036	.	+	.	ID=transcript:ZeamMp110;Parent=gene:ZeamMp110;biotype=protein_coding;transcript_id=ZeamMp110
+Mt	NCBI	exon	307593	308036	.	+	.	Parent=transcript:ZeamMp110;Name=ZeamMp110.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp110.exon1;rank=1
+Mt	NCBI	CDS	307593	308036	.	+	0	ID=CDS:ZeamMp110;Parent=transcript:ZeamMp110;protein_id=ZeamMp110
+###
+Mt	ensembl	gene	307857	308156	.	-	.	ID=gene:ZeamMp111;biotype=protein_coding;description=orf99-e;gene_id=ZeamMp111;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	307857	308156	.	-	.	ID=transcript:ZeamMp111;Parent=gene:ZeamMp111;biotype=protein_coding;transcript_id=ZeamMp111
+Mt	NCBI	exon	307857	308156	.	-	.	Parent=transcript:ZeamMp111;Name=ZeamMp111.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp111.exon1;rank=1
+Mt	NCBI	CDS	307857	308156	.	-	0	ID=CDS:ZeamMp111;Parent=transcript:ZeamMp111;protein_id=ZeamMp111
+###
+Mt	ensembl	gene	308155	308514	.	+	.	ID=gene:ZeamMp112;biotype=protein_coding;description=orf119-b;gene_id=ZeamMp112;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	308155	308514	.	+	.	ID=transcript:ZeamMp112;Parent=gene:ZeamMp112;biotype=protein_coding;transcript_id=ZeamMp112
+Mt	NCBI	exon	308155	308514	.	+	.	Parent=transcript:ZeamMp112;Name=ZeamMp112.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp112.exon1;rank=1
+Mt	NCBI	CDS	308155	308514	.	+	0	ID=CDS:ZeamMp112;Parent=transcript:ZeamMp112;protein_id=ZeamMp112
+###
+Mt	ensembl	gene	310906	312072	.	+	.	ID=gene:ZeamMp113;biotype=protein_coding;description=cob;gene_id=ZeamMp113;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	310906	312072	.	+	.	ID=transcript:ZeamMp113;Parent=gene:ZeamMp113;biotype=protein_coding;transcript_id=ZeamMp113
+Mt	NCBI	exon	310906	312072	.	+	.	Parent=transcript:ZeamMp113;Name=ZeamMp113.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp113.exon1;rank=1
+Mt	NCBI	CDS	310906	312072	.	+	0	ID=CDS:ZeamMp113;Parent=transcript:ZeamMp113;protein_id=ZeamMp113
+###
+Mt	ensembl	gene	313450	313773	.	-	.	ID=gene:ZeamMp114;biotype=protein_coding;description=orf107-a;gene_id=ZeamMp114;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	313450	313773	.	-	.	ID=transcript:ZeamMp114;Parent=gene:ZeamMp114;biotype=protein_coding;transcript_id=ZeamMp114
+Mt	NCBI	exon	313450	313773	.	-	.	Parent=transcript:ZeamMp114;Name=ZeamMp114.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp114.exon1;rank=1
+Mt	NCBI	CDS	313450	313773	.	-	0	ID=CDS:ZeamMp114;Parent=transcript:ZeamMp114;protein_id=ZeamMp114
+###
+Mt	ensembl	ncRNA_gene	318974	319047	.	+	.	ID=gene:ZeamMt024;biotype=tRNA;description=trnfMtRNA-Met;gene_id=ZeamMt024;logic_name=organellar_genes_ncbi
+Mt	NCBI	tRNA	318974	319047	.	+	.	ID=transcript:ZeamMt024;Parent=gene:ZeamMt024;biotype=tRNA;transcript_id=ZeamMt024
+Mt	NCBI	exon	318974	319047	.	+	.	Parent=transcript:ZeamMt024;Name=ZeamMt024.exon1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ZeamMt024.exon1;rank=1
+###
+Mt	ensembl	gene	319613	319963	.	+	.	ID=gene:ZeamMp115;biotype=protein_coding;description=rps13;gene_id=ZeamMp115;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	319613	319963	.	+	.	ID=transcript:ZeamMp115;Parent=gene:ZeamMp115;biotype=protein_coding;transcript_id=ZeamMp115
+Mt	NCBI	exon	319613	319963	.	+	.	Parent=transcript:ZeamMp115;Name=ZeamMp115.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp115.exon1;rank=1
+Mt	NCBI	CDS	319613	319963	.	+	0	ID=CDS:ZeamMp115;Parent=transcript:ZeamMp115;protein_id=ZeamMp115
+###
+Mt	ensembl	ncRNA_gene	326704	327726	.	-	.	ID=gene:ZeamMt025;biotype=tRNA;description=trnI-cttRNA-Ile;gene_id=ZeamMt025;logic_name=organellar_genes_ncbi
+Mt	NCBI	tRNA	326704	327726	.	-	.	ID=transcript:ZeamMt025;Parent=gene:ZeamMt025;biotype=tRNA;transcript_id=ZeamMt025
+Mt	NCBI	exon	326704	326738	.	-	.	Parent=transcript:ZeamMt025;Name=ZeamMt025.exon2;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ZeamMt025.exon2;rank=2
+Mt	NCBI	exon	327690	327726	.	-	.	Parent=transcript:ZeamMt025;Name=ZeamMt025.exon1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ZeamMt025.exon1;rank=1
+###
+Mt	Ensembl_Plants	ncRNA_gene	326739	326857	.	-	.	ID=gene:ENSRNA049457319;Name=Intron_gpII;biotype=sense_intronic;description=Group II catalytic intron;gene_id=ENSRNA049457319;logic_name=rfam_12.2_gene
+Mt	Ensembl_Plants	lnc_RNA	326739	326857	.	-	.	ID=transcript:ENSRNA049457319-T1;Parent=gene:ENSRNA049457319;biotype=sense_intronic;transcript_id=ENSRNA049457319-T1
+Mt	Ensembl_Plants	exon	326739	326857	.	-	.	Parent=transcript:ENSRNA049457319-T1;Name=ENSRNA049457319-E1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ENSRNA049457319-E1;rank=1
+###
+Mt	ensembl	gene	327181	327585	.	-	.	ID=gene:ZeamMp116;biotype=protein_coding;description=orf134-a-ct;gene_id=ZeamMp116;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	327181	327585	.	-	.	ID=transcript:ZeamMp116;Parent=gene:ZeamMp116;biotype=protein_coding;transcript_id=ZeamMp116
+Mt	NCBI	exon	327181	327585	.	-	.	Parent=transcript:ZeamMp116;Name=ZeamMp116.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp116.exon1;rank=1
+Mt	NCBI	CDS	327181	327585	.	-	0	ID=CDS:ZeamMp116;Parent=transcript:ZeamMp116;protein_id=ZeamMp116
+###
+Mt	ensembl	ncRNA_gene	328030	329520	.	-	.	ID=gene:ZeamMr001;biotype=rRNA;description=rrn16-ct16S ribosomal RNA;gene_id=ZeamMr001;logic_name=organellar_genes_ncbi
+Mt	NCBI	rRNA	328030	329520	.	-	.	ID=transcript:ZeamMr001;Parent=gene:ZeamMr001;biotype=rRNA;transcript_id=ZeamMr001
+Mt	NCBI	exon	328030	329520	.	-	.	Parent=transcript:ZeamMr001;Name=ZeamMr001.exon1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ZeamMr001.exon1;rank=1
+###
+Mt	ensembl	pseudogene	329751	329822	.	-	.	ID=gene:ZeamMt026;biotype=tRNA_pseudogene;description=trnV-cttRNA-Val;gene_id=ZeamMt026;logic_name=organellar_genes_ncbi
+Mt	NCBI	pseudogenic_transcript	329751	329822	.	-	.	ID=transcript:ZeamMt026;Parent=gene:ZeamMt026;biotype=tRNA_pseudogene;transcript_id=ZeamMt026
+Mt	NCBI	exon	329751	329822	.	-	.	Parent=transcript:ZeamMt026;Name=ZeamMt026.exon1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ZeamMt026.exon1;rank=1
+###
+Mt	ensembl	pseudogene	330558	330998	.	-	.	ID=gene:ZeamMp117;biotype=pseudogene;description=orf146-ct;gene_id=ZeamMp117;logic_name=organellar_genes_ncbi
+Mt	NCBI	pseudogenic_transcript	330558	330998	.	-	.	ID=transcript:ZeamMp117;Parent=gene:ZeamMp117;biotype=pseudogene;transcript_id=ZeamMp117
+Mt	NCBI	exon	330558	330998	.	-	.	Parent=transcript:ZeamMp117;Name=ZeamMp117.exon1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ZeamMp117.exon1;rank=1
+###
+Mt	Ensembl_Plants	ncRNA_gene	331502	331578	.	+	.	ID=gene:ENSRNA049457405;Name=Intron_gpII;biotype=sense_intronic;description=Group II catalytic intron;gene_id=ENSRNA049457405;logic_name=rfam_12.2_gene
+Mt	Ensembl_Plants	lnc_RNA	331502	331578	.	+	.	ID=transcript:ENSRNA049457405-T1;Parent=gene:ENSRNA049457405;biotype=sense_intronic;transcript_id=ENSRNA049457405-T1
+Mt	Ensembl_Plants	exon	331502	331578	.	+	.	Parent=transcript:ENSRNA049457405-T1;Name=ENSRNA049457405-E1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ENSRNA049457405-E1;rank=1
+###
+Mt	ensembl	pseudogene	331579	332379	.	+	.	ID=gene:ZeamMp118;biotype=pseudogene;description=rps12-ct;gene_id=ZeamMp118;logic_name=organellar_genes_ncbi
+Mt	NCBI	pseudogenic_transcript	331579	332379	.	+	.	ID=transcript:ZeamMp118;Parent=gene:ZeamMp118;biotype=pseudogene;transcript_id=ZeamMp118
+Mt	NCBI	exon	331579	331810	.	+	.	Parent=transcript:ZeamMp118;Name=ZeamMp118.exon1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ZeamMp118.exon1;rank=1
+Mt	NCBI	exon	332350	332379	.	+	.	Parent=transcript:ZeamMp118;Name=ZeamMp118.exon2;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ZeamMp118.exon2;rank=2
+###
+Mt	Ensembl_Plants	ncRNA_gene	332277	332350	.	+	.	ID=gene:ENSRNA049457438;Name=Intron_gpII;biotype=sense_intronic;description=Group II catalytic intron;gene_id=ENSRNA049457438;logic_name=rfam_12.2_gene
+Mt	Ensembl_Plants	lnc_RNA	332277	332350	.	+	.	ID=transcript:ENSRNA049457438-T1;Parent=gene:ENSRNA049457438;biotype=sense_intronic;transcript_id=ENSRNA049457438-T1
+Mt	Ensembl_Plants	exon	332277	332350	.	+	.	Parent=transcript:ENSRNA049457438-T1;Name=ENSRNA049457438-E1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ENSRNA049457438-E1;rank=1
+###
+Mt	ensembl	gene	332438	332908	.	+	.	ID=gene:ZeamMp119;Name=rps7-A;biotype=protein_coding;description=rps7-ct;gene_id=ZeamMp119;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	332438	332908	.	+	.	ID=transcript:ZeamMp119;Parent=gene:ZeamMp119;biotype=protein_coding;transcript_id=ZeamMp119
+Mt	NCBI	exon	332438	332908	.	+	.	Parent=transcript:ZeamMp119;Name=ZeamMp119.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp119.exon1;rank=1
+Mt	NCBI	CDS	332438	332908	.	+	0	ID=CDS:ZeamMp119;Parent=transcript:ZeamMp119;protein_id=ZeamMp119
+###
+Mt	ensembl	pseudogene	333208	335444	.	+	.	ID=gene:ZeamMp120;biotype=pseudogene;description=ndhB-ct;gene_id=ZeamMp120;logic_name=organellar_genes_ncbi
+Mt	NCBI	pseudogenic_transcript	333208	335444	.	+	.	ID=transcript:ZeamMp120;Parent=gene:ZeamMp120;biotype=pseudogene;transcript_id=ZeamMp120
+Mt	NCBI	exon	333208	335444	.	+	.	Parent=transcript:ZeamMp120;Name=ZeamMp120.exon1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ZeamMp120.exon1;rank=1
+###
+Mt	Ensembl_Plants	ncRNA_gene	334610	334688	.	+	.	ID=gene:ENSRNA049457253;Name=Intron_gpII;biotype=sense_intronic;description=Group II catalytic intron;gene_id=ENSRNA049457253;logic_name=rfam_12.2_gene
+Mt	Ensembl_Plants	lnc_RNA	334610	334688	.	+	.	ID=transcript:ENSRNA049457253-T1;Parent=gene:ENSRNA049457253;biotype=sense_intronic;transcript_id=ENSRNA049457253-T1
+Mt	Ensembl_Plants	exon	334610	334688	.	+	.	Parent=transcript:ENSRNA049457253-T1;Name=ENSRNA049457253-E1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ENSRNA049457253-E1;rank=1
+###
+Mt	ensembl	pseudogene	336020	336100	.	+	.	ID=gene:ZeamMt027;biotype=tRNA_pseudogene;description=trnL-c-cttRNA-Leu;gene_id=ZeamMt027;logic_name=organellar_genes_ncbi
+Mt	NCBI	pseudogenic_transcript	336020	336100	.	+	.	ID=transcript:ZeamMt027;Parent=gene:ZeamMt027;biotype=tRNA_pseudogene;transcript_id=ZeamMt027
+Mt	NCBI	exon	336020	336100	.	+	.	Parent=transcript:ZeamMt027;Name=ZeamMt027.exon1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ZeamMt027.exon1;rank=1
+###
+Mt	ensembl	gene	336423	336818	.	-	.	ID=gene:ZeamMp121;biotype=protein_coding;description=orf131-b-ct;gene_id=ZeamMp121;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	336423	336818	.	-	.	ID=transcript:ZeamMp121;Parent=gene:ZeamMp121;biotype=protein_coding;transcript_id=ZeamMp121
+Mt	NCBI	exon	336423	336818	.	-	.	Parent=transcript:ZeamMp121;Name=ZeamMp121.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp121.exon1;rank=1
+Mt	NCBI	CDS	336423	336818	.	-	0	ID=CDS:ZeamMp121;Parent=transcript:ZeamMp121;protein_id=ZeamMp121
+###
+Mt	ensembl	pseudogene	336884	337187	.	-	.	ID=gene:ZeamMp122;biotype=pseudogene;description=orf100-b-ct;gene_id=ZeamMp122;logic_name=organellar_genes_ncbi
+Mt	NCBI	pseudogenic_transcript	336884	337187	.	-	.	ID=transcript:ZeamMp122;Parent=gene:ZeamMp122;biotype=pseudogene;transcript_id=ZeamMp122
+Mt	NCBI	exon	336884	337187	.	-	.	Parent=transcript:ZeamMp122;Name=ZeamMp122.exon1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ZeamMp122.exon1;rank=1
+###
+Mt	ensembl	pseudogene	337987	338411	.	-	.	ID=gene:ZeamMp123;biotype=pseudogene;description=orf140-ct;gene_id=ZeamMp123;logic_name=organellar_genes_ncbi
+Mt	NCBI	pseudogenic_transcript	337987	338411	.	-	.	ID=transcript:ZeamMp123;Parent=gene:ZeamMp123;biotype=pseudogene;transcript_id=ZeamMp123
+Mt	NCBI	exon	337987	338411	.	-	.	Parent=transcript:ZeamMp123;Name=ZeamMp123.exon1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ZeamMp123.exon1;rank=1
+###
+Mt	ensembl	gene	339779	340135	.	+	.	ID=gene:ZeamMp124;biotype=protein_coding;description=orf118;gene_id=ZeamMp124;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	339779	340135	.	+	.	ID=transcript:ZeamMp124;Parent=gene:ZeamMp124;biotype=protein_coding;transcript_id=ZeamMp124
+Mt	NCBI	exon	339779	340135	.	+	.	Parent=transcript:ZeamMp124;Name=ZeamMp124.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp124.exon1;rank=1
+Mt	NCBI	CDS	339779	340135	.	+	0	ID=CDS:ZeamMp124;Parent=transcript:ZeamMp124;protein_id=ZeamMp124
+###
+Mt	ensembl	gene	342957	343355	.	-	.	ID=gene:ZeamMp125;biotype=protein_coding;description=orf132;gene_id=ZeamMp125;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	342957	343355	.	-	.	ID=transcript:ZeamMp125;Parent=gene:ZeamMp125;biotype=protein_coding;transcript_id=ZeamMp125
+Mt	NCBI	exon	342957	343355	.	-	.	Parent=transcript:ZeamMp125;Name=ZeamMp125.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp125.exon1;rank=1
+Mt	NCBI	CDS	342957	343355	.	-	0	ID=CDS:ZeamMp125;Parent=transcript:ZeamMp125;protein_id=ZeamMp125
+###
+Mt	ensembl	pseudogene	344034	344405	.	+	.	ID=gene:ZeamMp126;biotype=pseudogene;description=orf120;gene_id=ZeamMp126;logic_name=organellar_genes_ncbi
+Mt	NCBI	pseudogenic_transcript	344034	344405	.	+	.	ID=transcript:ZeamMp126;Parent=gene:ZeamMp126;biotype=pseudogene;transcript_id=ZeamMp126
+Mt	NCBI	exon	344034	344405	.	+	.	Parent=transcript:ZeamMp126;Name=ZeamMp126.exon1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ZeamMp126.exon1;rank=1
+###
+Mt	ensembl	gene	344813	345433	.	+	.	ID=gene:ZeamMp127;biotype=protein_coding;description=ccmB;gene_id=ZeamMp127;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	344813	345433	.	+	.	ID=transcript:ZeamMp127;Parent=gene:ZeamMp127;biotype=protein_coding;transcript_id=ZeamMp127
+Mt	NCBI	exon	344813	345433	.	+	.	Parent=transcript:ZeamMp127;Name=ZeamMp127.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp127.exon1;rank=1
+Mt	NCBI	CDS	344813	345433	.	+	0	ID=CDS:ZeamMp127;Parent=transcript:ZeamMp127;protein_id=ZeamMp127
+###
+Mt	ensembl	pseudogene	346550	346739	.	-	.	ID=gene:ZeamMp128;biotype=pseudogene;description=rps19-ct;gene_id=ZeamMp128;logic_name=organellar_genes_ncbi
+Mt	NCBI	pseudogenic_transcript	346550	346739	.	-	.	ID=transcript:ZeamMp128;Parent=gene:ZeamMp128;biotype=pseudogene;transcript_id=ZeamMp128
+Mt	NCBI	exon	346550	346739	.	-	.	Parent=transcript:ZeamMp128;Name=ZeamMp128.exon1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ZeamMp128.exon1;rank=1
+###
+Mt	ensembl	gene	346758	347501	.	-	.	ID=gene:ZeamMp129;biotype=protein_coding;description=orf247-ct;gene_id=ZeamMp129;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	346758	347501	.	-	.	ID=transcript:ZeamMp129;Parent=gene:ZeamMp129;biotype=protein_coding;transcript_id=ZeamMp129
+Mt	NCBI	exon	346758	347501	.	-	.	Parent=transcript:ZeamMp129;Name=ZeamMp129.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp129.exon1;rank=1
+Mt	NCBI	CDS	346758	347501	.	-	0	ID=CDS:ZeamMp129;Parent=transcript:ZeamMp129;protein_id=ZeamMp129
+###
+Mt	ensembl	ncRNA_gene	346870	346943	.	+	.	ID=gene:ZeamMt028;biotype=tRNA;description=trnH-cttRNA-His;gene_id=ZeamMt028;logic_name=organellar_genes_ncbi
+Mt	NCBI	tRNA	346870	346943	.	+	.	ID=transcript:ZeamMt028;Parent=gene:ZeamMt028;biotype=tRNA;transcript_id=ZeamMt028
+Mt	NCBI	exon	346870	346943	.	+	.	Parent=transcript:ZeamMt028;Name=ZeamMt028.exon1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ZeamMt028.exon1;rank=1
+###
+Mt	ensembl	pseudogene	347007	348473	.	-	.	ID=gene:ZeamMp130;biotype=pseudogene;description=rpl2-ct;gene_id=ZeamMp130;logic_name=organellar_genes_ncbi
+Mt	NCBI	pseudogenic_transcript	347007	348473	.	-	.	ID=transcript:ZeamMp130;Parent=gene:ZeamMp130;biotype=pseudogene;transcript_id=ZeamMp130
+Mt	NCBI	exon	347007	348473	.	-	.	Parent=transcript:ZeamMp130;Name=ZeamMp130.exon1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ZeamMp130.exon1;rank=1
+###
+Mt	ensembl	gene	347110	347523	.	+	.	ID=gene:ZeamMp131;Name=ycf72-1;biotype=protein_coding;description=orf137-a-ct;gene_id=ZeamMp131;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	347110	347523	.	+	.	ID=transcript:ZeamMp131;Parent=gene:ZeamMp131;biotype=protein_coding;transcript_id=ZeamMp131
+Mt	NCBI	exon	347110	347523	.	+	.	Parent=transcript:ZeamMp131;Name=ZeamMp131.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp131.exon1;rank=1
+Mt	NCBI	CDS	347110	347523	.	+	0	ID=CDS:ZeamMp131;Parent=transcript:ZeamMp131;protein_id=ZeamMp131
+###
+Mt	Ensembl_Plants	ncRNA_gene	347434	347510	.	-	.	ID=gene:ENSRNA049457226;Name=Intron_gpII;biotype=sense_intronic;description=Group II catalytic intron;gene_id=ENSRNA049457226;logic_name=rfam_12.2_gene
+Mt	Ensembl_Plants	lnc_RNA	347434	347510	.	-	.	ID=transcript:ENSRNA049457226-T1;Parent=gene:ENSRNA049457226;biotype=sense_intronic;transcript_id=ENSRNA049457226-T1
+Mt	Ensembl_Plants	exon	347434	347510	.	-	.	Parent=transcript:ENSRNA049457226-T1;Name=ENSRNA049457226-E1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ENSRNA049457226-E1;rank=1
+###
+Mt	ensembl	gene	348199	348528	.	+	.	ID=gene:ZeamMp132;biotype=protein_coding;description=orf109-b-ct;gene_id=ZeamMp132;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	348199	348528	.	+	.	ID=transcript:ZeamMp132;Parent=gene:ZeamMp132;biotype=protein_coding;transcript_id=ZeamMp132
+Mt	NCBI	exon	348199	348528	.	+	.	Parent=transcript:ZeamMp132;Name=ZeamMp132.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp132.exon1;rank=1
+Mt	NCBI	CDS	348199	348528	.	+	0	ID=CDS:ZeamMp132;Parent=transcript:ZeamMp132;protein_id=ZeamMp132
+###
+Mt	ensembl	pseudogene	348494	348769	.	-	.	ID=gene:ZeamMp133;biotype=pseudogene;description=rpl23-ct;gene_id=ZeamMp133;logic_name=organellar_genes_ncbi
+Mt	NCBI	pseudogenic_transcript	348494	348769	.	-	.	ID=transcript:ZeamMp133;Parent=gene:ZeamMp133;biotype=pseudogene;transcript_id=ZeamMp133
+Mt	NCBI	exon	348494	348769	.	-	.	Parent=transcript:ZeamMp133;Name=ZeamMp133.exon1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ZeamMp133.exon1;rank=1
+###
+Mt	ensembl	pseudogene	349025	350442	.	-	.	ID=gene:ZeamMp134;biotype=pseudogene;description=rbcL-ct;gene_id=ZeamMp134;logic_name=organellar_genes_ncbi
+Mt	NCBI	pseudogenic_transcript	349025	350442	.	-	.	ID=transcript:ZeamMp134;Parent=gene:ZeamMp134;biotype=pseudogene;transcript_id=ZeamMp134
+Mt	NCBI	exon	349025	350442	.	-	.	Parent=transcript:ZeamMp134;Name=ZeamMp134.exon1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ZeamMp134.exon1;rank=1
+###
+Mt	ensembl	gene	351309	351713	.	-	.	ID=gene:ZeamMp135;biotype=protein_coding;description=orf134-b;gene_id=ZeamMp135;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	351309	351713	.	-	.	ID=transcript:ZeamMp135;Parent=gene:ZeamMp135;biotype=protein_coding;transcript_id=ZeamMp135
+Mt	NCBI	exon	351309	351713	.	-	.	Parent=transcript:ZeamMp135;Name=ZeamMp135.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp135.exon1;rank=1
+Mt	NCBI	CDS	351309	351713	.	-	0	ID=CDS:ZeamMp135;Parent=transcript:ZeamMp135;protein_id=ZeamMp135
+###
+Mt	ensembl	gene	354865	356451	.	+	.	ID=gene:ZeamMp136;Name=COX1;biotype=protein_coding;description=cox1;gene_id=ZeamMp136;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	354865	356451	.	+	.	ID=transcript:ZeamMp136;Parent=gene:ZeamMp136;biotype=protein_coding;transcript_id=ZeamMp136
+Mt	NCBI	exon	354865	356451	.	+	.	Parent=transcript:ZeamMp136;Name=ZeamMp136.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp136.exon1;rank=1
+Mt	NCBI	CDS	354865	356451	.	+	0	ID=CDS:ZeamMp136;Parent=transcript:ZeamMp136;protein_id=ZeamMp136
+###
+Mt	ensembl	gene	356474	356917	.	-	.	ID=gene:ZeamMp137;biotype=protein_coding;description=orf147-b;gene_id=ZeamMp137;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	356474	356917	.	-	.	ID=transcript:ZeamMp137;Parent=gene:ZeamMp137;biotype=protein_coding;transcript_id=ZeamMp137
+Mt	NCBI	exon	356474	356917	.	-	.	Parent=transcript:ZeamMp137;Name=ZeamMp137.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp137.exon1;rank=1
+Mt	NCBI	CDS	356474	356917	.	-	0	ID=CDS:ZeamMp137;Parent=transcript:ZeamMp137;protein_id=ZeamMp137
+###
+Mt	ensembl	gene	360534	361787	.	-	.	ID=gene:ZeamMp138;biotype=protein_coding;description=orf417;gene_id=ZeamMp138;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	360534	361787	.	-	.	ID=transcript:ZeamMp138;Parent=gene:ZeamMp138;biotype=protein_coding;transcript_id=ZeamMp138
+Mt	NCBI	exon	360534	361787	.	-	.	Parent=transcript:ZeamMp138;Name=ZeamMp138.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp138.exon1;rank=1
+Mt	NCBI	CDS	360534	361787	.	-	0	ID=CDS:ZeamMp138;Parent=transcript:ZeamMp138;protein_id=ZeamMp138
+###
+Mt	ensembl	pseudogene	360558	360878	.	+	.	ID=gene:ZeamMp139;biotype=pseudogene;description=orf106;gene_id=ZeamMp139;logic_name=organellar_genes_ncbi
+Mt	NCBI	pseudogenic_transcript	360558	360878	.	+	.	ID=transcript:ZeamMp139;Parent=gene:ZeamMp139;biotype=pseudogene;transcript_id=ZeamMp139
+Mt	NCBI	exon	360558	360878	.	+	.	Parent=transcript:ZeamMp139;Name=ZeamMp139.exon1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ZeamMp139.exon1;rank=1
+###
+Mt	ensembl	gene	361927	362250	.	-	.	ID=gene:ZeamMp140;biotype=protein_coding;description=orf107-d;gene_id=ZeamMp140;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	361927	362250	.	-	.	ID=transcript:ZeamMp140;Parent=gene:ZeamMp140;biotype=protein_coding;transcript_id=ZeamMp140
+Mt	NCBI	exon	361927	362250	.	-	.	Parent=transcript:ZeamMp140;Name=ZeamMp140.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp140.exon1;rank=1
+Mt	NCBI	CDS	361927	362250	.	-	0	ID=CDS:ZeamMp140;Parent=transcript:ZeamMp140;protein_id=ZeamMp140
+###
+Mt	ensembl	gene	362802	363197	.	-	.	ID=gene:ZeamMp141;biotype=protein_coding;description=orf131-c;gene_id=ZeamMp141;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	362802	363197	.	-	.	ID=transcript:ZeamMp141;Parent=gene:ZeamMp141;biotype=protein_coding;transcript_id=ZeamMp141
+Mt	NCBI	exon	362802	363197	.	-	.	Parent=transcript:ZeamMp141;Name=ZeamMp141.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp141.exon1;rank=1
+Mt	NCBI	CDS	362802	363197	.	-	0	ID=CDS:ZeamMp141;Parent=transcript:ZeamMp141;protein_id=ZeamMp141
+###
+Mt	ensembl	gene	369060	369413	.	+	.	ID=gene:ZeamMp142;biotype=protein_coding;description=orf117-d;gene_id=ZeamMp142;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	369060	369413	.	+	.	ID=transcript:ZeamMp142;Parent=gene:ZeamMp142;biotype=protein_coding;transcript_id=ZeamMp142
+Mt	NCBI	exon	369060	369413	.	+	.	Parent=transcript:ZeamMp142;Name=ZeamMp142.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp142.exon1;rank=1
+Mt	NCBI	CDS	369060	369413	.	+	0	ID=CDS:ZeamMp142;Parent=transcript:ZeamMp142;protein_id=ZeamMp142
+###
+Mt	ensembl	gene	372870	373193	.	-	.	ID=gene:ZeamMp143;biotype=protein_coding;description=orf107-b;gene_id=ZeamMp143;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	372870	373193	.	-	.	ID=transcript:ZeamMp143;Parent=gene:ZeamMp143;biotype=protein_coding;transcript_id=ZeamMp143
+Mt	NCBI	exon	372870	373193	.	-	.	Parent=transcript:ZeamMp143;Name=ZeamMp143.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp143.exon1;rank=1
+Mt	NCBI	CDS	372870	373193	.	-	0	ID=CDS:ZeamMp143;Parent=transcript:ZeamMp143;protein_id=ZeamMp143
+###
+Mt	ensembl	gene	374935	375234	.	+	.	ID=gene:ZeamMp144;biotype=protein_coding;description=orf99-f;gene_id=ZeamMp144;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	374935	375234	.	+	.	ID=transcript:ZeamMp144;Parent=gene:ZeamMp144;biotype=protein_coding;transcript_id=ZeamMp144
+Mt	NCBI	exon	374935	375234	.	+	.	Parent=transcript:ZeamMp144;Name=ZeamMp144.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp144.exon1;rank=1
+Mt	NCBI	CDS	374935	375234	.	+	0	ID=CDS:ZeamMp144;Parent=transcript:ZeamMp144;protein_id=ZeamMp144
+###
+Mt	ensembl	gene	376214	376603	.	-	.	ID=gene:ZeamMp145;biotype=protein_coding;description=orf129-a;gene_id=ZeamMp145;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	376214	376603	.	-	.	ID=transcript:ZeamMp145;Parent=gene:ZeamMp145;biotype=protein_coding;transcript_id=ZeamMp145
+Mt	NCBI	exon	376214	376603	.	-	.	Parent=transcript:ZeamMp145;Name=ZeamMp145.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp145.exon1;rank=1
+Mt	NCBI	CDS	376214	376603	.	-	0	ID=CDS:ZeamMp145;Parent=transcript:ZeamMp145;protein_id=ZeamMp145
+###
+Mt	ensembl	ncRNA_gene	377949	378035	.	-	.	ID=gene:ZeamMt029;biotype=tRNA;description=trnS-btRNA-Ser;gene_id=ZeamMt029;logic_name=organellar_genes_ncbi
+Mt	NCBI	tRNA	377949	378035	.	-	.	ID=transcript:ZeamMt029;Parent=gene:ZeamMt029;biotype=tRNA;transcript_id=ZeamMt029
+Mt	NCBI	exon	377949	378035	.	-	.	Parent=transcript:ZeamMt029;Name=ZeamMt029.exon1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ZeamMt029.exon1;rank=1
+###
+Mt	ensembl	pseudogene	380144	380454	.	-	.	ID=gene:ZeamMp146;biotype=pseudogene;description=orf100-c;gene_id=ZeamMp146;logic_name=organellar_genes_ncbi
+Mt	NCBI	pseudogenic_transcript	380144	380454	.	-	.	ID=transcript:ZeamMp146;Parent=gene:ZeamMp146;biotype=pseudogene;transcript_id=ZeamMp146
+Mt	NCBI	exon	380144	380454	.	-	.	Parent=transcript:ZeamMp146;Name=ZeamMp146.exon1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ZeamMp146.exon1;rank=1
+###
+Mt	ensembl	pseudogene	383186	383510	.	-	.	ID=gene:ZeamMp147;biotype=pseudogene;description=orf109;gene_id=ZeamMp147;logic_name=organellar_genes_ncbi
+Mt	NCBI	pseudogenic_transcript	383186	383510	.	-	.	ID=transcript:ZeamMp147;Parent=gene:ZeamMp147;biotype=pseudogene;transcript_id=ZeamMp147
+Mt	NCBI	exon	383186	383510	.	-	.	Parent=transcript:ZeamMp147;Name=ZeamMp147.exon1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ZeamMp147.exon1;rank=1
+###
+Mt	ensembl	gene	385083	385424	.	+	.	ID=gene:ZeamMp148;biotype=protein_coding;description=orf113-b;gene_id=ZeamMp148;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	385083	385424	.	+	.	ID=transcript:ZeamMp148;Parent=gene:ZeamMp148;biotype=protein_coding;transcript_id=ZeamMp148
+Mt	NCBI	exon	385083	385424	.	+	.	Parent=transcript:ZeamMp148;Name=ZeamMp148.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp148.exon1;rank=1
+Mt	NCBI	CDS	385083	385424	.	+	0	ID=CDS:ZeamMp148;Parent=transcript:ZeamMp148;protein_id=ZeamMp148
+###
+Mt	ensembl	gene	388671	389072	.	-	.	ID=gene:ZeamMp149;biotype=protein_coding;description=orf133-b;gene_id=ZeamMp149;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	388671	389072	.	-	.	ID=transcript:ZeamMp149;Parent=gene:ZeamMp149;biotype=protein_coding;transcript_id=ZeamMp149
+Mt	NCBI	exon	388671	389072	.	-	.	Parent=transcript:ZeamMp149;Name=ZeamMp149.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp149.exon1;rank=1
+Mt	NCBI	CDS	388671	389072	.	-	0	ID=CDS:ZeamMp149;Parent=transcript:ZeamMp149;protein_id=ZeamMp149
+###
+Mt	ensembl	gene	393955	394392	.	-	.	ID=gene:ZeamMp150;biotype=protein_coding;description=orf145;gene_id=ZeamMp150;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	393955	394392	.	-	.	ID=transcript:ZeamMp150;Parent=gene:ZeamMp150;biotype=protein_coding;transcript_id=ZeamMp150
+Mt	NCBI	exon	393955	394392	.	-	.	Parent=transcript:ZeamMp150;Name=ZeamMp150.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp150.exon1;rank=1
+Mt	NCBI	CDS	393955	394392	.	-	0	ID=CDS:ZeamMp150;Parent=transcript:ZeamMp150;protein_id=ZeamMp150
+###
+Mt	ensembl	gene	394346	394831	.	-	.	ID=gene:ZeamMp151;biotype=protein_coding;description=orf161;gene_id=ZeamMp151;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	394346	394831	.	-	.	ID=transcript:ZeamMp151;Parent=gene:ZeamMp151;biotype=protein_coding;transcript_id=ZeamMp151
+Mt	NCBI	exon	394346	394831	.	-	.	Parent=transcript:ZeamMp151;Name=ZeamMp151.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp151.exon1;rank=1
+Mt	NCBI	CDS	394346	394831	.	-	0	ID=CDS:ZeamMp151;Parent=transcript:ZeamMp151;protein_id=ZeamMp151
+###
+Mt	ensembl	gene	394828	395136	.	-	.	ID=gene:ZeamMp152;biotype=protein_coding;description=orf102-b;gene_id=ZeamMp152;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	394828	395136	.	-	.	ID=transcript:ZeamMp152;Parent=gene:ZeamMp152;biotype=protein_coding;transcript_id=ZeamMp152
+Mt	NCBI	exon	394828	395136	.	-	.	Parent=transcript:ZeamMp152;Name=ZeamMp152.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp152.exon1;rank=1
+Mt	NCBI	CDS	394828	395136	.	-	0	ID=CDS:ZeamMp152;Parent=transcript:ZeamMp152;protein_id=ZeamMp152
+###
+Mt	ensembl	ncRNA_gene	400215	403766	.	+	.	ID=gene:ZeamMr002;biotype=rRNA;description=rrn2626S ribosomal RNA;gene_id=ZeamMr002;logic_name=organellar_genes_ncbi
+Mt	NCBI	rRNA	400215	403766	.	+	.	ID=transcript:ZeamMr002;Parent=gene:ZeamMr002;biotype=rRNA;transcript_id=ZeamMr002
+Mt	NCBI	exon	400215	403766	.	+	.	Parent=transcript:ZeamMr002;Name=ZeamMr002.exon1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ZeamMr002.exon1;rank=1
+###
+Mt	ensembl	gene	406845	407144	.	-	.	ID=gene:ZeamMp153;biotype=protein_coding;description=orf99-g;gene_id=ZeamMp153;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	406845	407144	.	-	.	ID=transcript:ZeamMp153;Parent=gene:ZeamMp153;biotype=protein_coding;transcript_id=ZeamMp153
+Mt	NCBI	exon	406845	407144	.	-	.	Parent=transcript:ZeamMp153;Name=ZeamMp153.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp153.exon1;rank=1
+Mt	NCBI	CDS	406845	407144	.	-	0	ID=CDS:ZeamMp153;Parent=transcript:ZeamMp153;protein_id=ZeamMp153
+###
+Mt	ensembl	gene	411137	411628	.	-	.	ID=gene:ZeamMp154;biotype=protein_coding;description=orf163;gene_id=ZeamMp154;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	411137	411628	.	-	.	ID=transcript:ZeamMp154;Parent=gene:ZeamMp154;biotype=protein_coding;transcript_id=ZeamMp154
+Mt	NCBI	exon	411137	411628	.	-	.	Parent=transcript:ZeamMp154;Name=ZeamMp154.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp154.exon1;rank=1
+Mt	NCBI	CDS	411137	411628	.	-	0	ID=CDS:ZeamMp154;Parent=transcript:ZeamMp154;protein_id=ZeamMp154
+###
+Mt	ensembl	pseudogene	417407	417820	.	-	.	ID=gene:ZeamMp156;biotype=pseudogene;description=orf137-b;gene_id=ZeamMp156;logic_name=organellar_genes_ncbi
+Mt	NCBI	pseudogenic_transcript	417407	417820	.	-	.	ID=transcript:ZeamMp156;Parent=gene:ZeamMp156;biotype=pseudogene;transcript_id=ZeamMp156
+Mt	NCBI	exon	417407	417820	.	-	.	Parent=transcript:ZeamMp156;Name=ZeamMp156.exon1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ZeamMp156.exon1;rank=1
+###
+Mt	ensembl	pseudogene	417407	418191	.	-	.	ID=gene:ZeamMp155;biotype=pseudogene;description=orf261;gene_id=ZeamMp155;logic_name=organellar_genes_ncbi
+Mt	NCBI	pseudogenic_transcript	417407	418191	.	-	.	ID=transcript:ZeamMp155;Parent=gene:ZeamMp155;biotype=pseudogene;transcript_id=ZeamMp155
+Mt	NCBI	exon	417407	418191	.	-	.	Parent=transcript:ZeamMp155;Name=ZeamMp155.exon1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ZeamMp155.exon1;rank=1
+###
+Mt	ensembl	gene	418064	419314	.	-	.	ID=gene:ZeamMp157;biotype=protein_coding;description=rps2B;gene_id=ZeamMp157;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	418064	419314	.	-	.	ID=transcript:ZeamMp157;Parent=gene:ZeamMp157;biotype=protein_coding;transcript_id=ZeamMp157
+Mt	NCBI	exon	418064	419314	.	-	.	Parent=transcript:ZeamMp157;Name=ZeamMp157.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp157.exon1;rank=1
+Mt	NCBI	CDS	418064	419314	.	-	0	ID=CDS:ZeamMp157;Parent=transcript:ZeamMp157;protein_id=ZeamMp157
+###
+Mt	ensembl	ncRNA_gene	419383	419508	.	-	.	ID=gene:ZeamMr003;biotype=rRNA;description=rrn55S ribosomal RNA;gene_id=ZeamMr003;logic_name=organellar_genes_ncbi
+Mt	NCBI	rRNA	419383	419508	.	-	.	ID=transcript:ZeamMr003;Parent=gene:ZeamMr003;biotype=rRNA;transcript_id=ZeamMr003
+Mt	NCBI	exon	419383	419508	.	-	.	Parent=transcript:ZeamMr003;Name=ZeamMr003.exon1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ZeamMr003.exon1;rank=1
+###
+Mt	ensembl	ncRNA_gene	419620	421587	.	-	.	ID=gene:ZeamMr004;biotype=rRNA;description=rrn1818S ribosomal RNA;gene_id=ZeamMr004;logic_name=organellar_genes_ncbi
+Mt	NCBI	rRNA	419620	421587	.	-	.	ID=transcript:ZeamMr004;Parent=gene:ZeamMr004;biotype=rRNA;transcript_id=ZeamMr004
+Mt	NCBI	exon	419620	421587	.	-	.	Parent=transcript:ZeamMr004;Name=ZeamMr004.exon1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ZeamMr004.exon1;rank=1
+###
+Mt	ensembl	gene	419869	420204	.	-	.	ID=gene:ZeamMp158;biotype=protein_coding;description=orf111-b;gene_id=ZeamMp158;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	419869	420204	.	-	.	ID=transcript:ZeamMp158;Parent=gene:ZeamMp158;biotype=protein_coding;transcript_id=ZeamMp158
+Mt	NCBI	exon	419869	420204	.	-	.	Parent=transcript:ZeamMp158;Name=ZeamMp158.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp158.exon1;rank=1
+Mt	NCBI	CDS	419869	420204	.	-	0	ID=CDS:ZeamMp158;Parent=transcript:ZeamMp158;protein_id=ZeamMp158
+###
+Mt	ensembl	gene	433538	433984	.	+	.	ID=gene:ZeamMp159;biotype=protein_coding;description=rps7;gene_id=ZeamMp159;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	433538	433984	.	+	.	ID=transcript:ZeamMp159;Parent=gene:ZeamMp159;biotype=protein_coding;transcript_id=ZeamMp159
+Mt	NCBI	exon	433538	433984	.	+	.	Parent=transcript:ZeamMp159;Name=ZeamMp159.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp159.exon1;rank=1
+Mt	NCBI	CDS	433538	433984	.	+	0	ID=CDS:ZeamMp159;Parent=transcript:ZeamMp159;protein_id=ZeamMp159
+###
+Mt	ensembl	gene	438523	438930	.	+	.	ID=gene:ZeamMp160;biotype=protein_coding;description=orf135;gene_id=ZeamMp160;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	438523	438930	.	+	.	ID=transcript:ZeamMp160;Parent=gene:ZeamMp160;biotype=protein_coding;transcript_id=ZeamMp160
+Mt	NCBI	exon	438523	438930	.	+	.	Parent=transcript:ZeamMp160;Name=ZeamMp160.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp160.exon1;rank=1
+Mt	NCBI	CDS	438523	438930	.	+	0	ID=CDS:ZeamMp160;Parent=transcript:ZeamMp160;protein_id=ZeamMp160
+###
+Mt	ensembl	gene	441570	442367	.	-	.	ID=gene:ZeamMp161;biotype=protein_coding;description=cox3;gene_id=ZeamMp161;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	441570	442367	.	-	.	ID=transcript:ZeamMp161;Parent=gene:ZeamMp161;biotype=protein_coding;transcript_id=ZeamMp161
+Mt	NCBI	exon	441570	442367	.	-	.	Parent=transcript:ZeamMp161;Name=ZeamMp161.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp161.exon1;rank=1
+Mt	NCBI	CDS	441570	442367	.	-	0	ID=CDS:ZeamMp161;Parent=transcript:ZeamMp161;protein_id=ZeamMp161
+###
+Mt	ensembl	gene	448356	448778	.	+	.	ID=gene:ZeamMp162;biotype=protein_coding;description=orf140-c;gene_id=ZeamMp162;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	448356	448778	.	+	.	ID=transcript:ZeamMp162;Parent=gene:ZeamMp162;biotype=protein_coding;transcript_id=ZeamMp162
+Mt	NCBI	exon	448356	448778	.	+	.	Parent=transcript:ZeamMp162;Name=ZeamMp162.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp162.exon1;rank=1
+Mt	NCBI	CDS	448356	448778	.	+	0	ID=CDS:ZeamMp162;Parent=transcript:ZeamMp162;protein_id=ZeamMp162
+###
+Mt	ensembl	gene	454351	455877	.	-	.	ID=gene:ZeamMp163;Name=ATPA;biotype=protein_coding;description=atp1-a1;gene_id=ZeamMp163;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	454351	455877	.	-	.	ID=transcript:ZeamMp163;Parent=gene:ZeamMp163;biotype=protein_coding;transcript_id=ZeamMp163
+Mt	NCBI	exon	454351	455877	.	-	.	Parent=transcript:ZeamMp163;Name=ZeamMp163.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp163.exon1;rank=1
+Mt	NCBI	CDS	454351	455877	.	-	0	ID=CDS:ZeamMp163;Parent=transcript:ZeamMp163;protein_id=ZeamMp163
+###
+Mt	ensembl	gene	456802	457383	.	+	.	ID=gene:ZeamMp164;biotype=protein_coding;description=orf193-a1;gene_id=ZeamMp164;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	456802	457383	.	+	.	ID=transcript:ZeamMp164;Parent=gene:ZeamMp164;biotype=protein_coding;transcript_id=ZeamMp164
+Mt	NCBI	exon	456802	457383	.	+	.	Parent=transcript:ZeamMp164;Name=ZeamMp164.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp164.exon1;rank=1
+Mt	NCBI	CDS	456802	457383	.	+	0	ID=CDS:ZeamMp164;Parent=transcript:ZeamMp164;protein_id=ZeamMp164
+###
+Mt	ensembl	gene	468544	468861	.	+	.	ID=gene:ZeamMp165;biotype=protein_coding;description=orf105-d;gene_id=ZeamMp165;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	468544	468861	.	+	.	ID=transcript:ZeamMp165;Parent=gene:ZeamMp165;biotype=protein_coding;transcript_id=ZeamMp165
+Mt	NCBI	exon	468544	468861	.	+	.	Parent=transcript:ZeamMp165;Name=ZeamMp165.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp165.exon1;rank=1
+Mt	NCBI	CDS	468544	468861	.	+	0	ID=CDS:ZeamMp165;Parent=transcript:ZeamMp165;protein_id=ZeamMp165
+###
+Mt	ensembl	gene	472552	472941	.	-	.	ID=gene:ZeamMp166;biotype=protein_coding;description=orf129-b;gene_id=ZeamMp166;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	472552	472941	.	-	.	ID=transcript:ZeamMp166;Parent=gene:ZeamMp166;biotype=protein_coding;transcript_id=ZeamMp166
+Mt	NCBI	exon	472552	472941	.	-	.	Parent=transcript:ZeamMp166;Name=ZeamMp166.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp166.exon1;rank=1
+Mt	NCBI	CDS	472552	472941	.	-	0	ID=CDS:ZeamMp166;Parent=transcript:ZeamMp166;protein_id=ZeamMp166
+###
+Mt	ensembl	pseudogene	473369	473442	.	-	.	ID=gene:ZeamMt030;biotype=tRNA_pseudogene;description=trnR-b-cttRNA-Arg;gene_id=ZeamMt030;logic_name=organellar_genes_ncbi
+Mt	NCBI	pseudogenic_transcript	473369	473442	.	-	.	ID=transcript:ZeamMt030;Parent=gene:ZeamMt030;biotype=tRNA_pseudogene;transcript_id=ZeamMt030
+Mt	NCBI	exon	473369	473442	.	-	.	Parent=transcript:ZeamMt030;Name=ZeamMt030.exon1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ZeamMt030.exon1;rank=1
+###
+Mt	Ensembl_Plants	ncRNA_gene	474241	474400	.	-	.	ID=gene:ENSRNA049457201;Name=LSU_rRNA_eukarya;biotype=rRNA;description=Eukaryotic large subunit ribosomal RNA;gene_id=ENSRNA049457201;logic_name=rfam_12.2_gene
+Mt	Ensembl_Plants	rRNA	474241	474400	.	-	.	ID=transcript:ENSRNA049457201-T1;Parent=gene:ENSRNA049457201;biotype=rRNA;transcript_id=ENSRNA049457201-T1
+Mt	Ensembl_Plants	exon	474241	474400	.	-	.	Parent=transcript:ENSRNA049457201-T1;Name=ENSRNA049457201-E1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ENSRNA049457201-E1;rank=1
+###
+Mt	Ensembl_Plants	ncRNA_gene	474424	474588	.	-	.	ID=gene:ENSRNA049457592;Name=LSU_rRNA_eukarya;biotype=rRNA;description=Eukaryotic large subunit ribosomal RNA;gene_id=ENSRNA049457592;logic_name=rfam_12.2_gene
+Mt	Ensembl_Plants	rRNA	474424	474588	.	-	.	ID=transcript:ENSRNA049457592-T1;Parent=gene:ENSRNA049457592;biotype=rRNA;transcript_id=ENSRNA049457592-T1
+Mt	Ensembl_Plants	exon	474424	474588	.	-	.	Parent=transcript:ENSRNA049457592-T1;Name=ENSRNA049457592-E1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ENSRNA049457592-E1;rank=1
+###
+Mt	Ensembl_Plants	ncRNA_gene	474614	474845	.	-	.	ID=gene:ENSRNA049457554;Name=LSU_rRNA_eukarya;biotype=rRNA;description=Eukaryotic large subunit ribosomal RNA;gene_id=ENSRNA049457554;logic_name=rfam_12.2_gene
+Mt	Ensembl_Plants	rRNA	474614	474845	.	-	.	ID=transcript:ENSRNA049457554-T1;Parent=gene:ENSRNA049457554;biotype=rRNA;transcript_id=ENSRNA049457554-T1
+Mt	Ensembl_Plants	exon	474614	474845	.	-	.	Parent=transcript:ENSRNA049457554-T1;Name=ENSRNA049457554-E1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ENSRNA049457554-E1;rank=1
+###
+Mt	ensembl	gene	479553	481148	.	-	.	ID=gene:ZeamMp167;biotype=protein_coding;description=rps2A;gene_id=ZeamMp167;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	479553	481148	.	-	.	ID=transcript:ZeamMp167;Parent=gene:ZeamMp167;biotype=protein_coding;transcript_id=ZeamMp167
+Mt	NCBI	exon	479553	481148	.	-	.	Parent=transcript:ZeamMp167;Name=ZeamMp167.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp167.exon1;rank=1
+Mt	NCBI	CDS	479553	481148	.	-	0	ID=CDS:ZeamMp167;Parent=transcript:ZeamMp167;protein_id=ZeamMp167
+###
+Mt	ensembl	gene	486574	486894	.	+	.	ID=gene:ZeamMp168;biotype=protein_coding;description=orf106-c;gene_id=ZeamMp168;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	486574	486894	.	+	.	ID=transcript:ZeamMp168;Parent=gene:ZeamMp168;biotype=protein_coding;transcript_id=ZeamMp168
+Mt	NCBI	exon	486574	486894	.	+	.	Parent=transcript:ZeamMp168;Name=ZeamMp168.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp168.exon1;rank=1
+Mt	NCBI	CDS	486574	486894	.	+	0	ID=CDS:ZeamMp168;Parent=transcript:ZeamMp168;protein_id=ZeamMp168
+###
+Mt	ensembl	gene	487871	488230	.	+	.	ID=gene:ZeamMp169;biotype=protein_coding;description=orf119-c;gene_id=ZeamMp169;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	487871	488230	.	+	.	ID=transcript:ZeamMp169;Parent=gene:ZeamMp169;biotype=protein_coding;transcript_id=ZeamMp169
+Mt	NCBI	exon	487871	488230	.	+	.	Parent=transcript:ZeamMp169;Name=ZeamMp169.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp169.exon1;rank=1
+Mt	NCBI	CDS	487871	488230	.	+	0	ID=CDS:ZeamMp169;Parent=transcript:ZeamMp169;protein_id=ZeamMp169
+###
+Mt	ensembl	gene	496997	497812	.	-	.	ID=gene:ZeamMp170;biotype=protein_coding;description=orfX;gene_id=ZeamMp170;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	496997	497812	.	-	.	ID=transcript:ZeamMp170;Parent=gene:ZeamMp170;biotype=protein_coding;transcript_id=ZeamMp170
+Mt	NCBI	exon	496997	497812	.	-	.	Parent=transcript:ZeamMp170;Name=ZeamMp170.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp170.exon1;rank=1
+Mt	NCBI	CDS	496997	497812	.	-	0	ID=CDS:ZeamMp170;Parent=transcript:ZeamMp170;protein_id=ZeamMp170
+###
+Mt	ensembl	gene	501949	502296	.	-	.	ID=gene:ZeamMp171;biotype=protein_coding;description=orf115-e;gene_id=ZeamMp171;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	501949	502296	.	-	.	ID=transcript:ZeamMp171;Parent=gene:ZeamMp171;biotype=protein_coding;transcript_id=ZeamMp171
+Mt	NCBI	exon	501949	502296	.	-	.	Parent=transcript:ZeamMp171;Name=ZeamMp171.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp171.exon1;rank=1
+Mt	NCBI	CDS	501949	502296	.	-	0	ID=CDS:ZeamMp171;Parent=transcript:ZeamMp171;protein_id=ZeamMp171
+###
+Mt	ensembl	gene	504158	504475	.	-	.	ID=gene:ZeamMp172;biotype=protein_coding;description=orf105-e;gene_id=ZeamMp172;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	504158	504475	.	-	.	ID=transcript:ZeamMp172;Parent=gene:ZeamMp172;biotype=protein_coding;transcript_id=ZeamMp172
+Mt	NCBI	exon	504158	504475	.	-	.	Parent=transcript:ZeamMp172;Name=ZeamMp172.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp172.exon1;rank=1
+Mt	NCBI	CDS	504158	504475	.	-	0	ID=CDS:ZeamMp172;Parent=transcript:ZeamMp172;protein_id=ZeamMp172
+###
+Mt	ensembl	gene	510534	510887	.	+	.	ID=gene:ZeamMp173;biotype=protein_coding;description=orf117-c;gene_id=ZeamMp173;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	510534	510887	.	+	.	ID=transcript:ZeamMp173;Parent=gene:ZeamMp173;biotype=protein_coding;transcript_id=ZeamMp173
+Mt	NCBI	exon	510534	510887	.	+	.	Parent=transcript:ZeamMp173;Name=ZeamMp173.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp173.exon1;rank=1
+Mt	NCBI	CDS	510534	510887	.	+	0	ID=CDS:ZeamMp173;Parent=transcript:ZeamMp173;protein_id=ZeamMp173
+###
+Mt	ensembl	gene	511894	512199	.	+	.	ID=gene:ZeamMp174;biotype=protein_coding;description=orf101-c;gene_id=ZeamMp174;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	511894	512199	.	+	.	ID=transcript:ZeamMp174;Parent=gene:ZeamMp174;biotype=protein_coding;transcript_id=ZeamMp174
+Mt	NCBI	exon	511894	512199	.	+	.	Parent=transcript:ZeamMp174;Name=ZeamMp174.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp174.exon1;rank=1
+Mt	NCBI	CDS	511894	512199	.	+	0	ID=CDS:ZeamMp174;Parent=transcript:ZeamMp174;protein_id=ZeamMp174
+###
+Mt	ensembl	gene	512175	512735	.	-	.	ID=gene:ZeamMp175;biotype=protein_coding;description=orf186;gene_id=ZeamMp175;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	512175	512735	.	-	.	ID=transcript:ZeamMp175;Parent=gene:ZeamMp175;biotype=protein_coding;transcript_id=ZeamMp175
+Mt	NCBI	exon	512175	512735	.	-	.	Parent=transcript:ZeamMp175;Name=ZeamMp175.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp175.exon1;rank=1
+Mt	NCBI	CDS	512175	512735	.	-	0	ID=CDS:ZeamMp175;Parent=transcript:ZeamMp175;protein_id=ZeamMp175
+###
+Mt	ensembl	gene	523288	524814	.	-	.	ID=gene:ZeamMp176;Name=ATPA;biotype=protein_coding;description=atp1-a2;gene_id=ZeamMp176;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	523288	524814	.	-	.	ID=transcript:ZeamMp176;Parent=gene:ZeamMp176;biotype=protein_coding;transcript_id=ZeamMp176
+Mt	NCBI	exon	523288	524814	.	-	.	Parent=transcript:ZeamMp176;Name=ZeamMp176.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp176.exon1;rank=1
+Mt	NCBI	CDS	523288	524814	.	-	0	ID=CDS:ZeamMp176;Parent=transcript:ZeamMp176;protein_id=ZeamMp176
+###
+Mt	ensembl	gene	525739	526320	.	+	.	ID=gene:ZeamMp177;biotype=protein_coding;description=orf193-a2;gene_id=ZeamMp177;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	525739	526320	.	+	.	ID=transcript:ZeamMp177;Parent=gene:ZeamMp177;biotype=protein_coding;transcript_id=ZeamMp177
+Mt	NCBI	exon	525739	526320	.	+	.	Parent=transcript:ZeamMp177;Name=ZeamMp177.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp177.exon1;rank=1
+Mt	NCBI	CDS	525739	526320	.	+	0	ID=CDS:ZeamMp177;Parent=transcript:ZeamMp177;protein_id=ZeamMp177
+###
+Mt	ensembl	pseudogene	540883	541363	.	+	.	ID=gene:ZeamMp178;biotype=pseudogene;description=orf161;gene_id=ZeamMp178;logic_name=organellar_genes_ncbi
+Mt	NCBI	pseudogenic_transcript	540883	541363	.	+	.	ID=transcript:ZeamMp178;Parent=gene:ZeamMp178;biotype=pseudogene;transcript_id=ZeamMp178
+Mt	NCBI	exon	540883	541363	.	+	.	Parent=transcript:ZeamMp178;Name=ZeamMp178.exon1;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ZeamMp178.exon1;rank=1
+###
+Mt	ensembl	gene	541960	543536	.	+	.	ID=gene:ZeamMp179;biotype=protein_coding;description=cox2;gene_id=ZeamMp179;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	541960	543536	.	+	.	ID=transcript:ZeamMp179;Parent=gene:ZeamMp179;biotype=protein_coding;transcript_id=ZeamMp179
+Mt	NCBI	exon	541960	542347	.	+	.	Parent=transcript:ZeamMp179;Name=ZeamMp179.exon1;constitutive=1;ensembl_end_phase=1;ensembl_phase=0;exon_id=ZeamMp179.exon1;rank=1
+Mt	NCBI	CDS	541960	542347	.	+	0	ID=CDS:ZeamMp179;Parent=transcript:ZeamMp179;protein_id=ZeamMp179
+Mt	NCBI	exon	543142	543536	.	+	.	Parent=transcript:ZeamMp179;Name=ZeamMp179.exon2;constitutive=1;ensembl_end_phase=0;ensembl_phase=1;exon_id=ZeamMp179.exon2;rank=2
+Mt	NCBI	CDS	543142	543536	.	+	2	ID=CDS:ZeamMp179;Parent=transcript:ZeamMp179;protein_id=ZeamMp179
+###
+Mt	ensembl	gene	548916	549248	.	+	.	ID=gene:ZeamMp180;biotype=protein_coding;description=orf110-c;gene_id=ZeamMp180;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	548916	549248	.	+	.	ID=transcript:ZeamMp180;Parent=gene:ZeamMp180;biotype=protein_coding;transcript_id=ZeamMp180
+Mt	NCBI	exon	548916	549248	.	+	.	Parent=transcript:ZeamMp180;Name=ZeamMp180.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp180.exon1;rank=1
+Mt	NCBI	CDS	548916	549248	.	+	0	ID=CDS:ZeamMp180;Parent=transcript:ZeamMp180;protein_id=ZeamMp180
+###
+Mt	ensembl	gene	550608	550973	.	+	.	ID=gene:ZeamMp181;biotype=protein_coding;description=orf121-c;gene_id=ZeamMp181;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	550608	550973	.	+	.	ID=transcript:ZeamMp181;Parent=gene:ZeamMp181;biotype=protein_coding;transcript_id=ZeamMp181
+Mt	NCBI	exon	550608	550973	.	+	.	Parent=transcript:ZeamMp181;Name=ZeamMp181.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp181.exon1;rank=1
+Mt	NCBI	CDS	550608	550973	.	+	0	ID=CDS:ZeamMp181;Parent=transcript:ZeamMp181;protein_id=ZeamMp181
+###
+Mt	ensembl	gene	562726	563958	.	+	.	ID=gene:ZeamMp182;biotype=protein_coding;description=atp6;gene_id=ZeamMp182;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	562726	563958	.	+	.	ID=transcript:ZeamMp182;Parent=gene:ZeamMp182;biotype=protein_coding;transcript_id=ZeamMp182
+Mt	NCBI	exon	562726	563958	.	+	.	Parent=transcript:ZeamMp182;Name=ZeamMp182.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp182.exon1;rank=1
+Mt	NCBI	CDS	562726	563958	.	+	0	ID=CDS:ZeamMp182;Parent=transcript:ZeamMp182;protein_id=ZeamMp182
+###
+Mt	ensembl	gene	564155	564517	.	-	.	ID=gene:ZeamMp183;biotype=protein_coding;description=orf120;gene_id=ZeamMp183;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	564155	564517	.	-	.	ID=transcript:ZeamMp183;Parent=gene:ZeamMp183;biotype=protein_coding;transcript_id=ZeamMp183
+Mt	NCBI	exon	564155	564517	.	-	.	Parent=transcript:ZeamMp183;Name=ZeamMp183.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp183.exon1;rank=1
+Mt	NCBI	CDS	564155	564517	.	-	0	ID=CDS:ZeamMp183;Parent=transcript:ZeamMp183;protein_id=ZeamMp183
+###
+Mt	ensembl	gene	564497	564946	.	+	.	ID=gene:ZeamMp184;biotype=protein_coding;description=orf149-a;gene_id=ZeamMp184;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	564497	564946	.	+	.	ID=transcript:ZeamMp184;Parent=gene:ZeamMp184;biotype=protein_coding;transcript_id=ZeamMp184
+Mt	NCBI	exon	564497	564946	.	+	.	Parent=transcript:ZeamMp184;Name=ZeamMp184.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp184.exon1;rank=1
+Mt	NCBI	CDS	564497	564946	.	+	0	ID=CDS:ZeamMp184;Parent=transcript:ZeamMp184;protein_id=ZeamMp184
+###
+Mt	ensembl	gene	565003	565665	.	+	.	ID=gene:ZeamMp185;biotype=protein_coding;description=nad6;gene_id=ZeamMp185;logic_name=organellar_genes_ncbi
+Mt	NCBI	mRNA	565003	565665	.	+	.	ID=transcript:ZeamMp185;Parent=gene:ZeamMp185;biotype=protein_coding;transcript_id=ZeamMp185
+Mt	NCBI	exon	565003	565665	.	+	.	Parent=transcript:ZeamMp185;Name=ZeamMp185.exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=ZeamMp185.exon1;rank=1
+Mt	NCBI	CDS	565003	565665	.	+	0	ID=CDS:ZeamMp185;Parent=transcript:ZeamMp185;protein_id=ZeamMp185
+###
