@@ -671,52 +671,6 @@ gff &lt;- fread(cmd='grep -v &quot;#&quot; largedata/Zea_mays.B73_RefGen_v4.46.c
 4   Parent=transcript:ZeamMp002;Name=ZeamMp002.exon1;constitutive=1;ensembl_end_phase=0;
 5   ID=CDS:ZeamMp002;Parent=transcript:ZeamMp002;
 6   ID=gene:ZeamMp003;biotype=protein_coding;description=orf444</code></pre>
-<hr />
-</div>
-<div id="general-feature-format-gff-version-3-1" class="section level1">
-<h1>General feature format (GFF) version 3</h1>
-<pre><code>  V1      V2         V3   V4     V5 V6 V7 V8
-1 Mt Gramene chromosome    1 569630  .  .  .
-2 Mt ensembl       gene 6391   6738  .  +  .
-                  V9
-1   ID=chromosome:Mt;Alias=AY506529.1,NC_007982.1;Is_circular=true
-2   ID=gene:ZeamMp002;biotype=protein_coding;description=orf115-a1;</code></pre>
-<hr />
-<ul>
-<li><p>1 <strong>sequence</strong>: The name of the sequence where the feature is located.</p></li>
-<li><p>2 <strong>source</strong>: Keyword identifying the source of the feature, like a program (e.g. RepeatMasker) or an organization (like ensembl).</p></li>
-<li>3 <strong>feature</strong>: The feature type name, like “gene” or “exon”.
-<ul>
-<li>In a well structured GFF file, all the children features always follow their parents in a single block (so all exons of a transcript are put after their parent “transcript” feature line and before any other parent transcript line).</li>
-</ul></li>
-<li>4 <strong>start</strong>: Genomic start of the feature, with a 1-base offset.
-<ul>
-<li>This is in contrast with other 0-offset half-open sequence formats, like <a href>BED</a>.</li>
-</ul></li>
-<li>5 <strong>end</strong>: Genomic end of the feature, with a 1-base offset.
-<ul>
-<li>This is the same end coordinate as it is in 0-offset half-open sequence formats, like BED.</li>
-</ul></li>
-<li>6 <strong>score</strong>: Numeric value that generally indicates the confidence of the source in the annotated feature.
-<ul>
-<li>A value of “.” (a dot) is used to define a null value.</li>
-</ul></li>
-<li>7 <strong>strand</strong>: Single character that indicates the strand of the feature.
-<ul>
-<li>it can assume the values of “+” (positive, or 5’ -&gt; 3’),</li>
-<li>“-”, (negative, or 3’ -&gt; 5’), “.” (undetermined).</li>
-</ul></li>
-<li>8 <strong>phase</strong>: phase of CDS (<strong>means CoDing Sequence</strong>) features.
-<ul>
-<li>The phase indicates where the feature begins with reference to the reading frame.</li>
-<li>The phase is one of the integers 0, 1, or 2, indicating the number of bases that should be removed from the beginning of this feature to reach the first base of the next codon.</li>
-</ul></li>
-<li>9 <strong>attributes</strong>: All the other information pertaining to this feature.
-<ul>
-<li>The format, structure and content of this field is the one which varies the most between the three competing file formats.</li>
-</ul></li>
-</ul>
-<hr />
 </div>
 <div id="work-with-gff" class="section level1">
 <h1>Work with GFF</h1>
@@ -917,7 +871,7 @@ ggplot(res_t_f, aes(x=feature, y=Fst, fill=feature)) +
   geom_violin(trim=FALSE)+
   labs(title=&quot;Fst distribution&quot;, x=&quot;&quot;, y = &quot;Fst&quot;)+
   geom_boxplot(width=0.1, fill=&quot;white&quot;)+
-  scale_fill_brewer(palette=&quot;Reds&quot;) + 
+  scale_fill_brewer(palette=&quot;greens&quot;) + 
   theme_classic()</code></pre>
 </div>
 </div>
