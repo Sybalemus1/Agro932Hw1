@@ -1,0 +1,923 @@
+\PassOptionsToPackage{unicode=true}{hyperref} % options for packages loaded elsewhere
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provides euro and other symbols
+\else % if luatex or xelatex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage[]{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\usepackage{hyperref}
+\hypersetup{
+            pdftitle={hw1},
+            pdfauthor={Santos Barrera},
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{longtable,booktabs}
+% Fix footnotes in tables (requires footnote package)
+\IfFileExists{footnote.sty}{\usepackage{footnote}\makesavenoteenv{longtable}}{}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+% set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+
+\title{hw1}
+\author{Santos Barrera}
+\date{2/26/2020}
+
+\begin{document}
+\maketitle
+
+\hypertarget{ngs-data-simulation-using-wgsim}{%
+\section{\texorpdfstring{NGS data simulation using
+\texttt{wgsim}}{NGS data simulation using wgsim}}\label{ngs-data-simulation-using-wgsim}}
+
+\hypertarget{type-in-the-following-command}{%
+\paragraph{Type in the following
+command:}\label{type-in-the-following-command}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{wgsim}\NormalTok{ lambda.fa -e 0 -d 500 -N 5000 -1 100 -2 100 -r 0.01  -R 0 -X 0 -S 1234567 -h l1.read1.fq l1.read2.fq}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{download-reference-from-ensemblplants}{%
+\section{Download Reference from
+EnsemblPlants}\label{download-reference-from-ensemblplants}}
+
+Maize \href{https://plants.ensembl.org/Zea_mays/Info/Index}{reference
+genome}
+
+\hypertarget{change-to-largedatalab4-folder}{%
+\paragraph{\texorpdfstring{Change to
+\texttt{largedata\textbackslash{}lab4}
+folder:}{Change to largedata\textbackslash{}lab4 folder:}}\label{change-to-largedatalab4-folder}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{cd}\NormalTok{ largedata}
+\FunctionTok{mkdir}\NormalTok{ Thetas_Fst}
+\BuiltInTok{cd}\NormalTok{ Thetas_Fst}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{then-use-wget-to-download-the-reference-genome}{%
+\paragraph{\texorpdfstring{Then use \texttt{wget} to download the
+reference
+genome:}{Then use wget to download the reference genome:}}\label{then-use-wget-to-download-the-reference-genome}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{wget}\NormalTok{ ftp://ftp.ensemblgenomes.org/pub/plants/release-46/fasta/zea_mays/dna/Zea_mays.B73_RefGen_v4.dna.chromosome.Mt.fa.gz}
+
+\CommentTok{### then unzip it}
+\FunctionTok{gunzip}\NormalTok{ Zea_mays.B73_RefGen_v4.dna.chromosome.Mt.fa.gz}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{ngs-data-simulation-using-wgsim-1}{%
+\section{\texorpdfstring{NGS data simulation using
+\texttt{wgsim}}{NGS data simulation using wgsim}}\label{ngs-data-simulation-using-wgsim-1}}
+
+\hypertarget{type-in-the-following-command-1}{%
+\paragraph{Type in the following
+command:}\label{type-in-the-following-command-1}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{wgsim}\NormalTok{ Zea_mays.B73_RefGen_v4.dna.chromosome.Mt.fa \textbackslash{}}
+\NormalTok{-e 0 -d 500 -N 5000 -1 100 -2 100 -r 0.01  \textbackslash{}}
+\NormalTok{-R 0 -X 0 -S 1234567 l1.read1.fq l1.read2.fq}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{itemize}
+\tightlist
+\item
+  Reference (about 500k)
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \texttt{Zea\_mays.B73\_RefGen\_v4.dna.chromosome.Mt.fa}
+  \end{itemize}
+\item
+  20x coverage
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \texttt{N\ 5000}
+  \end{itemize}
+\item
+  PE 100bp
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \texttt{-1\ 100\ -2\ 100}
+  \end{itemize}
+\item
+  Only SNP no Indel
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \texttt{-R\ 0\ -X\ 0}
+  \end{itemize}
+\item
+  Mutation rate is low
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \texttt{-r\ 0.01}
+  \end{itemize}
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{ngs-data-simulation-using-wgsim-2}{%
+\section{\texorpdfstring{NGS data simulation using
+\texttt{wgsim}}{NGS data simulation using wgsim}}\label{ngs-data-simulation-using-wgsim-2}}
+
+\hypertarget{simulate-10-individals-population-1}{%
+\subsection{simulate 10 individals population
+1}\label{simulate-10-individals-population-1}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{for} \ExtensionTok{i}\NormalTok{ in }\DataTypeTok{\{1..10\}}\KeywordTok{;} \KeywordTok{do}    \ExtensionTok{wgsim}\NormalTok{ Zea_mays.B73_RefGen_v4.dna.chromosome.Mt.fa -e 0 -d 500 -N 50000 -1 100 -2 100 -r 0.1  -R 0 -X 0 p1l}\VariableTok{$i}\NormalTok{.read1.fq l}\VariableTok{$i}\NormalTok{.read2.fq}\KeywordTok{;} \KeywordTok{done}
+\FunctionTok{mv}\NormalTok{ l1.read1.fq p1l1.read1.fq }\CommentTok{#(Change name pop 1. all 10 idividuals)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{simulate-10-individals-population-2}{%
+\subsection{simulate 10 individals population
+2}\label{simulate-10-individals-population-2}}
+
+--
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{for} \ExtensionTok{i}\NormalTok{ in }\DataTypeTok{\{1..10\}}\KeywordTok{;} \KeywordTok{do}    \ExtensionTok{wgsim}\NormalTok{ Zea_mays.B73_RefGen_v4.dna.chromosome.Mt.fa -e 0 -d 500 -N 50000 -1 100 -2 100 -r 0.1  -R 0 -X 0 l}\VariableTok{$i}\NormalTok{.read1.fq l}\VariableTok{$i}\NormalTok{.read2.fq}\KeywordTok{;} \KeywordTok{done}
+\FunctionTok{mv}\NormalTok{ l1.read1.fq p2l1.read1.fq }\CommentTok{#(Change name pop 2. all 10 idividuals)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{longtable}[]{@{}l@{}}
+\toprule
+\endhead
+\begin{minipage}[t]{0.04\columnwidth}\raggedright
+\#\#\#\# check how many reads\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.04\columnwidth}\raggedright
+\texttt{bash\ wc\ -l\ p1l1.read1.fq\ wc\ -l\ p2l1.read1.fq\ \#\ suppose\ to\ be\ 200,000\ lines\ =\ 50,000\ reads}\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
+
+\hypertarget{a-procedure-to-calculate-theta-and-f_st-values}{%
+\section{\texorpdfstring{A procedure to calculate \(\theta\) and
+\(F_{ST}\)
+values}{A procedure to calculate \textbackslash{}theta and F\_\{ST\} values}}\label{a-procedure-to-calculate-theta-and-f_st-values}}
+
+\hypertarget{align-the-ngs-reads-to-the-reference-genome}{%
+\subsubsection{1. Align the NGS reads to the reference
+genome}\label{align-the-ngs-reads-to-the-reference-genome}}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://github.com/lh3/bwa}{bwa}
+\item
+  \href{https://github.com/samtools/samtools}{samtools}
+\end{itemize}
+
+\hypertarget{calculate-sfs}{%
+\subsubsection{2. Calculate SFS}\label{calculate-sfs}}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{http://www.popgen.dk/angsd/index.php/ANGSD}{ANGSD}
+\end{itemize}
+
+\hypertarget{calculate-the-thetas-and-fst-for-each-site}{%
+\subsubsection{3. Calculate the thetas and Fst for each
+site}\label{calculate-the-thetas-and-fst-for-each-site}}
+
+\begin{itemize}
+\tightlist
+\item
+  ANGSD
+\end{itemize}
+
+\hypertarget{submit-a-slurm-job-i-couldnt-do-it}{%
+\section{Submit a Slurm job (I couldn't do
+it)}\label{submit-a-slurm-job-i-couldnt-do-it}}
+
+\begin{itemize}
+\item
+  We wrap our jobs in little batch scripts, which is nice because these
+  also help make steps reproducible.
+\item
+  To keep your directory organized, I usually keep a scripts directory
+  (i.e., \texttt{slurm-script/} ) and log dir (i.e., \texttt{slurm-log}
+  ) for Slurm's logs.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Tip: use these logs, as these are very helpful in debugging. I
+    separate them from my project because they fill up directories
+    rather quickly.
+  \end{itemize}
+\item
+  \texttt{D} sets your project directory.
+\item
+  \texttt{o} sets where standard output (of your batch script) goes.
+\item
+  \texttt{e} sets where standard error (of your batch script) goes.
+\item
+  \texttt{J} sets the job name.
+\item
+  \texttt{t} sets the time limit for the job, 24:00:00 indicates 24
+  hours.
+\item
+  \texttt{-\/-mail}: will email you if the job is ``END'' or ``FAIL''
+\end{itemize}
+
+--
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{vi}\NormalTok{ my_theta.sh}
+
+  \CommentTok{#!/bin/bash -l}
+    \CommentTok{#SBATCH -D /home/agro932/sybarreral/Agro932hw}
+    \CommentTok{#SBATCH -o /home/agro932/sybarreral/Agro932hw/slurm-log/stdout-%j.txt}
+    \CommentTok{#SBATCH -e /home/agro932/sybarreral/Agro932hw/slurm-log/stderr-%j.txt}
+    \CommentTok{#SBATCH -J theta}
+    \CommentTok{#SBATCH -t 1:00:00}
+    \CommentTok{#SBATCH --mail-user=sybarreral@huskers.unl.edu}
+    \CommentTok{#SBATCH --mail-type=}\RegionMarkerTok{END}\CommentTok{ #email if ends}
+    \CommentTok{#SBATCH --mail-type=FAIL #email if fails}
+    \KeywordTok{set} \ExtensionTok{-e}
+    \KeywordTok{set} \ExtensionTok{-u}
+
+\CommentTok{# insert your script here}
+\ExtensionTok{module}\NormalTok{ load bwa samtools}
+\CommentTok{# alignment pop.1}
+\BuiltInTok{cd}\NormalTok{ largedata/Thetas_Fst/bam_files}
+\KeywordTok{for} \ExtensionTok{i}\NormalTok{ in }\DataTypeTok{\{1..10\}}\KeywordTok{;} \KeywordTok{do} \ExtensionTok{bwa}\NormalTok{ mem Zea_mays.B73_RefGen_v4.dna.chromosome.Mt.fa p1l}\VariableTok{$i}\NormalTok{.read1.fq p1l}\VariableTok{$i}\NormalTok{.read2.fq }\KeywordTok{|} \ExtensionTok{samtools}\NormalTok{ view -bSh - }\OperatorTok{>}\NormalTok{ p1l}\VariableTok{$i}\NormalTok{.bam}\KeywordTok{;} \KeywordTok{done}
+\CommentTok{# alignment pop.2}
+\KeywordTok{for} \ExtensionTok{i}\NormalTok{ in }\DataTypeTok{\{1..10\}}\KeywordTok{;} \KeywordTok{do} \ExtensionTok{bwa}\NormalTok{ mem Zea_mays.B73_RefGen_v4.dna.chromosome.Mt.fa p2l}\VariableTok{$i}\NormalTok{.read1.fq p2l}\VariableTok{$i}\NormalTok{.read2.fq }\KeywordTok{|} \ExtensionTok{samtools}\NormalTok{ view -bSh - }\OperatorTok{>}\NormalTok{ p2l}\VariableTok{$i}\NormalTok{.bam}\KeywordTok{;} \KeywordTok{done}
+\CommentTok{# sort}
+\KeywordTok{for} \ExtensionTok{i}\NormalTok{ in *.bam}\KeywordTok{;} \KeywordTok{do} \ExtensionTok{samtools}\NormalTok{ sort }\VariableTok{$i}\NormalTok{ -o sorted_}\VariableTok{$i}\KeywordTok{;} \KeywordTok{done}
+\CommentTok{# index them}
+\KeywordTok{for} \ExtensionTok{i}\NormalTok{ in sorted*.bam}\KeywordTok{;} \KeywordTok{do} \ExtensionTok{samtools}\NormalTok{ index }\VariableTok{$i}\KeywordTok{;} \KeywordTok{done}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{a-procedure-to-calculate-theta-values}{%
+\section{\texorpdfstring{A procedure to calculate \(\theta\)
+values}{A procedure to calculate \textbackslash{}theta values}}\label{a-procedure-to-calculate-theta-values}}
+
+\hypertarget{calculate-sfs-using-angsd}{%
+\subsubsection{\texorpdfstring{2. Calculate SFS using
+\texttt{ANGSD}}{2. Calculate SFS using ANGSD}}\label{calculate-sfs-using-angsd}}
+
+\hypertarget{install-angsd-first}{%
+\paragraph{Install ANGSD first}\label{install-angsd-first}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{cd}\NormalTok{ ~/bin/ }\CommentTok{# if you don't have one, do `mkdir bin`}
+\FunctionTok{git}\NormalTok{ clone https://github.com/samtools/htslib.git}
+\FunctionTok{git}\NormalTok{ clone https://github.com/ANGSD/angsd.git }
+\BuiltInTok{cd}\NormalTok{ htslib}\KeywordTok{;} \FunctionTok{make}\KeywordTok{;} 
+\BuiltInTok{cd}\NormalTok{ ../angsd}\KeywordTok{;}
+\FunctionTok{make}\NormalTok{ HTSSRC=../htslib}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{run-angsd}{%
+\paragraph{run angsd}\label{run-angsd}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{#write the bam files to a txt file}
+\FunctionTok{mkdir}\NormalTok{ bam_files}
+\FunctionTok{mv}\NormalTok{ sorted*.bam bam_files}
+\BuiltInTok{cd}\NormalTok{ bam_files/}
+\FunctionTok{ls}\NormalTok{ sorted_p1*.bam }\OperatorTok{>}\NormalTok{ bam.txt}
+\CommentTok{#see file 1}
+\FunctionTok{cat}\NormalTok{ bam_p1.txt }
+\FunctionTok{ls}\NormalTok{ sorted_p2*.bam }\OperatorTok{>}\NormalTok{ bam.txt}
+\CommentTok{#see file 2}
+\FunctionTok{cat}\NormalTok{ bam_p2.txt }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{a-procedure-to-calculate-theta-values-1}{%
+\section{\texorpdfstring{A procedure to calculate \(\theta\)
+values}{A procedure to calculate \textbackslash{}theta values}}\label{a-procedure-to-calculate-theta-values-1}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{#calculate Sfs }
+\ExtensionTok{../../../../angsd/angsd}\NormalTok{ -bam  bam.txt -doSaf 1 -anc ../Zea_mays.B73_RefGen_v4.dna.chromosome.Mt.fa -GL 1  -out out}
+\CommentTok{# use realSFS to calculate sfs}
+\ExtensionTok{../../../../angsd/misc/realSFS}\NormalTok{ out.saf.idx }\OperatorTok{>}\NormalTok{ out.sfs}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{copy-the-result-to-cache-folder}{%
+\paragraph{\texorpdfstring{Copy the result to \texttt{cache/}
+folder}{Copy the result to cache/ folder}}\label{copy-the-result-to-cache-folder}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{## cp sfs to the cache/ folder}
+\FunctionTok{cp}\NormalTok{ out.sfs ../../../cache/}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{calculate-the-thetas-for-each-site}{%
+\subsubsection{3. Calculate the thetas for each
+site}\label{calculate-the-thetas-for-each-site}}
+
+The output from the above command are two files out.thetas.gz and
+out.thetas.idx. A formal description of these files can be found in the
+doc/formats.pdf in the angsd package. It is possible to extract the
+logscale persite thetas using the ./thetaStat print program.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{../../../../angsd/angsd}\NormalTok{ -bam bam.txt -out out -doThetas 1 -doSaf 1 -pest out.sfs -anc ../Zea_mays.B73_RefGen_v4.dna.chromosome.Mt.fa -GL 1}
+\ExtensionTok{../../../../angsd/misc/thetaStat}\NormalTok{ print out.thetas.idx }\OperatorTok{>}\NormalTok{ theta.txt}
+\CommentTok{## cp theta to the cache/ folder}
+\FunctionTok{cp}\NormalTok{ theta.txt ../../../cache/}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{a-procedure-to-calculate-f_st}{%
+\section{\texorpdfstring{A procedure to calculate
+\(F_{ST}\)}{A procedure to calculate F\_\{ST\}}}\label{a-procedure-to-calculate-f_st}}
+
+\hypertarget{create-two-list-bam-files}{%
+\paragraph{Create two list bam files}\label{create-two-list-bam-files}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{cp}\NormalTok{ bam_p1.txt pop1.txt}
+\FunctionTok{cp}\NormalTok{ bam_p2.txt pop2.txt}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{two-population-fst}{%
+\paragraph{Two population Fst}\label{two-population-fst}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# first calculate per pop saf for each populatoin}
+\ExtensionTok{../../../../angsd/angsd}\NormalTok{ -b pop1.txt -anc ../Zea_mays.B73_RefGen_v4.dna.chromosome.Mt.fa -out pop1 -dosaf 1 -gl 1}
+\ExtensionTok{../../../../angsd/angsd}\NormalTok{ -b pop2.txt -anc ../Zea_mays.B73_RefGen_v4.dna.chromosome.Mt.fa -out pop2 -dosaf 1 -gl 1}
+\CommentTok{# calculate the 2dsfs prior}
+\ExtensionTok{../../../../angsd/misc/realSFS}\NormalTok{ pop1.saf.idx pop2.saf.idx }\OperatorTok{>}\NormalTok{ pop1.pop2.ml}
+\CommentTok{# prepare the fst for easy window analysis etc}
+\ExtensionTok{../../../../angsd/misc/realSFS}\NormalTok{ fst index pop1.saf.idx pop2.saf.idx -sfs pop1.pop2.ml -fstout out}
+
+\CommentTok{# get the global estimate}
+\ExtensionTok{../../../../angsd/misc/realSFS}\NormalTok{ fst stats out.fst.idx}
+\CommentTok{# below is not tested that much, but seems to work}
+\ExtensionTok{../../../../angsd/misc/realSFS}\NormalTok{ fst stats2 out.fst.idx -win 500 -step 100 }\OperatorTok{>}\NormalTok{ fst_win.txt}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{copy-the-result-to-cache-folder-1}{%
+\paragraph{\texorpdfstring{Copy the result to \texttt{cache/}
+folder}{Copy the result to cache/ folder}}\label{copy-the-result-to-cache-folder-1}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{## cp sfs to the cache/ folder}
+\FunctionTok{cp}\NormalTok{ fst_win.txt ../../../cache/}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{visualize-the-results}{%
+\section{Visualize the results}\label{visualize-the-results}}
+
+In local computer, using \texttt{R}:
+
+\hypertarget{barplot-for-sfs}{%
+\paragraph{Barplot for SFS}\label{barplot-for-sfs}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{#Barplot for SFS}
+\NormalTok{sfs <-}\StringTok{ }\KeywordTok{scan}\NormalTok{(}\StringTok{'cache/out.sfs'}\NormalTok{)}
+\NormalTok{sfs <-}\StringTok{ }\NormalTok{sfs[}\OperatorTok{-}\KeywordTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{,}\KeywordTok{length}\NormalTok{(sfs))]}
+\NormalTok{sfs <-}\StringTok{ }\NormalTok{sfs}\OperatorTok{/}\KeywordTok{sum}\NormalTok{(sfs)}
+
+\KeywordTok{barplot}\NormalTok{(sfs,}\DataTypeTok{names=}\DecValTok{1}\OperatorTok{:}\KeywordTok{length}\NormalTok{(sfs), }\DataTypeTok{main=}\StringTok{'SFS'}\NormalTok{)}
+\KeywordTok{barplot}\NormalTok{(sfs, }\DataTypeTok{col=}\StringTok{"#cdc0b0"}\NormalTok{, }\DataTypeTok{xlab=}\StringTok{"No. of segregating sites"}\NormalTok{, }
+        \DataTypeTok{ylab=}\StringTok{"Minor allele frequency"}\NormalTok{, }
+        \DataTypeTok{names=}\DecValTok{1}\OperatorTok{:}\KeywordTok{length}\NormalTok{(sfs))}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{histgram-distribution-of-the-theta-values}{%
+\paragraph{Histgram distribution of the theta
+values}\label{histgram-distribution-of-the-theta-values}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{library}\NormalTok{(}\StringTok{"data.table"}\NormalTok{)}
+\CommentTok{#Histgram distribution of the theta values}
+\CommentTok{#theta <- read.table("cache/theta.txt", header=TRUE)}
+\NormalTok{theta <-}\StringTok{ }\KeywordTok{fread}\NormalTok{(}\StringTok{"cache/theta.txt"}\NormalTok{, }\DataTypeTok{data.table =}\OtherTok{FALSE}\NormalTok{)}
+\KeywordTok{hist}\NormalTok{(theta}\OperatorTok{$}\NormalTok{Pairwise) }
+\KeywordTok{hist}\NormalTok{(theta}\OperatorTok{$}\NormalTok{Pairwise, }\DataTypeTok{col=}\StringTok{"green"}\NormalTok{, }\DataTypeTok{xlab=}\StringTok{"Theta pairwise values (log10)"}\NormalTok{) }
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{scatter-plot-of-the-fst-values}{%
+\paragraph{Scatter plot of the Fst
+values}\label{scatter-plot-of-the-fst-values}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{#Scatter plot of the Fst values}
+\NormalTok{fst <-}\StringTok{ }\KeywordTok{read.table}\NormalTok{(}\StringTok{"cache/fst_win.txt"}\NormalTok{, }\DataTypeTok{skip=}\DecValTok{1}\NormalTok{, }\DataTypeTok{header=}\OtherTok{FALSE}\NormalTok{)}
+\KeywordTok{names}\NormalTok{(fst)[}\KeywordTok{c}\NormalTok{(}\DecValTok{3}\NormalTok{,}\DecValTok{5}\NormalTok{)] <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\StringTok{"midp"}\NormalTok{, }\StringTok{"fst"}\NormalTok{)}
+\KeywordTok{plot}\NormalTok{(fst}\OperatorTok{$}\NormalTok{midp, fst}\OperatorTok{$}\NormalTok{fst, }\DataTypeTok{xlab=}\StringTok{"Physical position"}\NormalTok{, }\DataTypeTok{ylab=}\StringTok{"Fst"}\NormalTok{, }\DataTypeTok{col=}\StringTok{"#5f9ea0"}\NormalTok{, }\DataTypeTok{pch=}\DecValTok{16}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{general-feature-format-gff-from-ensemblplants}{%
+\section{General feature format (GFF) from
+EnsemblPlants}\label{general-feature-format-gff-from-ensemblplants}}
+
+Maize \href{https://plants.ensembl.org/Zea_mays/Info/Index}{reference
+genome}
+
+change to \texttt{largedata\textbackslash{}lab4} folder:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{wget}\NormalTok{ ftp://ftp.ensemblgenomes.org/pub/plants/release-46/fasta/zea_mays/dna/Zea_mays.B73_RefGen_v4.dna.chromosome.Mt.fa.gz}
+
+\CommentTok{### then unzip it}
+\FunctionTok{gunzip}\NormalTok{ Zea_mays.B73_RefGen_v4.dna.chromosome.Mt.fa.gz}
+\end{Highlighting}
+\end{Shaded}
+
+Similarly, we will download and unzip the
+\href{ftp://ftp.ensemblgenomes.org/pub/plants/release-46/gff3/zea_mays/Zea_mays.B73_RefGen_v4.46.chromosome.Mt.gff3.gz}{Mt
+GFF3} file
+
+--
+
+\hypertarget{use-r-to-process-the-gff3-file}{%
+\paragraph{Use R to process the GFF3
+file}\label{use-r-to-process-the-gff3-file}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# install.package("data.table")}
+\KeywordTok{library}\NormalTok{(}\StringTok{"data.table"}\NormalTok{)}
+\CommentTok{## simply read in wouldn't work}
+\NormalTok{gff <-}\StringTok{ }\KeywordTok{fread}\NormalTok{(}\StringTok{"largedata/Zea_mays.B73_RefGen_v4.46.chromosome.Mt.gff3"}\NormalTok{, }\DataTypeTok{skip=}\StringTok{"#"}\NormalTok{, }\DataTypeTok{header=}\OtherTok{FALSE}\NormalTok{, }\DataTypeTok{data.table=}\OtherTok{FALSE}\NormalTok{)}
+\CommentTok{## grep -v means select lines that not matching any of the specified patterns}
+\NormalTok{gff <-}\StringTok{ }\KeywordTok{fread}\NormalTok{(}\DataTypeTok{cmd=}\StringTok{'grep -v "#" largedata/Zea_mays.B73_RefGen_v4.46.chromosome.Mt.gff3'}\NormalTok{, }\DataTypeTok{header=}\OtherTok{FALSE}\NormalTok{, }\DataTypeTok{data.table=}\OtherTok{FALSE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{general-feature-format-gff-version-3}{%
+\section{General feature format (GFF) version
+3}\label{general-feature-format-gff-version-3}}
+
+\begin{verbatim}
+  V1      V2         V3   V4     V5 V6 V7 V8
+1 Mt Gramene chromosome    1 569630  .  .  .
+2 Mt ensembl       gene 6391   6738  .  +  .
+3 Mt    NCBI       mRNA 6391   6738  .  +  .
+4 Mt    NCBI       exon 6391   6738  .  +  .
+5 Mt    NCBI        CDS 6391   6738  .  +  0
+6 Mt ensembl       gene 6951   8285  .  +  .
+                  V9
+1   ID=chromosome:Mt;Alias=AY506529.1,NC_007982.1;Is_circular=true
+2   ID=gene:ZeamMp002;biotype=protein_coding;description=orf115-a1;
+3   ID=transcript:ZeamMp002;Parent=gene:ZeamMp002;
+4   Parent=transcript:ZeamMp002;Name=ZeamMp002.exon1;constitutive=1;ensembl_end_phase=0;
+5   ID=CDS:ZeamMp002;Parent=transcript:ZeamMp002;
+6   ID=gene:ZeamMp003;biotype=protein_coding;description=orf444
+\end{verbatim}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{general-feature-format-gff-version-3-1}{%
+\section{General feature format (GFF) version
+3}\label{general-feature-format-gff-version-3-1}}
+
+\begin{verbatim}
+  V1      V2         V3   V4     V5 V6 V7 V8
+1 Mt Gramene chromosome    1 569630  .  .  .
+2 Mt ensembl       gene 6391   6738  .  +  .
+                  V9
+1   ID=chromosome:Mt;Alias=AY506529.1,NC_007982.1;Is_circular=true
+2   ID=gene:ZeamMp002;biotype=protein_coding;description=orf115-a1;
+\end{verbatim}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\begin{itemize}
+\item
+  1 \textbf{sequence}: The name of the sequence where the feature is
+  located.
+\item
+  2 \textbf{source}: Keyword identifying the source of the feature, like
+  a program (e.g.~RepeatMasker) or an organization (like ensembl).
+\item
+  3 \textbf{feature}: The feature type name, like ``gene'' or ``exon''.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    In a well structured GFF file, all the children features always
+    follow their parents in a single block (so all exons of a transcript
+    are put after their parent ``transcript'' feature line and before
+    any other parent transcript line).
+  \end{itemize}
+\item
+  4 \textbf{start}: Genomic start of the feature, with a 1-base offset.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    This is in contrast with other 0-offset half-open sequence formats,
+    like \href{}{BED}.
+  \end{itemize}
+\item
+  5 \textbf{end}: Genomic end of the feature, with a 1-base offset.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    This is the same end coordinate as it is in 0-offset half-open
+    sequence formats, like BED.
+  \end{itemize}
+\item
+  6 \textbf{score}: Numeric value that generally indicates the
+  confidence of the source in the annotated feature.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    A value of ``.'' (a dot) is used to define a null value.
+  \end{itemize}
+\item
+  7 \textbf{strand}: Single character that indicates the strand of the
+  feature.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    it can assume the values of ``+'' (positive, or 5' -\textgreater{}
+    3'),
+  \item
+    ``-'', (negative, or 3' -\textgreater{} 5'), ``.'' (undetermined).
+  \end{itemize}
+\item
+  8 \textbf{phase}: phase of CDS (\textbf{means CoDing Sequence})
+  features.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    The phase indicates where the feature begins with reference to the
+    reading frame.
+  \item
+    The phase is one of the integers 0, 1, or 2, indicating the number
+    of bases that should be removed from the beginning of this feature
+    to reach the first base of the next codon.
+  \end{itemize}
+\item
+  9 \textbf{attributes}: All the other information pertaining to this
+  feature.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    The format, structure and content of this field is the one which
+    varies the most between the three competing file formats.
+  \end{itemize}
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{work-with-gff}{%
+\section{Work with GFF}\label{work-with-gff}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{names}\NormalTok{(gff) <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\StringTok{"seq"}\NormalTok{, }\StringTok{"source"}\NormalTok{, }\StringTok{"feature"}\NormalTok{, }\StringTok{"start"}\NormalTok{, }\StringTok{"end"}\NormalTok{, }\StringTok{"score"}\NormalTok{, }\StringTok{"strand"}\NormalTok{, }\StringTok{"phase"}\NormalTok{, }\StringTok{"att"}\NormalTok{)}
+\KeywordTok{table}\NormalTok{(gff}\OperatorTok{$}\NormalTok{feature)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{get-genes-and-upstream-and-downstream-5kb-regions}{%
+\subsubsection{Get genes and upstream and downstream 5kb
+regions}\label{get-genes-and-upstream-and-downstream-5kb-regions}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{g <-}\StringTok{ }\KeywordTok{subset}\NormalTok{(gff, feature }\OperatorTok{%in%}\StringTok{ "gene"}\NormalTok{)}
+\NormalTok{g}\OperatorTok{$}\NormalTok{geneid <-}\StringTok{ }\KeywordTok{gsub}\NormalTok{(}\StringTok{".*gene:|;biotype.*"}\NormalTok{, }\StringTok{""}\NormalTok{, g}\OperatorTok{$}\NormalTok{att)}
+
+\CommentTok{### + strand}
+\NormalTok{gp <-}\StringTok{ }\KeywordTok{subset}\NormalTok{(g, strand }\OperatorTok{%in%}\StringTok{ "+"}\NormalTok{) }
+\CommentTok{# nrow(gp) 75}
+
+\CommentTok{### get the 5k upstream of the + strand gene model}
+\NormalTok{gp_up <-}\StringTok{ }\NormalTok{gp}
+\NormalTok{gp_up}\OperatorTok{$}\NormalTok{end <-}\StringTok{ }\NormalTok{gp_up}\OperatorTok{$}\NormalTok{start }\OperatorTok{-}\StringTok{ }\DecValTok{1}
+\NormalTok{gp_up}\OperatorTok{$}\NormalTok{start <-}\StringTok{ }\NormalTok{gp_up}\OperatorTok{$}\NormalTok{end }\OperatorTok{-}\StringTok{ }\DecValTok{5000} 
+
+\CommentTok{### get the 5k downstream of the + strand gene model}
+\NormalTok{gp_down <-}\StringTok{ }\NormalTok{gp}
+\NormalTok{gp_down}\OperatorTok{$}\NormalTok{start <-}\StringTok{ }\NormalTok{gp_down}\OperatorTok{$}\NormalTok{end }\OperatorTok{+}\StringTok{ }\DecValTok{1}
+\NormalTok{gp_down}\OperatorTok{$}\NormalTok{end <-}\StringTok{ }\NormalTok{gp_down}\OperatorTok{$}\NormalTok{start }\OperatorTok{+}\StringTok{ }\DecValTok{5000} 
+\end{Highlighting}
+\end{Shaded}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{get-genes-and-upstream-and-downstream-5kb-regions-1}{%
+\subsubsection{Get genes and upstream and downstream 5kb
+regions}\label{get-genes-and-upstream-and-downstream-5kb-regions-1}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{### - strand}
+\NormalTok{gm <-}\StringTok{ }\KeywordTok{subset}\NormalTok{(g, strand }\OperatorTok{%in%}\StringTok{ "-"}\NormalTok{) }
+\KeywordTok{dim}\NormalTok{(gm) }\CommentTok{# 82}
+
+\KeywordTok{fwrite}\NormalTok{(g, }\StringTok{"cache/mt_gene.txt"}\NormalTok{, }\DataTypeTok{sep=}\StringTok{"}\CharTok{\textbackslash{}t}\StringTok{"}\NormalTok{, }\DataTypeTok{row.names =} \OtherTok{FALSE}\NormalTok{, }\DataTypeTok{quote=}\OtherTok{FALSE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{intepret-the-theta-results}{%
+\subsection{Intepret the theta
+results}\label{intepret-the-theta-results}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{library}\NormalTok{(}\StringTok{"data.table"}\NormalTok{)}
+\KeywordTok{library}\NormalTok{(}\StringTok{"GenomicRanges"}\NormalTok{)}
+\KeywordTok{library}\NormalTok{(}\StringTok{"plyr"}\NormalTok{)}
+
+
+\NormalTok{theta <-}\StringTok{ }\KeywordTok{fread}\NormalTok{(}\StringTok{"cache/theta.txt"}\NormalTok{, }\DataTypeTok{data.table=}\OtherTok{FALSE}\NormalTok{)}
+\KeywordTok{names}\NormalTok{(theta)[}\DecValTok{1}\NormalTok{] <-}\StringTok{ "seq"}
+
+\NormalTok{up5k <-}\StringTok{ }\KeywordTok{read.table}\NormalTok{(}\StringTok{"cache/mt_gene_up5k.txt"}\NormalTok{, }\DataTypeTok{header=}\OtherTok{TRUE}\NormalTok{)}
+
+\CommentTok{### define the subject file for theta values}
+\NormalTok{grc <-}\StringTok{ }\KeywordTok{with}\NormalTok{(theta, }\KeywordTok{GRanges}\NormalTok{(}\DataTypeTok{seqnames=}\NormalTok{seq, }\KeywordTok{IRanges}\NormalTok{(}\DataTypeTok{start=}\NormalTok{Pos, }\DataTypeTok{end=}\NormalTok{Pos)))}
+
+\CommentTok{### define the query file for genomic feature}
+\NormalTok{grf <-}\StringTok{ }\KeywordTok{with}\NormalTok{(up5k, }\KeywordTok{GRanges}\NormalTok{(}\DataTypeTok{seqnames=}\NormalTok{seq, }\KeywordTok{IRanges}\NormalTok{(}\DataTypeTok{start=}\NormalTok{start, }\DataTypeTok{end=}\NormalTok{end), }\DataTypeTok{geneid=}\NormalTok{geneid))}
+    
+\CommentTok{### find overlaps between the two}
+\NormalTok{tb <-}\StringTok{ }\KeywordTok{findOverlaps}\NormalTok{(}\DataTypeTok{query=}\NormalTok{grf, }\DataTypeTok{subject=}\NormalTok{grc)}
+\NormalTok{tb <-}\StringTok{ }\KeywordTok{as.matrix}\NormalTok{(tb)}
+    
+\NormalTok{out1 <-}\StringTok{ }\KeywordTok{as.data.frame}\NormalTok{(grf[tb[,}\DecValTok{1}\NormalTok{]])}
+\NormalTok{out2 <-}\StringTok{ }\KeywordTok{as.data.frame}\NormalTok{(grc[tb[,}\DecValTok{2}\NormalTok{]])}
+\CommentTok{### for each genomic feature, find the sites with non-missing data}
+\NormalTok{out <-}\StringTok{ }\KeywordTok{cbind}\NormalTok{(out1, out2[, }\StringTok{"start"}\NormalTok{]) }
+\KeywordTok{names}\NormalTok{(out)[}\KeywordTok{ncol}\NormalTok{(out)] <-}\StringTok{ "pos"}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{intepret-the-theta-results-1}{%
+\subsection{Intepret the theta
+results}\label{intepret-the-theta-results-1}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{#define unique identifier and merge with the thetas}
+\NormalTok{out}\OperatorTok{$}\NormalTok{uid <-}\StringTok{ }\KeywordTok{paste}\NormalTok{(out}\OperatorTok{$}\NormalTok{seqnames, out}\OperatorTok{$}\NormalTok{pos, }\DataTypeTok{sep=}\StringTok{"_"}\NormalTok{)}
+\NormalTok{theta}\OperatorTok{$}\NormalTok{uid <-}\StringTok{ }\KeywordTok{paste}\NormalTok{(theta}\OperatorTok{$}\NormalTok{seq, theta}\OperatorTok{$}\NormalTok{Pos, }\DataTypeTok{sep=}\StringTok{"_"}\NormalTok{)}
+
+\NormalTok{df <-}\StringTok{ }\KeywordTok{merge}\NormalTok{(out, theta[, }\KeywordTok{c}\NormalTok{(}\OperatorTok{-}\DecValTok{1}\NormalTok{, }\DecValTok{-2}\NormalTok{)], }\DataTypeTok{by=}\StringTok{"uid"}\NormalTok{)}
+\CommentTok{# for each upstream 5k region, how many theta values}
+
+\NormalTok{mx <-}\StringTok{ }\KeywordTok{ddply}\NormalTok{(df, .(geneid), summarise,}
+            \DataTypeTok{Pairwise =} \KeywordTok{mean}\NormalTok{(Pairwise, }\DataTypeTok{na.rm=}\OtherTok{TRUE}\NormalTok{),}
+            \DataTypeTok{thetaH =} \KeywordTok{mean}\NormalTok{(thetaH, }\DataTypeTok{na.rm=}\OtherTok{TRUE}\NormalTok{),}
+            \DataTypeTok{nsites =} \KeywordTok{length}\NormalTok{(uid))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{intepret-the-theta-results-2}{%
+\subsection{Intepret the theta
+results}\label{intepret-the-theta-results-2}}
+
+Copy and paste everything above, and pack it into an \texttt{R}
+function:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{get_mean_theta <-}\StringTok{ }\ControlFlowTok{function}\NormalTok{(}\DataTypeTok{gf_file=}\StringTok{"cache/mt_gene_up5k.txt"}\NormalTok{)\{}
+  \CommentTok{# gf_file: gene feature file [chr, ="cache/mt_gene_up5k.txt"]}
+  
+\NormalTok{  theta <-}\StringTok{ }\KeywordTok{fread}\NormalTok{(}\StringTok{"cache/theta.txt"}\NormalTok{, }\DataTypeTok{data.table=}\OtherTok{FALSE}\NormalTok{)}
+  \KeywordTok{names}\NormalTok{(theta)[}\DecValTok{1}\NormalTok{] <-}\StringTok{ "seq"}
+
+\NormalTok{  up5k <-}\StringTok{ }\KeywordTok{read.table}\NormalTok{(gf_file, }\DataTypeTok{header=}\OtherTok{TRUE}\NormalTok{)}
+
+  \CommentTok{### define the subject file for theta values}
+\NormalTok{  grc <-}\StringTok{ }\KeywordTok{with}\NormalTok{(theta, }\KeywordTok{GRanges}\NormalTok{(}\DataTypeTok{seqnames=}\NormalTok{seq, }\KeywordTok{IRanges}\NormalTok{(}\DataTypeTok{start=}\NormalTok{Pos, }\DataTypeTok{end=}\NormalTok{Pos)))}
+
+  \CommentTok{### define the query file for genomic feature}
+\NormalTok{  grf <-}\StringTok{ }\KeywordTok{with}\NormalTok{(up5k, }\KeywordTok{GRanges}\NormalTok{(}\DataTypeTok{seqnames=}\NormalTok{seq, }\KeywordTok{IRanges}\NormalTok{(}\DataTypeTok{start=}\NormalTok{start, }\DataTypeTok{end=}\NormalTok{end), }\DataTypeTok{geneid=}\NormalTok{geneid))}
+    
+  \CommentTok{### find overlaps between the two}
+\NormalTok{  tb <-}\StringTok{ }\KeywordTok{findOverlaps}\NormalTok{(}\DataTypeTok{query=}\NormalTok{grf, }\DataTypeTok{subject=}\NormalTok{grc)}
+\NormalTok{  tb <-}\StringTok{ }\KeywordTok{as.matrix}\NormalTok{(tb)}
+    
+\NormalTok{  out1 <-}\StringTok{ }\KeywordTok{as.data.frame}\NormalTok{(grf[tb[,}\DecValTok{1}\NormalTok{]])}
+\NormalTok{  out2 <-}\StringTok{ }\KeywordTok{as.data.frame}\NormalTok{(grc[tb[,}\DecValTok{2}\NormalTok{]])}
+  \CommentTok{### for each genomic feature, find the sites with non-missing data}
+\NormalTok{  out <-}\StringTok{ }\KeywordTok{cbind}\NormalTok{(out1, out2[, }\StringTok{"start"}\NormalTok{]) }
+  \KeywordTok{names}\NormalTok{(out)[}\KeywordTok{ncol}\NormalTok{(out)] <-}\StringTok{ "pos"}
+
+  \CommentTok{#define unique identifier and merge with the thetas}
+\NormalTok{  out}\OperatorTok{$}\NormalTok{uid <-}\StringTok{ }\KeywordTok{paste}\NormalTok{(out}\OperatorTok{$}\NormalTok{seqnames, out}\OperatorTok{$}\NormalTok{pos, }\DataTypeTok{sep=}\StringTok{"_"}\NormalTok{)}
+\NormalTok{  theta}\OperatorTok{$}\NormalTok{uid <-}\StringTok{ }\KeywordTok{paste}\NormalTok{(theta}\OperatorTok{$}\NormalTok{seq, theta}\OperatorTok{$}\NormalTok{Pos, }\DataTypeTok{sep=}\StringTok{"_"}\NormalTok{)}
+
+\NormalTok{  df <-}\StringTok{ }\KeywordTok{merge}\NormalTok{(out, theta[, }\KeywordTok{c}\NormalTok{(}\OperatorTok{-}\DecValTok{1}\NormalTok{, }\DecValTok{-2}\NormalTok{)], }\DataTypeTok{by=}\StringTok{"uid"}\NormalTok{)}
+  \CommentTok{# for each upstream 5k region, how many theta values}
+
+\NormalTok{  mx <-}\StringTok{ }\KeywordTok{ddply}\NormalTok{(df, .(geneid), summarise,}
+            \DataTypeTok{Pairwise =} \KeywordTok{mean}\NormalTok{(Pairwise, }\DataTypeTok{na.rm=}\OtherTok{TRUE}\NormalTok{),}
+            \DataTypeTok{thetaH =} \KeywordTok{mean}\NormalTok{(thetaH, }\DataTypeTok{na.rm=}\OtherTok{TRUE}\NormalTok{),}
+            \DataTypeTok{nsites =} \KeywordTok{length}\NormalTok{(uid))}
+  \KeywordTok{return}\NormalTok{(mx)}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{plot-the-results}{%
+\subsection{Plot the results}\label{plot-the-results}}
+
+Run the customized R function
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{### apply the function}
+\NormalTok{up5k <-}\StringTok{ }\KeywordTok{get_mean_theta}\NormalTok{(}\DataTypeTok{gf_file=}\StringTok{"cache/mt_gene_up5k.txt"}\NormalTok{)}
+\NormalTok{down5k <-}\StringTok{ }\KeywordTok{get_mean_theta}\NormalTok{(}\DataTypeTok{gf_file=}\StringTok{"cache/mt_gene_down5k.txt"}\NormalTok{)}
+\NormalTok{gene <-}\StringTok{ }\KeywordTok{get_mean_theta}\NormalTok{(}\DataTypeTok{gf_file=}\StringTok{"cache/mt_gene.txt"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+And then plot the results:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{library}\NormalTok{(}\StringTok{"ggplot2"}\NormalTok{)}
+
+\NormalTok{up5k}\OperatorTok{$}\NormalTok{feature <-}\StringTok{ "up 5k"}
+\NormalTok{down5k}\OperatorTok{$}\NormalTok{feature <-}\StringTok{ "down 5k"}
+\NormalTok{gene}\OperatorTok{$}\NormalTok{feature <-}\StringTok{ "genic"}
+\NormalTok{res <-}\StringTok{ }\KeywordTok{rbind}\NormalTok{(up5k, down5k)}
+\NormalTok{res_nongenic <-}\StringTok{ }\NormalTok{res}
+\NormalTok{res_nongenic}\OperatorTok{$}\NormalTok{feature <-}\StringTok{ "intergenic"}
+\NormalTok{res_t <-}\StringTok{ }\KeywordTok{rbind}\NormalTok{(res, gene, res_nongenic)}
+\KeywordTok{ggplot}\NormalTok{(res_t, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{feature, }\DataTypeTok{y=}\NormalTok{Pairwise, }\DataTypeTok{fill=}\NormalTok{feature)) }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{geom_violin}\NormalTok{(}\DataTypeTok{trim=}\OtherTok{FALSE}\NormalTok{)}\OperatorTok{+}
+\StringTok{  }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{title=}\StringTok{"Theta value"}\NormalTok{, }\DataTypeTok{x=}\StringTok{""}\NormalTok{, }\DataTypeTok{y =} \StringTok{"Log10 (theta)"}\NormalTok{)}\OperatorTok{+}
+\StringTok{  }\KeywordTok{geom_boxplot}\NormalTok{(}\DataTypeTok{width=}\FloatTok{0.1}\NormalTok{, }\DataTypeTok{fill=}\StringTok{"white"}\NormalTok{)}\OperatorTok{+}
+\StringTok{  }\KeywordTok{scale_fill_brewer}\NormalTok{(}\DataTypeTok{palette=}\StringTok{"Blues"}\NormalTok{) }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{theme_classic}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\end{document}

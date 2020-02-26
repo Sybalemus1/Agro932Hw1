@@ -181,3 +181,58 @@ ggplot(res_t, aes(x=feature, y=Pairwise, fill=feature)) +
   geom_boxplot(width=0.1, fill="white")+
   scale_fill_brewer(palette="Blues") + 
   theme_classic()
+
+
+## Intepret the Fst results
+get_mean_Fst <- function(gf_file="cache/mt_gene_up5k.txt"){
+  # gf_file: gene feature file [chr, ="cache/mt_gene_up5k.txt"]
+  
+  fst <- fread("cache/fst_win.txt", data.table=FALSE)
+  names(fst)[2] <- "seq"
+  up5k <- read.table(gf_file, header=TRUE)
+  ### define the subject file for Fst values
+  grc_f <- with(fst, GRanges(seqnames=seq, IRanges(start=chr, end=chr)))
+  ### define the query file for genomic feature
+  grf <- with(up5k, GRanges(seqnames=seq, IRanges(start=start, end=end), geneid=geneid))
+  
+  ### find overlaps between the two
+  tb_f <- findOverlaps(query=grf, subject=grc_f)
+  tb_f <- as.matrix(tb_f)
+  
+  out1_f <- as.data.frame(grf[tb_f[,1]])
+  out2_f <- as.data.frame(grc[tb_f[,2]])
+  ### for each genomic feature, find the sites with non-missing data
+  out_f <- cbind(out1_f, out2_f[, "start"]) 
+  names(out_f)[ncol(out_f)] <- "pos"
+  #define unique identifier and merge with the Fst
+  out_f$uid <- paste(out_f$seqnames, out_f$pos, sep="_")
+  fst$uid <- paste(fst$seq, fst$chr, sep="_")
+  df_f <- merge(out_f, fst[, c(-1, -2, -3, -4)], by="uid")
+  # for each upstream 5k region, how many Fst values
+  names(df_f)[ncol(df_f)] <- "fst"
+  
+  mx_f <- ddply(df_f, .(geneid), summarise,
+                Fst = mean(fst, na.rm=TRUE),
+                nsites = length(uid))
+  return(mx_f)
+}
+
+### apply the function
+up5k_f <- get_mean_Fst(gf_file="cache/mt_gene_up5k.txt")
+down5k_f <- get_mean_Fst(gf_file="cache/mt_gene_down5k.txt")
+gene_f <- get_mean_Fst(gf_file="cache/mt_gene.txt")
+
+library("ggplot2")
+up5k_f$feature <- "up 5k"
+down5k_f$feature <- "down 5k"
+gene_f$feature <- "genic"
+res_f <- rbind(up5k_f, down5k_f)
+res_nongenic_f <- res_f
+res_nongenic_f$feature <- "intergenic"
+res_t_f <- rbind(res_f, gene_f, res_nongenic_f)
+ggplot(res_t_f, aes(x=feature, y=Fst, fill=feature)) + 
+  geom_violin(trim=FALSE)+
+  labs(title="Fst distribution", x="", y = "Fst")+
+  geom_boxplot(width=0.1, fill="white")+
+  scale_fill_brewer(palette="greens") + 
+  theme_classic()
