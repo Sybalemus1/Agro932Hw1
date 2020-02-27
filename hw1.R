@@ -19,6 +19,9 @@ library("data.table")
 theta <- fread("cache/theta.txt", data.table =FALSE)
 hist(theta$Pairwise) 
 hist(theta$Pairwise, col="green", xlab="Theta pairwise values (log10)") 
+hist(theta$Watterson, col="blue", xlab="Theta Waterson (log10)") 
+hist(theta$thetaSingleton, col="grey", xlab="Theta Singleton values (log10)") 
+hist(theta$thetaH, col="red", xlab="Theta thetaH values (log10)")  
 
 #Scatter plot of the Fst values
 fst <- read.table("cache/fst_win.txt", skip=1, header=FALSE)
