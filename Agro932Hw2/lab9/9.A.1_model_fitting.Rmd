@@ -1,0 +1,111 @@
+---
+title: "Calculate genetic variances"
+author: "Jinliang Yang"
+date: "March 12th, 2020"
+output: NULL
+---
+
+
+## Normalize the path:
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE) 
+knitr::opts_knit$set(root.dir=normalizePath('../../')) 
+```
+
+
+## Experimental design
+
+
+
+## Data
+
+```{r}
+d <- read.table("data/sorghum_height.txt", header=TRUE)
+
+# Creating factors
+d$Variety <- as.factor(d$Family)
+d$Source <- as.factor(d$Progeny)
+d$Block <- as.factor(d$Block)
+
+# Fitting model with blocks fixed
+fit <- lm(Height ~ Block + Variety, data=d)
+summary(fit)
+anova(fit)
+```
+
+
+
+### Flint-Garcia et al., 2009 data
+
+```{r}
+f <- read.delim("data/journal.pone.0007433.s001.txt", header=TRUE)
+# Convert missing data to NA
+f[f=="."] <- NA
+
+# four environments
+table(f$Env)
+
+
+f$INBRED <- as.factor(f$INBRED)
+f$Env <- as.factor(f$Env)
+# tricky part, be careful:
+f$TotKnlWt_Inbred  <- as.numeric(as.character((f$TotKnlWt_Inbred)))
+hist(f$TotKnlWt_Inbred)
+fit <- lm(TotKnlWt_Inbred ~ INBRED + Env, data=f)
+Vp_TotKnlWt_Inbred= var(f$TotKnlWt_Inbred, na.rm = TRUE)
+#summary(fit)
+#plot (fit)
+anova(fit)
+```
+
+$$
+H^2 = \frac{V_G}{V_G + V_E}
+$$
+With $(V_G =  MS(G) - MS(error)/n$ 
+
+```{r}
+Vg =  (603.8 - 307.5)/4
+Ve = 307.5
+
+H2 = Vg/(Vg + Ve)
+H2
+```
+
+```{r}
+f <- read.delim("data/journal.pone.0007433.s001.txt", header=TRUE)
+# Convert missing data to NA
+f[f=="."] <- NA
+
+# four environments
+table(f$Env)
+
+
+f$INBRED <- as.factor(f$INBRED)
+f$Env <- as.factor(f$Env)
+# tricky part, be careful:
+f$CobDia_Hyb   <- as.numeric(as.character((f$CobDia_Hyb)))
+fit2 <- lm(CobDia_Hyb ~ INBRED + Env, data=f)
+#summary(fit)
+#plot (fit)
+anova(fit2)
+```
+```{r}
+Vg =  (9.661 - 1.925)/4
+Ve = 1.925
+
+H2 = Vg/(Vg + Ve)
+H2
+```
+
+#accounting interaction GxE
+```{r}
+f$INBRED <- as.factor(f$INBRED)
+f$Env <- as.factor(f$Env)
+# tricky part, be careful:
+f$CobDia_Hyb   <- as.numeric(as.character((f$CobDia_Hyb)))
+fit2 <- lm(CobDia_Hyb ~ INBRED + Env + INBRED*ENV, data=f)
+#summary(fit)
+#plot (fit)
+anova(fit2)
+```

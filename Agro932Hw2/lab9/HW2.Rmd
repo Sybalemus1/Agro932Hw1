@@ -1,0 +1,218 @@
+---
+title: "HW2"
+author: "Santos Barrera"
+date: "4/1/2020"
+output:
+  word_document: default
+  html_document: default
+  pdf_document: default
+---
+
+
+## Normalize the path:
+```{r setup, include=FALSE} 
+knitr::opts_chunk$set(echo = TRUE) 
+knitr::opts_knit$set(root.dir=normalizePath('../../')) 
+```
+
+#1.  Version control
+
+#2. Identify three traits of interest showing different levels of heterosis 
+
+Traits selected according Flint-Garcia et al., 2009 data
+PltYield: Plant yield (gr/plant)
+LFLEN: Leaf Length (cm)
+TSLLEN: Tassel length (cm) 
+
+#3.Following the basic steps to estimate genetic variances
+
+First, the linear model is written down
+
+pijr = μ + fi + Ej + eijr
+
+pijr:phenotype value
+μ: averall mean
+fi: effect of the ith father
+Ej: is the effect of the jth environment 
+eijr: is the residual error ~𝑁𝑜𝑟𝑚𝑎𝑙(0,𝜎_𝑔^2)
+
+Second, phenotypic variance is written in terms of components. 
+𝜎^2P=𝜎^f+𝜎2E+𝜎^2e
+𝜎2p=Phenotypic Variance
+𝜎^2f=Genotpic Variance
+𝜎^2E=Entironmental Variance
+𝜎^2e=error Variance
+
+Third, interpret the ANOVA table and variance components in terms of the covariances between relatives
+I have a question:
+For half-siblings (hybrids in Flint-Garcia et al., 2009 data) we have to consider the inbreeding coefficient (F), which is 1/2 for half-siblings, for the calculation of VA (additive variance). However, in your lecture and Rex Bernardo Book, we calculate it from the mean sq (MS) of the interaction gxe. What is the procedure for finding mean sq (MS) of the interaction gxe in R?. In this case do we treat the environment as random effect in the model? Because I couln't calculate this value I can't reporte the additive variance and therefore I can't report narrow sense heredability h^2
+
+VA=4/1+FVprogeny
+
+
+# Hybrids 
+Plant yield (gr/plant)
+
+```{r}
+# library(lme4) when we account for randome effects 
+library(Matrix)
+f <- read.delim("data/journal.pone.0007433.s001.txt", header=TRUE)
+# Convert missing data to NA
+f[f=="."] <- NA
+
+# four environments
+table(f$Env)
+
+f$INBRED <- as.factor(f$INBRED)
+f$Env <- as.factor(f$Env)
+# tricky part, be careful:
+f$PltYield_Hyb  <- as.numeric(as.character((f$PltYield_Hyb)))
+hist(f$PltYield_Hyb, col="grey", xlab="Plant yield (gr/plant)") 
+fit_PYH <- lm(PltYield_Hyb ~ INBRED + Env, data=f)
+#plot (fit_PYH)
+anova(fit_PYH)
+```
+```{r}
+Vg=  (2332 - 1210)/2 #only 2 locations for PltYield_Hyb (North Carolina and Missouri)
+Ve = 1210
+
+H2 = Vg/(Vg + Ve)
+H2
+```
+# Hybrids 
+Leaf Length (cm) 
+
+```{r}
+f$INBRED <- as.factor(f$INBRED)
+f$Env <- as.factor(f$Env)
+# tricky part, be careful:
+f$LFLEN_Hyb  <- as.numeric(as.character((f$LFLEN_Hyb)))
+hist(f$LFLEN_Hyb, col="grey", xlab="Plant Leaf Length (cm) ") 
+fit_LFH <- lm(LFLEN_Hyb~ INBRED + Env, data=f)
+#plot (fit_LFH)
+anova(fit_LFH)
+```
+
+```{r}
+Vg=  (16367 - 1430)/4
+Ve = 1430 
+
+H2 = Vg/(Vg + Ve)
+H2
+```
+
+# Hybrids
+Tassel length (cm) 
+
+```{r}
+f$INBRED <- as.factor(f$INBRED)
+f$Env <- as.factor(f$Env)
+# tricky part, be careful:
+f$TSLLEN_Hyb  <- as.numeric(as.character((f$TSLLEN_Hyb)))
+hist(f$TSLLEN_Hyb, col="grey", xlab="Plant Tassel length (cm) ") 
+fit_TSLH <- lm(TSLLEN_Hyb~ INBRED + Env, data=f)
+#plot (fit_TSLH)
+anova(fit_TSLH)
+```
+
+
+```{r}
+Vg=  (2185 - 405)/2 #only 2 locations for Tassel length (cm) (Florida and North Carolina)
+Ve = 405 
+
+H2 = Vg/(Vg + Ve)
+H2
+```
+
+
+### Flint-Garcia et al., 2009 data
+# Inbreed lines 
+# Plant yield (gr/plant)
+
+```{r}
+f <- read.delim("data/journal.pone.0007433.s001.txt", header=TRUE)
+# Convert missing data to NA
+f[f=="."] <- NA
+
+# four environments
+table(f$Env)
+
+f$INBRED <- as.factor(f$INBRED)
+f$Env <- as.factor(f$Env)
+# tricky part, be careful:
+f$PltYield_Inbred  <- as.numeric(as.character((f$PltYield_Inbred)))
+hist(f$PltYield_Inbred, col="grey", xlab="Plant yield (gr/plant)") 
+fit_PYI <- lm(PltYield_Inbred ~ INBRED + Env, data=f)
+#plot (fit_PYI)
+anova(fit_PYI)
+```
+```{r}
+Vg=  (549.08 - 358.99)/2 #only 2 locations for PltYield_Hyb (North Carolina and Missouri)
+Ve = 358.99
+
+H2 = Vg/(Vg + Ve)
+H2
+```
+
+
+# Inbreed lines 
+# Leaf Length (cm) 
+
+```{r}
+f$INBRED <- as.factor(f$INBRED)
+f$Env <- as.factor(f$Env)
+# tricky part, be careful:
+f$LFLEN_Inbred <- as.numeric(as.character((f$LFLEN_Inbred)))
+hist(f$LFLEN_Inbred, col="grey", xlab="Plant Leaf Length (cm) ") 
+fit_LFI <- lm(LFLEN_Inbred~ INBRED + Env, data=f)
+#plot (fit_LFI)
+anova(fit_LFI)
+```
+
+```{r}
+Vg=  (31302 - 2259)/4
+Ve = 2259 
+
+H2 = Vg/(Vg + Ve)
+H2
+```
+
+# Inbreed lines 
+# Tassel length (cm) 
+
+```{r}
+f$INBRED <- as.factor(f$INBRED)
+f$Env <- as.factor(f$Env)
+# tricky part, be careful:
+f$TSLLEN_Inbred  <- as.numeric(as.character((f$TSLLEN_Inbred)))
+hist(f$TSLLEN_Inbred, col="grey", xlab="Plant Tassel length (cm) ") 
+fit_TSLI <- lm(TSLLEN_Inbred~ INBRED + Env, data=f)
+#plot (fit_TSLI)
+anova(fit_TSLI)
+```
+
+
+```{r}
+Vg=  (3757 - 645)/2 #only 2 locations for PltYield_Hyb (Florida and North Carolina)
+Ve = 645 
+
+H2 = Vg/(Vg + Ve)
+H2
+```
+
+#4. Visualization 
+
+```{r}
+library(ggplot2)
+H2_hyb <- c(0.32, 0.72, 0.68)
+H2_Inb <- c(0.20, 0.76, 0.70)
+Trait <- c("Plant yield (gr/plant)", "Leaf Length (cm)", "Tassel length (cm) ")
+dat <- data.frame(Trait = Trait ,H2_hyb = H2_hyb, H2_Inb = H2_Inb)
+dat
+
+ggplot(dat, aes(x= Trait, y=H2_hyb, fill=Trait)) +
+  geom_bar(stat="summary", fun.y="heritability")
+ggplot(dat, aes(x= Trait, y=H2_Inb, fill=Trait)) +
+  geom_bar(stat="summary", fun.y="heritability")
+
+```
